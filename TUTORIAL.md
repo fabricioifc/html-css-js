@@ -578,13 +578,10 @@ O resultado final deve ser parecido com o código abaixo:
 </html>
 ```
 
-## Criando nosso controle de versão com Git
+## Deploy do site no GitHub Pages
 
-Nesta aula, vamos criar nosso controle de versão com Git. O controle de versão é utilizado para controlar as alterações no código e compartilhar o código com outras pessoas. Para criar o controle de versão, siga os passos abaixo:
+O GitHub Pages é um serviço de hospedagem de sites estáticos. Para hospedar um site no GitHub Pages, você precisa criar um repositório no GitHub e adicionar o código do seu site no repositório. Para demonstrar, vamos hospedar o nosso site no GitHub Pages. Para isso, siga os passos abaixo:
 
-1. Procure pelo ícone do Git no canto esquerdo do Visual Studio Code.
-2. Clique no ícone do Git.
-3. Clique no botão "Initialize Repository".
-4. Verifique a lista de alterações no canto esquerdo do Visual Studio Code.
-5. Adicione uma mensagem de commit que descreva as alterações. Por exemplo, "Criando o projeto".
-6. Clique no botão "Confirmação".
+> ⚠️ **Aviso**: Antes de prosseguir, certifique-se que você possui o Git instalado no seu computador. Se você não possui o Git instalado no seu computador, instale o Git no site [Git](https://git-scm.com/downloads).
+
+> ⚠️ **Aviso**: Antes de prosseguir, certifique-se que você possui uma conta no GitHub. Se você não possui uma conta no GitHub, crie uma conta no site [GitHub](https://github.com). 

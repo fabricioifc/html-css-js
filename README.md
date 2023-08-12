@@ -96,13 +96,13 @@ O Visual Studio Code possui um sistema de extensões que permite adicionar novas
 - [Better Comments](https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments): melhora a visualização dos comentários.
 - [Peacock](https://marketplace.visualstudio.com/items?itemName=johnpapa.vscode-peacock): colore a barra superior do Visual Studio Code.
 
-### Sincronizando as configurações do Visual Studio Code
+### Sincronizando as configurações do Visual Studio Code com o GitHub
 
 Para sincronizar as configurações do Visual Studio Code, siga os passos abaixo:
 
- - Faça login com a conta do GitHub ou da Microsoft no VS Code.
- - Clique no ícone de engrenagem no canto inferior esquerdo da tela do VS Code e clique em Ativar a Sincronização de Configurações.
-
+ - Crie uma conta no [GitHub](https://github.com). Caso já tenha uma conta, pule para o próximo passo.
+ - Faça login com a conta do GitHub ou da Microsoft no VS Code. Para fazer login, clique no ícone de usuário no canto inferior esquerdo da tela do VS Code e clique em Fazer login.
+- Clique no ícone de engrenagem no canto inferior esquerdo da tela do VS Code e clique em Ativar a Sincronização de Configurações.
 
 ## Teclas de atalho do Visual Studio Code
 
