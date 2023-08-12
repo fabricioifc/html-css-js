@@ -19,6 +19,7 @@
 - [x] [Como adicionar um rodapé ao seu site?](HTML.md#como-adicionar-um-rodapé-ao-seu-site)
 - [x] [Metatags para SEO](HTML.md#metatags-para-seo)
 - [x] [Resultado final](HTML.md#resultado-final)
+- [x] [Exercício Prático](HTML.md#exercício-prático)
 - [ ] [Como adicionar áudio ao seu site?](HTML.md#como-adicionar-áudio-ao-seu-site)
 - [ ] [Como adicionar formulário ao seu site?](HTML.md#como-adicionar-formulário-ao-seu-site)
 
@@ -47,17 +48,31 @@ A internet é uma rede de computadores que se conectam entre si. Para que você 
 
 Para compreender melhor como a internet funciona, assista ao vídeo abaixo:
 
-[![Como a Internet chega na minha casa?](https://res.cloudinary.com/marcomontalbano/image/upload/v1691849184/video_to_markdown/images/youtube--F74GKCLXUWM-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://youtu.be/F74GKCLXUWM?t=140 "Como a Internet chega na minha casa?"){:target="_blank"} 
+[![Como a Internet chega na minha casa?](https://res.cloudinary.com/marcomontalbano/image/upload/v1691849184/video_to_markdown/images/youtube--F74GKCLXUWM-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://youtu.be/F74GKCLXUWM?t=140 "Como a Internet chega na minha casa?")
 
 ## O que é o HTML?
 [&uarr;](#1-introdução-a-html)
 
 HTML é a sigla para HyperText Markup Language, que significa Linguagem de Marcação de Hipertexto. O HTML é uma linguagem de marcação utilizada para criar páginas web. O HTML é composto por uma série de elementos, que são representados por tags. As tags são utilizadas para estruturar o conteúdo da página.
 
+> 💡 Para experimentar os exemplos abaixo, crie um novo projeto no Visual Studio Code e crie um arquivo chamado `index.html`. Evite copiar e colar os exemplos abaixo. Digite os exemplos abaixo para praticar. 
+
+> Para criar um novo projeto, faça o seguinte:
+> 1. Abra o Visual Studio Code.
+> 2. Clique no menu "Arquivo" -> "Abrir Pasta".
+> 3. Crie uma pasta chamada `primeiro-projeto`.
+> 5. Salve a pasta `primeiro-projeto` dentro da pasta `Documentos`.
+> 6. Clique no menu "Arquivo" -> "Novo Arquivo".
+> 7. Crie um arquivo chamado `index.html`. O arquivo `index.html` é o arquivo principal do site.
+> 8. Clique no menu "Arquivo" e habilite a opção "Salvar automaticamente quando um arquivo for alterado".
+
+Agora você está pronto para começar a escrever o código HTML.
+ 
 ### Estrutura básica
 [&uarr;](#1-introdução-a-html)
 
-A estrutura básica de um documento HTML é composta por uma tag `<html>`, que contém duas tags: `<head>` e `<body>`. A tag `<head>` é utilizada para adicionar informações sobre o documento, como por exemplo, o título da página. A tag `<body>` é utilizada para adicionar o conteúdo da página.
+
+A estrutura básica de um documento HTML é composta por uma tag `<html>`, que contém duas tags: `<head>` e `<body>`. A tag `<head>` é utilizada para adicionar informações sobre o documento, como por exemplo, o título da página. A tag `<body>` é utilizada para adicionar o conteúdo da página. No arquivo `index.html`, digite o código abaixo:
 
 ```html
 <!DOCTYPE html>
@@ -73,6 +88,10 @@ A estrutura básica de um documento HTML é composta por uma tag `<html>`, que c
 </html>
 ```
 
+> 💡 Para ver o resultado, execute a ferramenta `live server` que fica no menu inferior direito do vscode. Por padrão, seu site vai estar disponível no endereço `http://localhost:5000`. `localhost` significa que o projeto está sendo executado no seu computador local e `5000` é o número da porta.
+
+> 💡 Entenda melhor como usar a ferramenta `live server` acessando [Como usar o Live Server de forma ideal](https://blog.cod3r.com.br/como-usar-o-live-server-de-forma-ideal/).
+
 #### Explicando a estrutura básica
 
  - A tag `<!DOCTYPE html>` é utilizada para informar ao navegador que o documento é um documento HTML. Esta tag deve ser a primeira tag do documento.
@@ -84,6 +103,7 @@ A estrutura básica de um documento HTML é composta por uma tag `<html>`, que c
  - A tag `<body>` é utilizada para criar o corpo do documento. O corpo do documento é a parte visível da página.
  - A tag `<h1>` é utilizada para criar um título. O número indica o nível de importância do título. O número 1 indica que o título é o mais importante. O número 6 indica que o título é o menos importante. 
  - A tag `<p>` é utilizada para criar um parágrafo.
+
  
 ### O que é um elemento HTML?
 
@@ -678,3 +698,16 @@ O resultado final deve ser parecido com o código abaixo:
     </body>
 </html>
 ```
+
+## Exercício Prático
+[&uarr;](#1-introdução-a-html)
+
+Crie um site para mostrar os seus filmes e séries favoritas. O site precisa ter:
+ - Um título. Utilize a tag `<h1>`.
+ - Uma foto de um ator ou atriz. Utilize a tag `<img>`.
+ - Um parágrafo com o nome do ator ou atriz. Utilize a tag `<p>`. O nome do ator ou atriz deve estar em negrito. Utilize a tag `<strong>`.
+ - Uma lista de filmes. Cada filme terá um título, um ano e um gênero. A lista deve ter pelo menos 3 filmes. Utilize as tags `<h1>`, `<ul>`, `<li>`, `<table>`, `<thead>`, `<tbody>`, `<tr>`, `<th>` e `<td>`. 
+ - Uma tabela com as suas séries favoritas. Cada série terá um título, um ano e um gênero. A tabela deve ter pelo menos 3 séries. Utilize as tags `<h1>`, `<table>`, `<thead>`, `<tbody>`, `<tr>`, `<th>` e `<td>`.
+ - Um vídeo de um trailer de um filme ou série. Utilize a tag `<iframe>`.
+  - Um rodapé com o seu nome e link para o seu GitHub. Utilize as tags `<p>` e `<a>`.
+
