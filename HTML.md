@@ -1,5 +1,6 @@
 # 1. Introdução a HTML
 
+- [x] [Introdução ao conteúdo](HTML.md#introdução-ao-conteúdo)
 - [x] [Como a internet chega até a sua casa?](HTML.md#como-a-internet-chega-até-a-sua-casa)
 - [x] [O que é o HTML?](HTML.md#o-que-é-o-html)
 - [x] [Estrutura básica](HTML.md#estrutura-básica)
@@ -20,6 +21,24 @@
 - [x] [Resultado final](HTML.md#resultado-final)
 - [ ] [Como adicionar áudio ao seu site?](HTML.md#como-adicionar-áudio-ao-seu-site)
 - [ ] [Como adicionar formulário ao seu site?](HTML.md#como-adicionar-formulário-ao-seu-site)
+
+## Introdução ao conteúdo
+[&uarr;](#1-introdução-a-html)
+
+As principais tecnologias utilizadas para criar páginas web são o HTML, o CSS e o JavaScript. O HTML é utilizado para estruturar o conteúdo da página. O CSS é utilizado para estilizar o conteúdo da página. O JavaScript é utilizado para adicionar comportamentos ao conteúdo da página. A imagem abaixo ilustra o logotipo do HTML, do CSS e do JavaScript.
+
+<img src="image/html-css-js.jpg" width="100%">
+
+> Fonte: <a href="https://apexensino.com.br/wp-content/uploads/2017/11/html-css-javascript.jpg">Apexensino</a>
+
+A diferença entre o HTML, o CSS e o JavaScript é que o HTML é uma linguagem de marcação, o CSS é uma linguagem de estilização e o JavaScript é uma linguagem de programação. A imagem abaixo ilustra a diferença entre o HTML, o CSS e o JavaScript.
+
+
+<img src="image/esqueleto.webp" width="100%">
+
+> Fonte: <a href="https://thumbs.dreamstime.com/z/html-css-e-javascript-como-camadas-de-codifica%C3%A7%C3%A3o-explica%C3%A7%C3%A3o-diagrama-t%C3%B3picos-explicadas-fases-desenvolvimento-projetos-233593998.jpg">Desamstime</a>
+
+Percebemos na imagem que o HTML é representado como o esqueleto da página, o CSS adiciona cores e estilos ao esqueleto e o JavaScript adiciona comportamentos.
 
 ## Como a internet chega até a sua casa?
 [&uarr;](#1-introdução-a-html)
