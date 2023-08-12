@@ -22,21 +22,21 @@
 - [ ] [Como adicionar formulário ao seu site?](HTML.md#como-adicionar-formulário-ao-seu-site)
 
 ## Como a internet chega até a sua casa?
-[&uarr;](#1-introdução-ao-html)
+[&uarr;](#1-introdução-a-html)
 
 A internet é uma rede de computadores que se conectam entre si. Para que você possa acessar a internet, é necessário que o seu computador esteja conectado a essa rede. Existem várias formas de se conectar à internet, como por exemplo, através de um cabo de rede, de uma rede sem fio (Wi-Fi) ou de uma rede de telefonia móvel (3G, 4G, 5G).
 
 Para compreender melhor como a internet funciona, assista ao vídeo abaixo:
 
-[![Como a Internet chega na minha casa?](https://res.cloudinary.com/marcomontalbano/image/upload/v1691849184/video_to_markdown/images/youtube--F74GKCLXUWM-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://youtu.be/F74GKCLXUWM?t=140 "Como a Internet chega na minha casa?")
+[![Como a Internet chega na minha casa?](https://res.cloudinary.com/marcomontalbano/image/upload/v1691849184/video_to_markdown/images/youtube--F74GKCLXUWM-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://youtu.be/F74GKCLXUWM?t=140 "Como a Internet chega na minha casa?"){:target="_blank"} 
 
 ## O que é o HTML?
-[&uarr;](#1-introdução-ao-html)
+[&uarr;](#1-introdução-a-html)
 
 HTML é a sigla para HyperText Markup Language, que significa Linguagem de Marcação de Hipertexto. O HTML é uma linguagem de marcação utilizada para criar páginas web. O HTML é composto por uma série de elementos, que são representados por tags. As tags são utilizadas para estruturar o conteúdo da página.
 
 ### Estrutura básica
-[&uarr;](#1-introdução-ao-html)
+[&uarr;](#1-introdução-a-html)
 
 A estrutura básica de um documento HTML é composta por uma tag `<html>`, que contém duas tags: `<head>` e `<body>`. A tag `<head>` é utilizada para adicionar informações sobre o documento, como por exemplo, o título da página. A tag `<body>` é utilizada para adicionar o conteúdo da página.
 
@@ -75,7 +75,7 @@ Um elemento HTML é composto por uma tag de abertura, um conteúdo e uma tag de 
 ```
 
 ### Tags básicas
-[&uarr;](#1-introdução-ao-html)
+[&uarr;](#1-introdução-a-html)
 
 As tags de título são utilizadas para criar títulos e destacar partes importantes do conteúdo. A tag `h1` é utilizada para criar o título mais importante. A tag `h6` é utilizada para criar o título menos importante.
 
@@ -152,7 +152,7 @@ As tags de divisão são utilizadas para criar divisões. As divisões são util
 ```
 
 ## Aninhamento
-[&uarr;](#1-introdução-ao-html)
+[&uarr;](#1-introdução-a-html)
 
 O aninhamento de elementos é utilizado para agrupar elementos, criando estruturas complexas. Por exemplo, o código abaixo cria uma lista de itens com títulos e parágrafos.
 
@@ -172,7 +172,7 @@ O aninhamento de elementos é utilizado para agrupar elementos, criando estrutur
 No código acima, cada item `li` possui um título `h1` e um parágrafo `p`. O título e o parágrafo estão aninhados dentro do item da lista. 
 
 ## Atributos
-[&uarr;](#1-introdução-ao-html)
+[&uarr;](#1-introdução-a-html)
 
 Os atributos são utilizados para adicionar informações adicionais às tags. Os atributos são adicionados na tag de abertura. Por exemplo, o atributo `href` é utilizado para adicionar um link a um elemento. O atributo `src` é utilizado para adicionar uma imagem a um elemento. O atributo `alt` é utilizado para adicionar um texto alternativo a um elemento. O atributo `class` é utilizado para adicionar uma classe a um elemento. O atributo `id` é utilizado para adicionar um identificador a um elemento.
 
@@ -186,7 +186,7 @@ Os atributos são utilizados para adicionar informações adicionais às tags. O
 ```
 
 ## Exemplo
-[&uarr;](#1-introdução-ao-html)
+[&uarr;](#1-introdução-a-html)
 
 Nesta aula aprendemos alguns conceitos básicos sobre HTML e suas tags básicas. Aprendemos também a estrutura básica de um documento HTML e como criar títulos, parágrafos, listas, imagens, links, comentários e divisões. Aprendemos também sobre aninhamento de elementos e atributos. Para demonstrar o que aprendemos, vamos criar uma página HTML com uma lista de compras de produtos de supermercado. Cada produto terá um título, uma imagem e um link para o site do supermercado.
 
@@ -220,7 +220,7 @@ Nesta aula aprendemos alguns conceitos básicos sobre HTML e suas tags básicas.
 ```
 
 ## Criando nosso primeiro site com HTML
-[&uarr;](#1-introdução-ao-html)
+[&uarr;](#1-introdução-a-html)
 
 Nesta aula, vamos criar nosso primeiro site. O site será uma página de perfil. A página de perfil será composta por uma foto, um nome, uma descrição, um link para o GitHub e uma lista de atividades favoritas. Para criar o site, siga os passos abaixo:
 
@@ -284,7 +284,7 @@ Para melhorar o código acima, vamos separar o conteúdo em seções com a tag `
 ```
 
 ## Símbolos e Emoji no seu site
-[&uarr;](#1-introdução-ao-html)
+[&uarr;](#1-introdução-a-html)
 
 Para adicionar símbolos e emoji no seu site, você pode utilizar o [Emojipedia](https://emojipedia.org/). Para demonstrar, vamos adicionar um emoji de coração na lista de atividades. Para isso, siga os passos abaixo:
 
@@ -307,7 +307,7 @@ O resultado final deve ser parecido com o código abaixo:
 ```
 
 ## Você tem o direito de usar qualquer imagem no seu site?
-[&uarr;](#1-introdução-ao-html)
+[&uarr;](#1-introdução-a-html)
 
 Não. Você não pode usar qualquer imagem no seu site. Você só pode usar imagens que você tem o direito de usar. Por exemplo, você pode usar imagens que você criou ou imagens que você encontrou em sites que permitem o uso comercial. Para encontrar imagens que você pode usar comercialmente, você pode utilizar o [Google Imagens](https://www.google.com.br/imghp?hl=pt-BR&tab=wi&ogbl). Para demonstrar, vamos encontrar uma imagem de um coração no Google Imagens. Para isso, siga os passos abaixo:
 
@@ -324,7 +324,7 @@ O resultado final deve ser parecido com a imagem abaixo:
 ```
 
 ## Como adicionar um favicon ao seu site?
-[&uarr;](#1-introdução-ao-html)
+[&uarr;](#1-introdução-a-html)
 
 Favicon é a sigla para Favorite Icon, que significa Ícone Favorito. O favicon é o ícone que aparece na aba do navegador. 
 Para adicionar um favicon ao seu site, você pode utilizar o [Favicon Generator](https://www.favicon-generator.org/). Para demonstrar, vamos adicionar um favicon ao nosso site. Para isso, siga os passos abaixo:
@@ -357,7 +357,7 @@ O resultado final deve ser parecido com o código abaixo:
 ```
 
 ## Como adicionar tabela ao seu site?
-[&uarr;](#1-introdução-ao-html)
+[&uarr;](#1-introdução-a-html)
 
 Tabelas em HTML são utilizadas para exibir dados em linhas e colunas. Para demonstrar, vamos alterar o código do nosso site para exibir uma tabela de filmes. Para isso, siga os passos abaixo:
 
@@ -405,7 +405,7 @@ Tabelas em HTML são utilizadas para exibir dados em linhas e colunas. Para demo
 Percebe-se que a tabela é composta por uma tag `<table>`, que contém duas tags: `<thead>` e `<tbody>`. A tag `<thead>` é utilizada para criar o cabeçalho da tabela. A tag `<tbody>` é utilizada para criar o corpo da tabela. O cabeçalho da tabela é composto por uma tag `<tr>`, que contém três tags `<th>`. O corpo da tabela é composto por três tags `<tr>`, que contém três tags `<td>`. A tag `<th>` é utilizada para criar o cabeçalho da coluna. A tag `<td>` é utilizada para criar o conteúdo da célula.
 
 ## Elementos de linha e elementos de bloco
-[&uarr;](#1-introdução-ao-html)
+[&uarr;](#1-introdução-a-html)
 
 Cada elemento HTML possui um comportamento diferente. Alguns elementos são elementos de linha e outros são elementos de bloco. Os elementos de linha são elementos que não ocupam toda a largura da página. Os elementos de bloco são elementos que ocupam toda a largura da página.
 
@@ -434,7 +434,7 @@ Para demonstrar a diferença entre elementos de linha e elementos de bloco, vamo
 Observe que as imagens estão uma ao lado da outra. Para que as imagens fiquem uma abaixo da outra, é necessário alterar a propriedade `display` das imagens para `block`. Isso será feito posteriormente, quando aprendermos sobre CSS.
 
 ## Como adicionar um vídeo ao seu site?
-[&uarr;](#1-introdução-ao-html)
+[&uarr;](#1-introdução-a-html)
 
 Para adicionar um vídeo ao seu site, você pode utilizar o [YouTube](https://www.youtube.com/). Para demonstrar, vamos adicionar um vídeo ao nosso site. Para isso, siga os passos abaixo:
 
@@ -467,7 +467,7 @@ O resultado final deve ser parecido com o código abaixo:
 ```
 
 ## Como adicionar um mapa ao seu site?
-[&uarr;](#1-introdução-ao-html)
+[&uarr;](#1-introdução-a-html)
 
 Para adicionar um mapa ao seu site, você pode utilizar o [Google Maps](https://www.google.com.br/maps/). Para demonstrar, vamos adicionar um mapa ao nosso site. Para isso, siga os passos abaixo:
 
@@ -499,7 +499,7 @@ O resultado final deve ser parecido com o código abaixo:
 ```
 
 ## Como adicionar um rodapé ao seu site?
-[&uarr;](#1-introdução-ao-html)
+[&uarr;](#1-introdução-a-html)
 
 O rodapé é a parte inferior da página. O rodapé é utilizado para adicionar informações adicionais ao site como por exemplo, o nome do autor, licença, data de criação, links para redes sociais, etc. Para demonstrar, vamos adicionar um rodapé ao nosso site. Para isso, siga os passos abaixo:
 
@@ -521,7 +521,7 @@ O rodapé é a parte inferior da página. O rodapé é utilizado para adicionar 
 ```
 
 ## Metatags para SEO
-[&uarr;](#1-introdução-ao-html)
+[&uarr;](#1-introdução-a-html)
 
 SEO é a sigla para `Search Engine Optimization`, que significa Otimização para Mecanismos de Busca. O SEO é utilizado para melhorar o posicionamento de um site nos mecanismos de busca. Para melhorar o posicionamento de um site nos mecanismos de busca, é necessário adicionar metatags ao site. As principais metatags para SEO são: `description`, `keywords`, `author`, `viewport`, `robots` e `charset`. Adicionar estas metatags permitem que o site seja encontrado mais facilmente nos mecanismos de busca.
 
@@ -580,7 +580,7 @@ O resultado final deve ser parecido com o código abaixo:
 ```
 
 ## Resultado Final
-[&uarr;](#1-introdução-ao-html)
+[&uarr;](#1-introdução-a-html)
 
 O resultado final deve ser parecido com o código abaixo:
 
