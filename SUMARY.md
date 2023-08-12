@@ -121,3 +121,14 @@
 - [x] Instalação do VSCode
 - [x] Instalação do Node.js
 - [x] Instalação do Git
+
+
+
+<!-- ## Deploy do site no GitHub Pages
+[&uarr;](#1-introdução-ao-html)
+
+O GitHub Pages é um serviço de hospedagem de sites estáticos. Para hospedar um site no GitHub Pages, você precisa criar um repositório no GitHub e adicionar o código do seu site no repositório. Para demonstrar, vamos hospedar o nosso site no GitHub Pages. Para isso, siga os passos abaixo:
+
+> ⚠️ **Aviso**: Antes de prosseguir, certifique-se que você possui o Git instalado no seu computador. Se você não possui o Git instalado no seu computador, instale o Git no site [Git](https://git-scm.com/downloads).
+
+> ⚠️ **Aviso**: Antes de prosseguir, certifique-se que você possui uma conta no GitHub. Se você não possui uma conta no GitHub, crie uma conta no site [GitHub](https://github.com).  -->

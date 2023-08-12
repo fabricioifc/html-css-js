@@ -118,3 +118,4 @@ Para sincronizar as configurações do Visual Studio Code, siga os passos abaixo
 10. A tecla `Ctrl + Shift + F` é utilizada para abrir a barra de pesquisa e procurar texto em todos os arquivos.
 11. A tecla `Ctrl + P` é utilizada para abrir a barra de pesquisa e procurar arquivos.
 12. A tecla `F1` ou `Ctrl + Shift + P` é utilizada para abrir a barra de comandos.
+13. 
