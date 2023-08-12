@@ -850,7 +850,7 @@ p.red {
 p.green {
     color: green;
 }
-.center {
+.link {
     color: magenta;
     text-decoration: none;
     font-size: 20px;
@@ -870,7 +870,7 @@ p.green {
             <p class="blue">Faça doações ou empréstimos de livros no campus.</p>
             <p class="red">Faça doações ou empréstimos de livros no campus.</p>
             <p class="green">Faça doações ou empréstimos de livros no campus.</p>
-            <a class="center" href="#">GitHub</a>
+            <a class="link" href="#">GitHub</a>
         </div>
     </body>
 </html>
@@ -883,26 +883,26 @@ O resultado final com as alterações de estlo podem ser visualizados abaixo:
     <head>
         <style>
             #main {
-    font-family: monospace;
-}
-h1 {
-    color: red;
-    background-color: black;
-}
-p.blue {
-    color: blue;
-}
-p.red {
-    color: red;
-}
-p.green {
-    color: green;
-}
-.center {
-    color: magenta;
-    text-decoration: none;
-    font-size: 20px;
-}
+                font-family: monospace;
+            }
+            h1 {
+                color: red;
+                background-color: black;
+            }
+            p.blue {
+                color: blue;
+            }
+            p.red {
+                color: red;
+            }
+            p.green {
+                color: green;
+            }
+            .link {
+                color: magenta;
+                text-decoration: none;
+                font-size: 20px;
+            }
         </style>
     </head>
     <body>
@@ -911,7 +911,7 @@ p.green {
             <p class="blue">Faça doações ou empréstimos de livros no campus.</p>
             <p class="red">Faça doações ou empréstimos de livros no campus.</p>
             <p class="green">Faça doações ou empréstimos de livros no campus.</p>
-            <a class="center" href="#">GitHub</a>
+            <a class="link" href="#">GitHub</a>
         </div>
     </body>
 </html>
