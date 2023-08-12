@@ -876,6 +876,10 @@ p.green {
 </html>
 ```
 
+O resultado esperado deve ser parecido com a imagem abaixo:
+
+![seletores-de-elemento](./image/seletor-exemplo.png)
+
 Perceba que estamos usando o seletor de elemento para adicionar estilos ao título, ao parágrafo e ao link. 
 
  - O seletor `h1` seleciona todos os elementos `<h1>` e adiciona a cor vermelha e o fundo preto. 
@@ -883,3 +887,4 @@ Perceba que estamos usando o seletor de elemento para adicionar estilos ao títu
  - O seletor `p.red` seleciona todos os elementos `<p>` com a classe `red` e adiciona a cor vermelha. 
  - O seletor `p.green` seleciona todos os elementos `<p>` com a classe `green` e adiciona a cor verde. 
  - O seletor `.link` seleciona todos os elementos com a classe `link` e adiciona a cor magenta, remove o sublinhado e aumenta o tamanho da fonte.
+
