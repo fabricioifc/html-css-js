@@ -878,10 +878,34 @@ p.green {
 
 O resultado final com as alterações de estlo podem ser visualizados abaixo:
 
-<div style="font-family: monospace;">
-    <h1 style="color: red; background-color: black;">Livraria</h1>
-    <p style="color: blue;">Faça doações ou empréstimos de livros no campus.</p>
-    <p style="color: red;">Faça doações ou empréstimos de livros no campus.</p>
-    <p style="color: green;">Faça doações ou empréstimos de livros no campus.</p>
-    <a color: magenta;text-decoration: none;font-size: 20px; href="#">GitHub</a>
+<style>
+    #main {
+        font-family: monospace;
+    }
+    h1 {
+        color: red;
+        background-color: black;
+    }
+    p.blue {
+        color: blue;
+    }
+    p.red {
+        color: red;
+    }
+    p.green {
+        color: green;
+    }
+    .link {
+        color: magenta;
+        text-decoration: none;
+        font-size: 20px;
+    }
+</style>
+
+<div id="main">
+    <h1>Livraria</h1>
+    <p class="blue">Faça doações ou empréstimos de livros no campus.</p>
+    <p class="red">Faça doações ou empréstimos de livros no campus.</p>
+    <p class="green">Faça doações ou empréstimos de livros no campus.</p>
+    <a class="link" href="#">GitHub</a>
 </div>
