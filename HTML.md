@@ -35,7 +35,7 @@ As principais tecnologias utilizadas para criar páginas web são o HTML, o CSS 
 A diferença entre o HTML, o CSS e o JavaScript é que o HTML é uma linguagem de marcação, o CSS é uma linguagem de estilização e o JavaScript é uma linguagem de programação. A imagem abaixo ilustra a diferença entre o HTML, o CSS e o JavaScript.
 
 
-<img src="image/esqueleto.webp" width="100%">
+<img src="image/esqueleto.jpg" width="100%">
 
 > Fonte: <a href="https://thumbs.dreamstime.com/z/html-css-e-javascript-como-camadas-de-codifica%C3%A7%C3%A3o-explica%C3%A7%C3%A3o-diagrama-t%C3%B3picos-explicadas-fases-desenvolvimento-projetos-233593998.jpg">Desamstime</a>
 
@@ -704,7 +704,7 @@ O resultado final deve ser parecido com o código abaixo:
 
 Crie um site para mostrar os seus filmes e séries favoritas. O site precisa ter:
  - Um título. Utilize a tag `<h1>`.
- - Uma foto de um ator ou atriz. Utilize a tag `<img>`.
+ - Uma foto de um ator ou atriz. Utiqlize a tag `<img>`.
  - Um parágrafo com o nome do ator ou atriz. Utilize a tag `<p>`. O nome do ator ou atriz deve estar em negrito. Utilize a tag `<strong>`.
  - Uma lista de filmes. Cada filme terá um título, um ano e um gênero. A lista deve ter pelo menos 3 filmes. Utilize as tags `<h1>`, `<ul>`, `<li>`, `<table>`, `<thead>`, `<tbody>`, `<tr>`, `<th>` e `<td>`. 
  - Uma tabela com as suas séries favoritas. Cada série terá um título, um ano e um gênero. A tabela deve ter pelo menos 3 séries. Utilize as tags `<h1>`, `<table>`, `<thead>`, `<tbody>`, `<tr>`, `<th>` e `<td>`.
