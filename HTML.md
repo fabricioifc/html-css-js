@@ -876,36 +876,10 @@ p.green {
 </html>
 ```
 
-O resultado final com as alterações de estlo podem ser visualizados abaixo:
+Perceba que estamos usando o seletor de elemento para adicionar estilos ao título, ao parágrafo e ao link. 
 
-<style>
-    #main {
-        font-family: monospace;
-    }
-    h1 {
-        color: red;
-        background-color: black;
-    }
-    p.blue {
-        color: blue;
-    }
-    p.red {
-        color: red;
-    }
-    p.green {
-        color: green;
-    }
-    .link {
-        color: magenta;
-        text-decoration: none;
-        font-size: 20px;
-    }
-</style>
-
-<div id="main">
-    <h1>Livraria</h1>
-    <p class="blue">Faça doações ou empréstimos de livros no campus.</p>
-    <p class="red">Faça doações ou empréstimos de livros no campus.</p>
-    <p class="green">Faça doações ou empréstimos de livros no campus.</p>
-    <a class="link" href="#">GitHub</a>
-</div>
+ - O seletor `h1` seleciona todos os elementos `<h1>` e adiciona a cor vermelha e o fundo preto. 
+ - O seletor `p.blue` seleciona todos os elementos `<p>` com a classe `blue` e adiciona a cor azul. 
+ - O seletor `p.red` seleciona todos os elementos `<p>` com a classe `red` e adiciona a cor vermelha. 
+ - O seletor `p.green` seleciona todos os elementos `<p>` com a classe `green` e adiciona a cor verde. 
+ - O seletor `.link` seleciona todos os elementos com a classe `link` e adiciona a cor magenta, remove o sublinhado e aumenta o tamanho da fonte.
