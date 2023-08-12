@@ -1,27 +1,36 @@
 # 1. Introdução a HTML
 
-- [x] [Introdução ao conteúdo](HTML.md#introdução-ao-conteúdo)
-- [x] [Como a internet chega até a sua casa?](HTML.md#como-a-internet-chega-até-a-sua-casa)
-- [x] [O que é o HTML?](HTML.md#o-que-é-o-html)
-- [x] [Estrutura básica](HTML.md#estrutura-básica)
-- [x] [Tags básicas](HTML.md#tags-básicas)
-- [x] [Aninhamento](HTML.md#aninhamento)
-- [x] [Atributos](HTML.md#atributos)
-- [x] [Exemplo](HTML.md#exemplo)
-- [x] [Criando nosso primeiro site com HTML](HTML.md#criando-nosso-primeiro-site-com-html)
-- [x] [Símbolos e Emoji no seu site](HTML.md#símbolos-e-emoji-no-seu-site)
-- [x] [Você tem o direito de usar qualquer imagem no seu site?](HTML.md#você-tem-o-direito-de-usar-qualquer-imagem-no-seu-site)
-- [x] [Como adicionar um favicon ao seu site?](HTML.md#como-adicionar-um-favicon-ao-seu-site)
-- [x] [Como adicionar tabela ao seu site?](HTML.md#como-adicionar-tabela-ao-seu-site)
-- [x] [Elementos de linha e elementos de bloco](HTML.md#elementos-de-linha-e-elementos-de-bloco)
-- [x] [Como adicionar um vídeo ao seu site?](HTML.md#como-adicionar-um-vídeo-ao-seu-site)
-- [x] [Como adicionar um mapa ao seu site?](HTML.md#como-adicionar-um-mapa-ao-seu-site)
-- [x] [Como adicionar um rodapé ao seu site?](HTML.md#como-adicionar-um-rodapé-ao-seu-site)
-- [x] [Metatags para SEO](HTML.md#metatags-para-seo)
-- [x] [Resultado final](HTML.md#resultado-final)
-- [x] [Exercício Prático](HTML.md#exercício-prático)
-- [ ] [Como adicionar áudio ao seu site?](HTML.md#como-adicionar-áudio-ao-seu-site)
-- [ ] [Como adicionar formulário ao seu site?](HTML.md#como-adicionar-formulário-ao-seu-site)
+## Sumário
+  - [x] [Introdução ao conteúdo](HTML.md#introdução-ao-conteúdo)
+- HTML
+  - [x] [Como a internet chega até a sua casa?](HTML.md#como-a-internet-chega-até-a-sua-casa)
+  - [x] [O que é o HTML?](HTML.md#o-que-é-o-html)
+  - [x] [Estrutura básica](HTML.md#estrutura-básica)
+  - [x] [Tags básicas](HTML.md#tags-básicas)
+  - [x] [Aninhamento](HTML.md#aninhamento)
+  - [x] [Atributos](HTML.md#atributos)
+  - [x] [Exemplo](HTML.md#exemplo)
+  - [x] [Criando nosso primeiro site com HTML](HTML.md#criando-nosso-primeiro-site-com-html)
+  - [x] [Símbolos e Emoji no seu site](HTML.md#símbolos-e-emoji-no-seu-site)
+  - [x] [Você tem o direito de usar qualquer imagem no seu site?](HTML.md#você-tem-o-direito-de-usar-qualquer-imagem-no-seu-site)
+  - [x] [Como adicionar um favicon ao seu site?](HTML.md#como-adicionar-um-favicon-ao-seu-site)
+  - [x] [Como adicionar tabela ao seu site?](HTML.md#como-adicionar-tabela-ao-seu-site)
+  - [x] [Elementos de linha e elementos de bloco](HTML.md#elementos-de-linha-e-elementos-de-bloco)
+  - [x] [Como adicionar um vídeo ao seu site?](HTML.md#como-adicionar-um-vídeo-ao-seu-site)
+  - [x] [Como adicionar um mapa ao seu site?](HTML.md#como-adicionar-um-mapa-ao-seu-site)
+  - [x] [Como adicionar um rodapé ao seu site?](HTML.md#como-adicionar-um-rodapé-ao-seu-site)
+  - [x] [Metatags para SEO](HTML.md#metatags-para-seo)
+  - [x] [Resultado final](HTML.md#resultado-final)
+  - [x] [Exercício Prático](HTML.md#exercício-prático)
+  - [ ] [Como adicionar áudio ao seu site?](HTML.md#como-adicionar-áudio-ao-seu-site)
+  - [ ] [Como adicionar formulário ao seu site?](HTML.md#como-adicionar-formulário-ao-seu-site)
+- CSS
+  - [x] [O que é o CSS?](HTML.md#o-que-é-o-css)
+  - [x] [Inline, Embedding e Import](HTML.md#inline-embedding-e-import)
+  - [x] [Selectors](HTML.md#selectors)
+  - [x] [Especificidade](HTML.md#especificidade)
+  - [x] [Box model](HTML.md#box-model)
+  
 
 ## Introdução ao conteúdo
 [&uarr;](#1-introdução-a-html)
@@ -711,3 +720,198 @@ Crie um site para mostrar os seus filmes e séries favoritas. O site precisa ter
  - Um vídeo de um trailer de um filme ou série. Utilize a tag `<iframe>`.
   - Um rodapé com o seu nome e link para o seu GitHub. Utilize as tags `<p>` e `<a>`.
 
+# O que é CSS?
+[&uarr;](#1-introdução-a-html)
+
+CSS é a sigla para `Cascading Style Sheets`, que significa Folhas de Estilo em Cascata. O CSS é utilizado para adicionar estilos e comportamentos aos elementos HTML. O CSS é utilizado para alterar a cor, o tamanho, a fonte, a posição, a visibilidade, a animação, etc. dos elementos HTML. 
+
+## Sintaxe
+[&uarr;](#1-introdução-a-html)
+
+O CSS é composto por regras. Cada regra é composta por um seletor e um bloco de declarações. O seletor é utilizado para selecionar um ou mais elementos HTML. O bloco de declarações é utilizado para adicionar estilos e comportamentos aos elementos HTML.
+
+```css
+seletor {
+    propriedade: valor;
+}
+```
+
+No exemplo acima, o seletor é `seletor` e o bloco de declarações é `propriedade: valor;`. O seletor pode ser um elemento HTML, uma classe ou um id. A propriedade é o estilo ou comportamento que será adicionado ao elemento HTML. O valor é o valor da propriedade.
+
+## Como adicionar CSS ao seu site?
+[&uarr;](#1-introdução-a-html)
+
+> 💡 Para experimentar os exemplos abaixo, crie um novo projeto no Visual Studio Code e crie um arquivo chamado `index.html`. Evite copiar e colar os exemplos abaixo. Digite os exemplos abaixo para praticar. 
+
+> Para criar um novo projeto, faça o seguinte:
+> 1. Abra o Visual Studio Code.
+> 2. Clique no menu "Arquivo" -> "Abrir Pasta".
+> 3. Crie uma pasta chamada `segundo-projeto`.
+> 5. Salve a pasta `segundo-projeto` dentro da pasta `Documentos`.
+> 6. Clique no menu "Arquivo" -> "Novo Arquivo".
+> 7. Crie um arquivo chamado `index.html`. O arquivo `index.html` é o arquivo principal do site.
+> 8. Abra o projeto no navegador usando a ferramenta `live server`.
+
+Para adicionar CSS ao seu site, você pode utilizar a tag `<style>`. Para demonstrar, vamos adicionar CSS ao nosso site. Para isso, siga os passos abaixo:
+
+1. Abra o arquivo `index.html` no Visual Studio Code.
+2. Adicione a tag `<style>` dentro da tag `<head>`.
+3. Adicione o código CSS dentro da tag `<style>`.
+
+O resultado final deve ser parecido com o código abaixo:
+
+```html
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Livraria</title>
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <meta name="description" content="Livraria do IFC">
+        <meta name="keywords" content="IFC, Professor, Informática, Web Design">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="Fabricio Bizotto">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            h1 {
+                color: red;
+                background-color: black;
+            }
+            p {
+                color: blue;
+                background-color: yellow;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Livraria</h1>
+        <p>Faça doações ou empréstimos de livros no campus.</p>
+    </body>
+</html>
+```
+
+Perceba que o resultado final é um título vermelho com fundo preto. Isso acontece porque o seletor `h1` seleciona todos os elementos `<h1>` e adiciona a cor vermelha e o fundo preto. O resultado final também é um parágrafo azul com fundo amarelo. Isso acontece porque o seletor `p` seleciona todos os elementos `<p>` e adiciona a cor azul e o fundo amarelo.
+
+## Como adicionar CSS em um arquivo externo?
+[&uarr;](#1-introdução-a-html)
+
+Para adicionar CSS em um arquivo externo, você pode utilizar a tag `<link>`. Vale ressaltar que é uma boa prática adicionar o CSS em um arquivo externo. Para demonstrar, vamos adicionar CSS em um arquivo externo. Para isso, siga os passos abaixo:
+
+1. Crie um arquivo chamado `estilo.css` dentro da pasta `segundo-projeto`.
+2. Mover o código css do exemplo anterior para o arquivo `estilo.css`.
+3. Adicione a tag `<link>` com os atributos `rel` e `href` dentro da tag `<head>`. O atributo `rel` deve ter o valor `stylesheet`. O atributo `href` deve ter o valor `estilo.css`.
+4. Abra o projeto no navegador usando a ferramenta `live server`.
+
+O resultado final deve ser parecido com o código abaixo:
+
+```html
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Livraria</title>
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <meta name="description" content="Livraria do IFC">
+        <meta name="keywords" content="IFC, Professor, Informática, Web Design">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="Fabricio Bizotto">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- Alteração -->
+        <link rel="stylesheet" href="estilo.css">
+    </head>
+    <body>
+        <h1>Livraria</h1>
+        <p>Faça doações ou empréstimos de livros no campus.</p>
+    </body>
+</html>
+```
+
+## Seletores de Elemento
+[&uarr;](#1-introdução-a-html)
+
+O seletor de elemento é utilizado para selecionar um ou mais elementos HTML. Como seletor, podemos usar uma `tag`, um `id` ou uma `classe`. Para demonstrar, vamos alterar o código do nosso site para adicionar um estilo ao título, ao parágrafo e ao link. Para isso, siga os passos abaixo:
+
+```css
+/* estilos.css */
+#main {
+    font-family: monospace;
+}
+h1 {
+    color: red;
+    background-color: black;
+}
+p.blue {
+    color: blue;
+}
+p.red {
+    color: red;
+}
+p.green {
+    color: green;
+}
+.center {
+    color: magenta;
+    text-decoration: none;
+    font-size: 20px;
+}
+```
+
+```html
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        ...
+    </head>
+    <body>
+        <div id="main">
+            <h1>Livraria</h1>
+            <p class="blue">Faça doações ou empréstimos de livros no campus.</p>
+            <p class="red">Faça doações ou empréstimos de livros no campus.</p>
+            <p class="green">Faça doações ou empréstimos de livros no campus.</p>
+            <a class="center" href="#">GitHub</a>
+        </div>
+    </body>
+</html>
+```
+
+O resultado final com as alterações de estlo podem ser visualizados abaixo:
+
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <style>
+            #main {
+    font-family: monospace;
+}
+h1 {
+    color: red;
+    background-color: black;
+}
+p.blue {
+    color: blue;
+}
+p.red {
+    color: red;
+}
+p.green {
+    color: green;
+}
+.center {
+    color: magenta;
+    text-decoration: none;
+    font-size: 20px;
+}
+        </style>
+    </head>
+    <body>
+        <div id="main">
+            <h1>Livraria</h1>
+            <p class="blue">Faça doações ou empréstimos de livros no campus.</p>
+            <p class="red">Faça doações ou empréstimos de livros no campus.</p>
+            <p class="green">Faça doações ou empréstimos de livros no campus.</p>
+            <a class="center" href="#">GitHub</a>
+        </div>
+    </body>
+</html>
