@@ -1,4 +1,4 @@
-# 1. Introdução ao HTML
+# 1. Introdução a HTML
 
 - [x] [Como a internet chega até a sua casa?](TUTORIAL.md#como-a-internet-chega-até-a-sua-casa)
 - [x] [O que é o HTML?](TUTORIAL.md#o-que-é-o-html)
@@ -16,9 +16,10 @@
 - [x] [Como adicionar um vídeo ao seu site?](TUTORIAL.md#como-adicionar-um-vídeo-ao-seu-site)
 - [x] [Como adicionar um mapa ao seu site?](TUTORIAL.md#como-adicionar-um-mapa-ao-seu-site)
 - [x] [Como adicionar um rodapé ao seu site?](TUTORIAL.md#como-adicionar-um-rodapé-ao-seu-site)
+- [x] [Metatags para SEO](TUTORIAL.md#metatags-para-seo)
+- [x] [Resultado final](TUTORIAL.md#resultado-final)
 - [ ] [Como adicionar áudio ao seu site?](TUTORIAL.md#como-adicionar-áudio-ao-seu-site)
 - [ ] [Como adicionar formulário ao seu site?](TUTORIAL.md#como-adicionar-formulário-ao-seu-site)
-- [ ] [Resultado final](TUTORIAL.md#resultado-final)
 
 ## Como a internet chega até a sua casa?
 [&uarr;](#1-introdução-ao-html)
@@ -519,6 +520,65 @@ O rodapé é a parte inferior da página. O rodapé é utilizado para adicionar 
 </html>
 ```
 
+## Metatags para SEO
+[&uarr;](#1-introdução-ao-html)
+
+SEO é a sigla para `Search Engine Optimization`, que significa Otimização para Mecanismos de Busca. O SEO é utilizado para melhorar o posicionamento de um site nos mecanismos de busca. Para melhorar o posicionamento de um site nos mecanismos de busca, é necessário adicionar metatags ao site. As principais metatags para SEO são: `description`, `keywords`, `author`, `viewport`, `robots` e `charset`. Adicionar estas metatags permitem que o site seja encontrado mais facilmente nos mecanismos de busca.
+
+As metatags são utilizadas para adicionar informações adicionais ao documento. Vejamos alguns exemplos de metatags:
+
+```html
+<meta name="description" content="Descrição do documento">
+<meta name="keywords" content="Palavras-chave do documento">
+<meta name="author" content="Autor do documento">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<meta charset="UTF-8">
+```
+
+Cada `metatag` possui um significado. Para entender melhor, vamos detalhar abaixo cada uma:
+
+ - A metatag `<meta name="description" content="Descrição do documento">` é utilizada para adicionar uma descrição ao documento. A descrição é utilizada pelos mecanismos de busca para exibir uma descrição do documento nos resultados de busca.
+ - A metatag `<meta name="keywords" content="Palavras-chave do documento">` é utilizada para adicionar palavras-chave ao documento. As palavras-chave são utilizadas pelos mecanismos de busca para exibir o documento nos resultados de busca.
+ - A metatag `<meta name="author" content="Autor do documento">` é utilizada para adicionar o autor do documento.
+ - A metatag `<meta name="viewport" content="width=device-width, initial-scale=1.0">` é utilizada para informar ao navegador que o documento deve ser exibido com a largura do dispositivo e com o zoom inicial de 100%.
+ - A metatag `<meta name="robots" content="index, follow">` é utilizada para informar aos mecanismos de busca que o documento deve ser indexado e que os links do documento devem ser seguidos.
+ - A metatag `<meta charset="UTF-8">` é utilizada para informar ao navegador o conjunto de caracteres do documento. O conjunto de caracteres é utilizado para exibir caracteres especiais, como por exemplo, acentos.
+
+### Como adicionar metatags ao seu site?
+
+Para adicionar metatags ao seu site, você pode utilizar o [Meta Tag Generator](https://www.metatags.org/). Para demonstrar, vamos adicionar metatags ao nosso site. Para isso, siga os passos abaixo:
+
+> 💡 **Importante**: As metatags devem ser adicionadas dentro da tag `<head>`.
+
+1. Abra o site [Free Meta Tag Generator](https://www.seoptimer.com/meta-tag-generator).
+2. Preencha os campos com as informações do seu site.
+3. Clique no botão "Generate Meta Tags".
+4. Clique no botão "Copy to Clipboard".
+5. Cole as metatags no seu site dentro da tag `<head>`.
+
+O resultado final deve ser parecido com o código abaixo:
+
+```html
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Meu Perfil</title>
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <meta name="title" content="Meu Perfil">
+        <meta name="description" content="Meu perfil como professor de informática">
+        <meta name="keywords" content="IFC, Professor, Informática, Web Design">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="Fabricio Bizotto">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        ...
+    </body>
+</html>
+```
+
 ## Resultado Final
 [&uarr;](#1-introdução-ao-html)
 
@@ -531,6 +591,12 @@ O resultado final deve ser parecido com o código abaixo:
         <meta charset="UTF-8">
         <title>Meu Perfil</title>
         <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <meta name="title" content="Meu Perfil">
+        <meta name="description" content="Meu perfil como professor de informática">
+        <meta name="keywords" content="IFC, Professor, Informática, Web Design">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="Fabricio Bizotto">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
         <div>
@@ -590,65 +656,6 @@ O resultado final deve ser parecido com o código abaixo:
             <p>Licença: MIT</p>
             <a href="https://github.com/fabricioifc" target="_blank">GitHub</a>
         </div>
-    </body>
-</html>
-```
-
-## Metatags para SEO
-[&uarr;](#1-introdução-ao-html)
-
-SEO é a sigla para `Search Engine Optimization`, que significa Otimização para Mecanismos de Busca. O SEO é utilizado para melhorar o posicionamento de um site nos mecanismos de busca. Para melhorar o posicionamento de um site nos mecanismos de busca, é necessário adicionar metatags ao site. As principais metatags para SEO são: `description`, `keywords`, `author`, `viewport`, `robots` e `charset`. Adicionar estas metatags permitem que o site seja encontrado mais facilmente nos mecanismos de busca.
-
-As metatags são utilizadas para adicionar informações adicionais ao documento. Vejamos alguns exemplos de metatags:
-
-```html
-<meta name="description" content="Descrição do documento">
-<meta name="keywords" content="Palavras-chave do documento">
-<meta name="author" content="Autor do documento">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="robots" content="index, follow">
-<meta charset="UTF-8">
-```
-
-Cada `metatag` possui um significado. Para entender melhor, vamos detalhar abaixo cada uma:
-
- - A metatag `<meta name="description" content="Descrição do documento">` é utilizada para adicionar uma descrição ao documento. A descrição é utilizada pelos mecanismos de busca para exibir uma descrição do documento nos resultados de busca.
- - A metatag `<meta name="keywords" content="Palavras-chave do documento">` é utilizada para adicionar palavras-chave ao documento. As palavras-chave são utilizadas pelos mecanismos de busca para exibir o documento nos resultados de busca.
- - A metatag `<meta name="author" content="Autor do documento">` é utilizada para adicionar o autor do documento.
- - A metatag `<meta name="viewport" content="width=device-width, initial-scale=1.0">` é utilizada para informar ao navegador que o documento deve ser exibido com a largura do dispositivo e com o zoom inicial de 100%.
- - A metatag `<meta name="robots" content="index, follow">` é utilizada para informar aos mecanismos de busca que o documento deve ser indexado e que os links do documento devem ser seguidos.
- - A metatag `<meta charset="UTF-8">` é utilizada para informar ao navegador o conjunto de caracteres do documento. O conjunto de caracteres é utilizado para exibir caracteres especiais, como por exemplo, acentos.
-
-### Como adicionar metatags ao seu site?
-
-Para adicionar metatags ao seu site, você pode utilizar o [Meta Tag Generator](https://www.metatags.org/). Para demonstrar, vamos adicionar metatags ao nosso site. Para isso, siga os passos abaixo:
-
-> 💡 **Importante**: As metatags devem ser adicionadas dentro da tag `<head>`.
-
-1. Abra o site [Free Meta Tag Generator](https://www.seoptimer.com/meta-tag-generator).
-2. Preencha os campos com as informações do seu site.
-3. Clique no botão "Generate Meta Tags".
-4. Clique no botão "Copy to Clipboard".
-5. Cole as metatags no seu site dentro da tag `<head>`.
-
-O resultado final deve ser parecido com o código abaixo:
-
-```html
-<!DOCTYPE html>
-<html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <title>Meu Perfil</title>
-        <link rel="icon" href="favicon.ico" type="image/x-icon">
-        <meta name="title" content="Meu Perfil">
-        <meta name="description" content="Meu perfil como professor de informática">
-        <meta name="keywords" content="IFC, Professor, Informática, Web Design">
-        <meta name="robots" content="index, follow">
-        <meta name="author" content="Fabricio Bizotto">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        ...
     </body>
 </html>
 ```

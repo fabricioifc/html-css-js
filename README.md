@@ -118,4 +118,20 @@ Para sincronizar as configurações do Visual Studio Code, siga os passos abaixo
 10. A tecla `Ctrl + Shift + F` é utilizada para abrir a barra de pesquisa e procurar texto em todos os arquivos.
 11. A tecla `Ctrl + P` é utilizada para abrir a barra de pesquisa e procurar arquivos.
 12. A tecla `F1` ou `Ctrl + Shift + P` é utilizada para abrir a barra de comandos.
-13. 
+
+## Começando as aulas
+
+1. [x] [Introdução a HTML](HTML.md)
+2. [ ] [Introdução a CSS](CSS.md)
+3. [ ] [Introdução a JavaScript](JavaScript.md)
+
+
+## Referências
+
+- [Visual Studio Code](https://code.visualstudio.com/)
+- [Google Chrome](https://www.google.com/intl/pt-BR/chrome/)
+- [GitHub](https://github.com)
+- [HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
+- [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
+- [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
+- [W3Schools](https://www.w3schools.com/)
