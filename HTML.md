@@ -989,6 +989,7 @@ p {
     /* Alteração */
     margin: 10px;
     padding: 10px;
+    background-color: #e4e4e4;
 }
 p.blue {
     color: blue;
@@ -1001,5 +1002,6 @@ p.green {
 }
 ```
 
-Criamos um seletor de parágrafos `p` e adicionamos a propriedade `margin` e `padding`. Agora, todos os parágrafos terão um espaçamento de 10px.
+Criamos um seletor de parágrafos `p` e adicionamos a propriedade `margin` e `padding`. Agora, todos os parágrafos terão um espaçamento de 10px. Adicionamos também a propriedade `background-color` para adicionar uma cor de fundo. A cor de fundo vai nos auxiliar a visualizar melhor o espaçamento entre os parágrafos.
+
 
