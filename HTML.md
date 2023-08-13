@@ -752,6 +752,40 @@ No exemplo acima, o seletor é `seletor` e o bloco de declarações é `propried
 > 7. Crie um arquivo chamado `index.html`. O arquivo `index.html` é o arquivo principal do site.
 > 8. Abra o projeto no navegador usando a ferramenta `live server`.
 
+Existem três formas de adicionar CSS ao seu site: 
+ - Adicionar CSS na tag `<style>` dentro da tag `<head>`.
+ - Adicionar CSS em um arquivo externo com a tag `<link>` dentro da tag `<head>`.
+ - Adicionar CSS inline com o atributo `style` dentro da tag HTML.
+
+## Como adicionar CSS inline?
+
+Para adicionar CSS inline, você pode utilizar o atributo `style` dentro da tag HTML. Para demonstrar, vamos adicionar CSS inline ao nosso site. Para isso, siga os passos abaixo:
+
+1. Abra o arquivo `index.html` no Visual Studio Code.
+2. Adicione o atributo `style` dentro da tag `<h1>`.
+3. Adicione o código CSS dentro do atributo `style`.
+
+O resultado final deve ser parecido com o código abaixo:
+
+```html
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Livraria</title>
+    </head>
+    <body>
+        <h1 style="color: red; background-color: black;">Livraria</h1>
+        <p>Faça doações ou empréstimos de livros no campus.</p>
+    </body>
+</html>
+```
+
+Perceba que o resultado final é um título vermelho com fundo preto. Isso acontece porque o atributo `style` adiciona a cor vermelha e o fundo preto ao título.
+
+## Como adicionar CSS na tag `<style>`?
+[&uarr;](#1-introdução-a-html)
+
 Para adicionar CSS ao seu site, você pode utilizar a tag `<style>`. Para demonstrar, vamos adicionar CSS ao nosso site. Para isso, siga os passos abaixo:
 
 1. Abra o arquivo `index.html` no Visual Studio Code.
@@ -766,12 +800,6 @@ O resultado final deve ser parecido com o código abaixo:
     <head>
         <meta charset="UTF-8">
         <title>Livraria</title>
-        <link rel="icon" href="favicon.ico" type="image/x-icon">
-        <meta name="description" content="Livraria do IFC">
-        <meta name="keywords" content="IFC, Professor, Informática, Web Design">
-        <meta name="robots" content="index, follow">
-        <meta name="author" content="Fabricio Bizotto">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
             h1 {
                 color: red;
@@ -827,8 +855,10 @@ O resultado final deve ser parecido com o código abaixo:
 </html>
 ```
 
-## Seletores de Elemento
+## Seletores de Elemento, Classe e Id
 [&uarr;](#1-introdução-a-html)
+
+Podemos usar o seletor de elemento, classe e id para selecionar um ou mais elementos HTML. O seletor de elemento seleciona um ou mais elementos HTML. O seletor de classe seleciona um ou mais elementos HTML com a mesma classe. O seletor de id seleciona um elemento HTML com o respectivo id. Para demonstrar, as três formas de selecionar um elemento HTML, vamos adicionar um título, um parágrafo e uma lista ao nosso site. Para isso, siga os passos abaixo:
 
 O seletor de elemento é utilizado para selecionar um ou mais elementos HTML. Como seletor, podemos usar uma `tag`, um `id` ou uma `classe`. Para demonstrar, vamos alterar o código do nosso site para adicionar um estilo ao título, ao parágrafo e ao link. Para isso, siga os passos abaixo:
 
@@ -837,7 +867,7 @@ O seletor de elemento é utilizado para selecionar um ou mais elementos HTML. Co
 #main {
     font-family: monospace;
 }
-h1 {
+#main h1 {
     color: red;
     background-color: black;
 }
@@ -862,7 +892,7 @@ p.green {
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
-        ...
+        <link rel="stylesheet" href="estilo.css">
     </head>
     <body>
         <div id="main">
@@ -880,11 +910,96 @@ O resultado esperado deve ser parecido com a imagem abaixo:
 
 ![seletores-de-elemento](./image/seletor-exemplo.png)
 
-Perceba que estamos usando o seletor de elemento para adicionar estilos ao título, ao parágrafo e ao link. 
+Perceba que estamos usando seletores de elemento, classe e id para adicionar estilos ao título, ao parágrafo e ao link. 
 
- - O seletor `h1` seleciona todos os elementos `<h1>` e adiciona a cor vermelha e o fundo preto. 
+ - O seletor `#main` seleciona o elemento com o id `main` e adiciona a fonte `monospace`.
+ - O seletor `#main h1` seleciona todos os elementos `<h1>` dentro do elemento com o id `main` e adiciona a cor vermelha e o fundo preto.
  - O seletor `p.blue` seleciona todos os elementos `<p>` com a classe `blue` e adiciona a cor azul. 
  - O seletor `p.red` seleciona todos os elementos `<p>` com a classe `red` e adiciona a cor vermelha. 
  - O seletor `p.green` seleciona todos os elementos `<p>` com a classe `green` e adiciona a cor verde. 
  - O seletor `.link` seleciona todos os elementos com a classe `link` e adiciona a cor magenta, remove o sublinhado e aumenta o tamanho da fonte.
+
+
+## Como adicionar espaçamentos?
+[&uarr;](#1-introdução-a-html)
+
+Podemos adicionar espaçamentos entre os elementos HTML. Para isso, podemos usar as propriedades `margin` e `padding`. A propriedade `margin` é utilizada para adicionar espaçamento externo. A propriedade `padding` é utilizada para adicionar espaçamento interno. Para demonstrar, vamos adicionar espaçamentos ao nosso site. Para isso, siga os passos abaixo:
+
+> 💡 **Importante**: Nunca use a tag `br` para adicionar espaçamento. A tag `br` é utilizada para quebrar linha. Para adicionar espaçamento, use as propriedades `margin` e `padding`.
+
+```css
+/* estilos.css */
+#main {
+    font-family: monospace;
+}
+#main h1 {
+    color: red;
+    background-color: black;
+}
+p.blue {
+    color: blue;
+    /* Alteração */
+    margin: 10px;
+    padding: 10px;
+}
+p.red {
+    color: red;
+    /* Alteração */
+    margin: 10px;
+    padding: 10px;
+}
+p.green {
+    color: green;
+    /* Alteração */
+    margin: 10px;
+    padding: 10px;
+}
+.link {
+    color: magenta;
+    text-decoration: none;
+    font-size: 20px;
+}
+```
+
+```html
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <link rel="stylesheet" href="estilo.css">
+    </head>
+    <body>
+        <div id="main">
+            <h1>Livraria</h1>
+            <p class="blue">Faça doações ou empréstimos de livros no campus.</p>
+            <p class="red">Faça doações ou empréstimos de livros no campus.</p>
+            <p class="green">Faça doações ou empréstimos de livros no campus.</p>
+            <a class="link" href="#">GitHub</a>
+        </div>
+    </body>
+</html>
+```
+
+Podemos perceber que existe um padrão de 10px para `margin` e `padding` repetindo-se em todos os parágrafos. Para evitar repetição, podemos fazer uma pequena modificação no nosso código. Para isso, siga os passos abaixo:
+
+```css
+/* estilos.css */
+/* ... */
+p {
+    /* Alteração */
+    margin: 10px;
+    padding: 10px;
+}
+p.blue {
+    color: blue;
+}
+p.red {
+    color: red;
+}
+p.green {
+    color: green;
+}
+```
+
+Criamos um seletor de parágrafos `p` e adicionamos a propriedade `margin` e `padding`. Agora, todos os parágrafos terão um espaçamento de 10px.
 
