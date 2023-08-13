@@ -25,9 +25,10 @@
   - [ ] [Como adicionar áudio ao seu site?](HTML.md#como-adicionar-áudio-ao-seu-site)
   - [ ] [Como adicionar formulário ao seu site?](HTML.md#como-adicionar-formulário-ao-seu-site)
 - CSS
-  - [x] [O que é o CSS?](HTML.md#o-que-é-o-css)
+  - [x] [O que é CSS?](HTML.md#o-que-é-css)
   - [x] [Inline, Embedding e Import](HTML.md#inline-embedding-e-import)
   - [x] [Selectors](HTML.md#selectors)
+  - [x] [Como adicionar espaçamentos?](HTML.md#como-adicionar-espaçamentos)
   - [x] [Especificidade](HTML.md#especificidade)
   - [x] [Box model](HTML.md#box-model)
   
@@ -725,22 +726,6 @@ Crie um site para mostrar os seus filmes e séries favoritas. O site precisa ter
 
 CSS é a sigla para `Cascading Style Sheets`, que significa Folhas de Estilo em Cascata. O CSS é utilizado para adicionar estilos e comportamentos aos elementos HTML. O CSS é utilizado para alterar a cor, o tamanho, a fonte, a posição, a visibilidade, a animação, etc. dos elementos HTML. 
 
-## Sintaxe
-[&uarr;](#1-introdução-a-html)
-
-O CSS é composto por regras. Cada regra é composta por um seletor e um bloco de declarações. O seletor é utilizado para selecionar um ou mais elementos HTML. O bloco de declarações é utilizado para adicionar estilos e comportamentos aos elementos HTML.
-
-```css
-seletor {
-    propriedade: valor;
-}
-```
-
-No exemplo acima, o seletor é `seletor` e o bloco de declarações é `propriedade: valor;`. O seletor pode ser um elemento HTML, uma classe ou um id. A propriedade é o estilo ou comportamento que será adicionado ao elemento HTML. O valor é o valor da propriedade.
-
-## Como adicionar CSS ao seu site?
-[&uarr;](#1-introdução-a-html)
-
 > 💡 Para experimentar os exemplos abaixo, crie um novo projeto no Visual Studio Code e crie um arquivo chamado `index.html`. Evite copiar e colar os exemplos abaixo. Digite os exemplos abaixo para praticar. 
 
 > Para criar um novo projeto, faça o seguinte:
@@ -752,12 +737,29 @@ No exemplo acima, o seletor é `seletor` e o bloco de declarações é `propried
 > 7. Crie um arquivo chamado `index.html`. O arquivo `index.html` é o arquivo principal do site.
 > 8. Abra o projeto no navegador usando a ferramenta `live server`.
 
-Existem três formas de adicionar CSS ao seu site: 
- - Adicionar CSS na tag `<style>` dentro da tag `<head>`.
- - Adicionar CSS em um arquivo externo com a tag `<link>` dentro da tag `<head>`.
- - Adicionar CSS inline com o atributo `style` dentro da tag HTML.
+### Sintaxe
 
-## Como adicionar CSS inline?
+O CSS é composto por regras. Cada regra é composta por um seletor e um bloco de declarações. O seletor é utilizado para selecionar um ou mais elementos HTML. O bloco de declarações é utilizado para adicionar estilos e comportamentos aos elementos HTML.
+
+```css
+seletor {
+    propriedade: valor;
+}
+```
+
+No exemplo acima, o seletor é `seletor` e o bloco de declarações é `propriedade: valor;`. O seletor pode ser um elemento HTML, uma classe ou um id. A propriedade é o estilo ou comportamento que será adicionado ao elemento HTML. O valor é o valor da propriedade.
+
+## Inline, Embedding e Import
+[&uarr;](#1-introdução-a-html)
+
+Existem três formas de adicionar CSS ao seu site: inline, embedding e import:
+ - **Inline**: O CSS é adicionado diretamente no elemento HTML usando o atributo `style` dentro da tag HTML.
+ - **Embedding**: O CSS é adicionado dentro da tag `<style>` dentro da tag `<head>`. 
+ - **Import**: O CSS é adicionado em um arquivo externo e importado no HTML pela tag `<link>` dentro da tag `<head>`.
+
+> 💡 A terceira estratégia é a mais indicada. É uma boa prática adicionar o CSS em um arquivo externo.
+
+### Como adicionar CSS inline?
 
 Para adicionar CSS inline, você pode utilizar o atributo `style` dentro da tag HTML. Para demonstrar, vamos adicionar CSS inline ao nosso site. Para isso, siga os passos abaixo:
 
@@ -783,8 +785,7 @@ O resultado final deve ser parecido com o código abaixo:
 
 Perceba que o resultado final é um título vermelho com fundo preto. Isso acontece porque o atributo `style` adiciona a cor vermelha e o fundo preto ao título.
 
-## Como adicionar CSS na tag `<style>`?
-[&uarr;](#1-introdução-a-html)
+### Como adicionar CSS na tag `<style>`?
 
 Para adicionar CSS ao seu site, você pode utilizar a tag `<style>`. Para demonstrar, vamos adicionar CSS ao nosso site. Para isso, siga os passos abaixo:
 
@@ -820,8 +821,7 @@ O resultado final deve ser parecido com o código abaixo:
 
 Perceba que o resultado final é um título vermelho com fundo preto. Isso acontece porque o seletor `h1` seleciona todos os elementos `<h1>` e adiciona a cor vermelha e o fundo preto. O resultado final também é um parágrafo azul com fundo amarelo. Isso acontece porque o seletor `p` seleciona todos os elementos `<p>` e adiciona a cor azul e o fundo amarelo.
 
-## Como adicionar CSS em um arquivo externo?
-[&uarr;](#1-introdução-a-html)
+### Como adicionar CSS em um arquivo externo?
 
 Para adicionar CSS em um arquivo externo, você pode utilizar a tag `<link>`. Vale ressaltar que é uma boa prática adicionar o CSS em um arquivo externo. Para demonstrar, vamos adicionar CSS em um arquivo externo. Para isso, siga os passos abaixo:
 
@@ -855,7 +855,7 @@ O resultado final deve ser parecido com o código abaixo:
 </html>
 ```
 
-## Seletores de Elemento, Classe e Id
+## Seletores
 [&uarr;](#1-introdução-a-html)
 
 Podemos usar o seletor de elemento, classe e id para selecionar um ou mais elementos HTML. O seletor de elemento seleciona um ou mais elementos HTML. O seletor de classe seleciona um ou mais elementos HTML com a mesma classe. O seletor de id seleciona um elemento HTML com o respectivo id. Para demonstrar, as três formas de selecionar um elemento HTML, vamos adicionar um título, um parágrafo e uma lista ao nosso site. Para isso, siga os passos abaixo:
@@ -1004,4 +1004,52 @@ p.green {
 
 Criamos um seletor de parágrafos `p` e adicionamos a propriedade `margin` e `padding`. Agora, todos os parágrafos terão um espaçamento de 10px. Adicionamos também a propriedade `background-color` para adicionar uma cor de fundo. A cor de fundo vai nos auxiliar a visualizar melhor o espaçamento entre os parágrafos.
 
+## Especificidade
+[&uarr;](#1-introdução-a-html)
 
+A especificidade é utilizada para determinar qual estilo deve ser aplicado a um elemento HTML. A especificidade é utilizada quando dois ou mais seletores selecionam o mesmo elemento HTML. Para determinar qual estilo deve ser aplicado a um elemento HTML, é necessário verificar a especificidade de cada seletor. O seletor com maior especificidade é o seletor que será aplicado ao elemento HTML.
+
+A especificidade é calculada da seguinte forma:
+ - Seletor de elemento: 1 ponto.
+ - Seletor de classe: 10 pontos.
+ - Seletor de id: 100 pontos.
+ - Inline: 1000 pontos.
+ - !important: 10000 pontos.
+
+> 💡 Evite usar a propriedade `!important` pois ela irá sobreescrever qualquer estilo.
+
+### ID vs Classe
+
+O seletor de id tem maior especificidade que o seletor de classe. Para demonstrar, vamos adicionar um estilo ao nosso site. Para isso, siga os passos abaixo:
+
+```html
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <style>
+            #paragrafo {
+                color: red;
+            }
+
+            .azul {
+                color: blue;
+            }
+
+            .verde {
+                color: green;
+            }
+        </style>
+    </head>
+    <body>
+        <p id="paragrafo" class="azul verde">Um ID contra duas classes</p>
+    </body>
+</html>
+```
+
+**Resultado**: A cor do parágrafo será vermelha. Isso acontece porque o seletor de id tem maior especificidade que o seletor de classe.
+
+> 💡 É importante lembrar que o ID só pode ser usado uma vez por página.
+
+Experimente remover o seletor de id `#paragrafo` e veja o resultado.
+
+> 💡 Assista ao vídeo sobre [CSS: Seletores e Especificidade](https://youtu.be/dPL23aVRIlc) para saber mais.
