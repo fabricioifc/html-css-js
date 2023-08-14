@@ -1076,9 +1076,7 @@ Experimente remover o seletor de id `#paragrafo` no arquivo `index.html` no exem
 ## Reset de Estilos
 [&uarr;](#1-introdução-a-html)
 
-Todo elemento HTML tem um estilo padrão que é injetado pelo Browser. O legal é que não existe um padrão entre eles. O Chrome tem seu estilo, o Firefox tem o dele, o Safari e Opera também.
-
-Isso pode gerar incompatibilidade com o CSS que você escreve. As vezes você coloca um espaço aqui, outro ali e quando abre no navegador vê que está tudo bagunçado!
+Todo elemento HTML tem um estilo padrão que é injetado pelo navegador web. O legal é que não existe um padrão entre eles. O Chrome tem seu estilo, o Firefox tem o dele, o Safari e Opera também. Isso pode gerar incompatibilidade com o CSS que você escreve. 
 
 O CSS Reset é uma técnica que serve para evitar esse problema. Você remove ou seta valores para as propriedades dos elementos conforme necessário. Existem várias formas de se fazer um CSS Reset. Para começar, podemos criar um simples reset de estilos. Para isso, siga os passos abaixo:
 
@@ -1093,14 +1091,14 @@ Basta colocar esse código no início do arquivo de estilos:
 }
 ```
 
-Pronto, todos (*) os elementos ficarão sem borda, sem preenchimento e sem margem. Ai é só ir estilizando conforme for necessário.
+Pronto, todos (*) os elementos ficarão sem preenchimento e sem margem. Ai é só ir estilizando conforme for necessário.
 
 ## Box Model - O modelo em caixa
 [&uarr;](#1-introdução-a-html)
 
 O Box Model é utilizado para adicionar espaçamentos externos e internos aos elementos HTML. O Box Model é composto por quatro propriedades: `margin`, `border`, `padding` e `content`. A propriedade `margin` é utilizada para adicionar espaçamento externo. A propriedade `border` é utilizada para adicionar borda. A propriedade `padding` é utilizada para adicionar espaçamento interno. A propriedade `content` é utilizada para adicionar o conteúdo do elemento HTML.
 
-Box Model ajuda a entender como os elementos HTML são renderizados no navegador. Para demonstrar, Vamos usar um parágrafo como exemplo:
+Box Model ajuda a entender como os elementos HTML são renderizados no navegador. Para demonstrar, vamos usar um parágrafo como exemplo:
 
 ```html
 <!DOCTYPE html>
@@ -1209,42 +1207,145 @@ Agora, vamos adicionar o estilo ao nosso site. Para isso, siga os passos abaixo:
 
 O código CSS acima, começa com o reset de estilos com a propriedade `*` que seleciona todos os elementos HTML. O reset de estilos é utilizado para remover os estilos padrões do navegador. Assim, estamos zerando as margens e os espaçamentos dos elementos HTML. 
 
-
-
+O próximo passo será adicionar uma cor de fundo e um tipo de fonte diferente. Faremos isso na tag `body` pois queremos que esses estilos sejam aplicados em todo o site. Para isso, siga os passos abaixo:
 
 ```css
-/* estilo.css */
-/* Reset de Estilos */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
 }
+```
 
+> 💡 Podemos adicionar uma fonte externa ao nosso site. Recomendo usar o Google Fonts para adicionar fontes externas ao seu site. Conheça mais sobre o Google Fonts [clicando aqui](https://fonts.google.com/). Veremos isso mais adiante.
+
+Em seguida, vamos adicionar o estilo ao cabeçalho. Para isso, siga os passos abaixo:
+
+```css
 header {
     background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 1rem;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
+```
 
+O código acima adiciona uma cor de fundo, uma cor de texto, um alinhamento centralizado e um espaçamento interno de 20px em todas as direções. Para simplificar, podemos usar a propriedade `padding` para adicionar um espaçamento interno de 20px em todas as direções. Para isso, faça a seguinte alteração no código acima:
+
+```css
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    
+    /* assim (cima, baixo, esquerda, direita) */
+    padding: 20px 20px 20px 20px;
+    /* ou 20px em todas as direções */
+    padding: 20px;
+}
+```
+
+> 💡 Tanto `padding` quanto `margin` seguem a mesma lógica (cima, baixo, esquerda, direita).
+
+Nosso cabeçalho está quase pronto. Falta apenas adicionar o estilo ao título e ao menu. Para isso, siga os passos abaixo:
+
+```css
 nav ul {
+    /* Remove o estilo da lista */
     list-style: none;
 }
 
 nav li {
+    /* Deixa os itens da lista em linha */
     display: inline;
     margin-right: 20px;
 }
 
 nav a {
+    /* Remove o sublinhado dos links */
     text-decoration: none;
-    color: #fff;
+    /* Muda o texto dos links para negrito */
     font-weight: bold;
+    color: #fff;
 }
 ```
+
+O código acima remove os marcadores da lista, adiciona os itens da lista em linha e adiciona um espaçamento de 20px entre os itens da lista. Em seguida, o código acima remove o sublinhado dos links, adiciona a cor branca e deixa o texto em negrito.
+
+Pronto, nosso cabeçalho está pronto. Agora, vamos alterar nosso arquivo `index.html` para adicionar a lista de livros. Para isso, siga os passos abaixo:
+
+```html
+<!-- ... -->
+<body>
+    <header>
+        <!-- ... -->
+    </header>
+
+    <main>
+        <section class="cards">
+            <div class="card">
+                <img src="image/livraria/livro-01.jpg" alt="Livro 1">
+                <h2>Livro Incrível</h2>
+                <p>Autor: João Silva</p>
+                <button>Comprar</button>
+            </div>
+
+            <div class="card">
+                <img src="image/livraria/livro-02.jpg" alt="Livro 2">
+                <h2>Livro Fantástico</h2>
+                <p>Autor: Maria Santos</p>
+                <button>Comprar</button>
+            </div>
+
+            <div class="card">
+                <img src="image/livraria/livro-03.jpg" alt="Livro 3">
+                <h2>Aventuras Mágicas</h2>
+                <p>Autor: Pedro Almeida</p>
+                <button>Comprar</button>
+            </div>
+        </section>
+    </main>
+</body>
+<!-- ... -->
+```
+
+> 💡 Repare que estamos usando mais duas tags semânticas: `main` e `section`. A tag `main` é utilizada para adicionar o conteúdo principal do site. A tag `section` é utilizada para adicionar uma seção do site. Conheça mais sobre tags semânticas [clicando aqui](https://www.freecodecamp.org/portuguese/news/elementos-semanticos-do-html5-explicados/).
+
+O código acima adiciona uma seção com a classe `.cards` e três cartões com a classe `.card`. Cada cartão tem uma imagem, um título, um autor e um botão para comprar. Inicialmente, vamos adicionar uma margem de 20px em todas as direções na tag `main`. Para isso, siga os passos abaixo:
+
+```css
+main {
+    padding: 20px;
+    overflow: hidden;
+}
+```
+
+> 💡 A propriedade `overflow` com o valor `hidden` é utilizada para esconder o conteúdo que ultrapassa o tamanho do elemento. Isso é necessário porque vamos adicionar um estilo de coluna na classe `.card`.
+
+Em seguida, vamos adicionar o estilo aos cartões. Para isso, siga os passos abaixo:
+
+```css
+.card {
+    width: calc(33.33% - 20px); /* 33.33% - 40px */
+    margin: 10px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    float: left;
+}
+```
+
+No código acim, utilizamos vários conceitos diferentes.
+
+- A largura (`width`) de cada card é calculada da seguinte forma. Primeiro, calculamos 33.33% da largura do elemento pai. Em seguida, subtraímos 20px para adicionar um espaçamento de 20px entre os cartões. O resultado é uma largura de 33.33% - 20px.
+- Adicionamos uma margem de 10px em cada card.
+- Adicionamos um espaçamento interno de 20px em todas as direções.
+- Adicionamos uma cor de fundo branca.
+- Adicionamos uma sombra.
+- Centralizamos o texto no card.
+- Flutuamos o card para a esquerda. Isso é necessário para encaixar os cards em colunas.
+
+> 💡 A propriedade `float` é utilizada para flutuar o elemento para a esquerda ou para a direita. Isso é necessário para flutuar um card ao lado do outro, já que cada card por padrão ocupa 100% da largura do elemento pai.
