@@ -724,7 +724,7 @@ Crie um site para mostrar os seus filmes e séries favoritas. O site precisa ter
 # O que é CSS?
 [&uarr;](#1-introdução-a-html)
 
-CSS é a sigla para `Cascading Style Sheets`, que significa Folhas de Estilo em Cascata. O CSS é utilizado para adicionar estilos e comportamentos aos elementos HTML. O CSS é utilizado para alterar a cor, o tamanho, a fonte, a posição, a visibilidade, a animação, etc. dos elementos HTML. 
+CSS é a sigla para `Cascading Style Sheets`, que significa Folhas de Estilo em Cascata. O CSS é utilizado para adicionar estilos e comportamentos aos elementos HTML. O CSS é utilizado para alterar características e alguns comportamentos dos componentes HTML, tais como, a cor, o tamanho, a fonte, a posição, a visibilidade, a animação, etc.
 
 > 💡 Para experimentar os exemplos abaixo, crie um novo projeto no Visual Studio Code e crie um arquivo chamado `index.html`. Evite copiar e colar os exemplos abaixo. Digite os exemplos abaixo para praticar. 
 
@@ -832,7 +832,20 @@ Para adicionar CSS em um arquivo externo, você pode utilizar a tag `<link>`. Va
 
 O resultado final deve ser parecido com o código abaixo:
 
+```css
+/* estilo.css */
+h1 {
+    color: red;
+    background-color: black;
+}
+p {
+    color: blue;
+    background-color: yellow;
+}
+```
+
 ```html
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
@@ -917,7 +930,7 @@ Perceba que estamos usando seletores de elemento, classe e id para adicionar est
  - O seletor `p.blue` seleciona todos os elementos `<p>` com a classe `blue` e adiciona a cor azul. 
  - O seletor `p.red` seleciona todos os elementos `<p>` com a classe `red` e adiciona a cor vermelha. 
  - O seletor `p.green` seleciona todos os elementos `<p>` com a classe `green` e adiciona a cor verde. 
- - O seletor `.link` seleciona todos os elementos com a classe `link` e adiciona a cor magenta, remove o sublinhado e aumenta o tamanho da fonte.
+ - O seletor `.link` seleciona todos os elementos com a classe `link` e adiciona a cor magenta, remove o sublinhado e aumenta o tamanho da fonte. Por padrão, os links possuem um sublinhado. Para remover o sublinhado, utilizamos a propriedade `text-decoration` com o valor `none`. Para aumentar o tamanho da fonte, utilizamos a propriedade `font-size` com o valor `20px`.
 
 
 ## Como adicionar espaçamentos?
@@ -984,9 +997,15 @@ Podemos perceber que existe um padrão de 10px para `margin` e `padding` repetin
 
 ```css
 /* estilos.css */
-/* ... */
+#main {
+    font-family: monospace;
+}
+#main h1 {
+    color: red;
+    background-color: black;
+}
+/* Alteração */
 p {
-    /* Alteração */
     margin: 10px;
     padding: 10px;
     background-color: #e4e4e4;
@@ -1048,8 +1067,184 @@ O seletor de id tem maior especificidade que o seletor de classe. Para demonstra
 
 **Resultado**: A cor do parágrafo será vermelha. Isso acontece porque o seletor de id tem maior especificidade que o seletor de classe.
 
-> 💡 É importante lembrar que o ID só pode ser usado uma vez por página.
+> 💡 É importante lembrar que o ID só pode ser usado uma vez por página. Para reutilizar código CSS, use classes.
 
-Experimente remover o seletor de id `#paragrafo` e veja o resultado.
+Experimente remover o seletor de id `#paragrafo` no arquivo `index.html` no exemplo acima. O resultado será um parágrafo verde. Isso acontece porque o seletor de classe `.verde` tem maior especificidade que o seletor de classe `.azul`.
 
 > 💡 Assista ao vídeo sobre [CSS: Seletores e Especificidade](https://youtu.be/dPL23aVRIlc) para saber mais.
+
+## Reset de Estilos
+[&uarr;](#1-introdução-a-html)
+
+Todo elemento HTML tem um estilo padrão que é injetado pelo Browser. O legal é que não existe um padrão entre eles. O Chrome tem seu estilo, o Firefox tem o dele, o Safari e Opera também.
+
+Isso pode gerar incompatibilidade com o CSS que você escreve. As vezes você coloca um espaço aqui, outro ali e quando abre no navegador vê que está tudo bagunçado!
+
+O CSS Reset é uma técnica que serve para evitar esse problema. Você remove ou seta valores para as propriedades dos elementos conforme necessário. Existem várias formas de se fazer um CSS Reset. Para começar, podemos criar um simples reset de estilos. Para isso, siga os passos abaixo:
+
+Basta colocar esse código no início do arquivo de estilos:
+
+```css
+/* estilos.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+```
+
+Pronto, todos (*) os elementos ficarão sem borda, sem preenchimento e sem margem. Ai é só ir estilizando conforme for necessário.
+
+## Box Model - O modelo em caixa
+[&uarr;](#1-introdução-a-html)
+
+O Box Model é utilizado para adicionar espaçamentos externos e internos aos elementos HTML. O Box Model é composto por quatro propriedades: `margin`, `border`, `padding` e `content`. A propriedade `margin` é utilizada para adicionar espaçamento externo. A propriedade `border` é utilizada para adicionar borda. A propriedade `padding` é utilizada para adicionar espaçamento interno. A propriedade `content` é utilizada para adicionar o conteúdo do elemento HTML.
+
+Box Model ajuda a entender como os elementos HTML são renderizados no navegador. Para demonstrar, Vamos usar um parágrafo como exemplo:
+
+```html
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo Box Model</title>
+    <style>
+        /* Reset de Estilos */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .box-example {
+            width: 300px;
+            padding: 20px;
+            border: 2px solid #333;
+            margin: 30px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box-example">
+        <p>Livraria fantástica.</p>
+    </div>
+</body>
+</html>
+```
+
+Nesse exemplo, o parágrafo está contido em uma div com a classe `.box-example`.
+
+- **Conteúdo**: O texto do parágrafo "Livraria fantástica." é o conteúdo do elemento.
+- **Preenchimento (Padding)**: O padding (preenchimento) da `div` é definido como `20px`, o que cria um espaço entre o conteúdo (parágrafo) e a borda da caixa.
+- **Borda (Border)**: A borda da div é definida como `2px solid #333`, o que cria uma borda sólida de 2px ao redor da caixa.
+- **Margem (Margin)**: A margem da div é definida como `30px`, o que cria um espaço entre a div e outros elementos vizinhos.
+
+Assim, o Box Model é a soma de todos esses elementos: `conteúdo + preenchimento + borda + margem`. Isso é ilustrado claramente no exemplo, onde a div contém um parágrafo e todas essas propriedades do Box Model. Para visualizar melhor o Box Model, abra a ferramenta de desenvolvedor do navegador (`atalho F12`) e selecione o parágrafo. O resultado será parecido com a imagem abaixo:
+
+![box-model](./image/box-model.png)
+
+> 💡 Entendendo como funciona o Box Model e o Box Sizing [clicando aqui](https://www.alura.com.br/artigos/entendendo-como-funciona-box-model-e-o-box-sizing).
+
+# Projeto: Livraria
+[&uarr;](#1-introdução-a-html)
+
+Vamos usar vários conhecimentos relacionados a HTML e CSS em um projeto prático. O projeto consiste em criar um site para uma livraria. O site deve ter um título, um menu, uma lista de livros e um rodapé. O menu deve ter os links "Início", "Livros", "Autores" e "Contato". A lista de livros deve ter pelo menos 3 livros. Cada livro deve ter um título, um autor, uma imagem e um botão para comprar. O rodapé deve ter o nome do autor e o ano de criação do site. Para isso, siga os passos abaixo:
+
+1. Crie um novo projeto chamado `livraria` no Visual Studio Code.
+2. Crie um arquivo chamado `index.html`.
+3. Crie um arquivo chamado `estilo.css`.
+4. Adicione o código HTML abaixo no arquivo `index.html`.
+5. Adicione o código CSS abaixo no arquivo `estilo.css`.
+6. Abra o projeto no navegador usando a ferramenta `live server`.
+
+O resultado esperado deve ser parecido com a imagem abaixo:
+
+![livraria](./image/livraria/livraria_resultado.png)
+
+Vamos começar a criar o site passo a passo. Primeiro, vamos criar o título e o menu. Para isso, siga os passos abaixo:
+
+```html
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livraria</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header>
+        <h1>Livraria Fantástica</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Livros</a></li>
+                <li><a href="#">Autores</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+</body>
+</html>
+```
+
+O código acima começa com a declaração do documento HTML. Em seguida, temos a tag `<head>` com as metatags charset e viewport. Em seguida, temos o título do site e o link para o arquivo `estilos.css`. Na tag `<body>`, temos o cabeçalho com o título e o menu. O menu é uma lista não ordenada com os links "Início", "Livros", "Autores" e "Contato".
+
+> 💡 A tag `header` é uma tag semântica. As tags semânticas são utilizadas para adicionar significado ao documento. Conheça mais sobre tags semânticas [clicando aqui](https://www.freecodecamp.org/portuguese/news/elementos-semanticos-do-html5-explicados/).
+
+Agora, vamos adicionar o estilo ao nosso site. Para isso, siga os passos abaixo:
+
+```css
+/* estilo.css */
+/* Reset de Estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+```
+
+O código CSS acima, começa com o reset de estilos com a propriedade `*` que seleciona todos os elementos HTML. O reset de estilos é utilizado para remover os estilos padrões do navegador. Assim, estamos zerando as margens e os espaçamentos dos elementos HTML. 
+
+
+
+
+```css
+/* estilo.css */
+/* Reset de Estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+```

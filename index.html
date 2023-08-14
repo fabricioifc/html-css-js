@@ -1,26 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        /* estilos.css */
-        #paragrafo {
-                color: red;
-            }
-
-            .azul {
-                color: blue;
-            }
-
-            .verde {
-                color: green;
-            }
-    </style>
+    <link rel="stylesheet" href="estilos.css">
+    <title>Livraria</title>
 </head>
 <body>
-    <p id="paragrafo" class="azul verde">Um ID contra duas classes</p>
+    <header>
+        <h1>Livraria Fantástica</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Livros</a></li>
+                <li><a href="#">Autores</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="cards">
+            <div class="card">
+                <img src="image/livraria/livro-01.jpg" alt="Livro 1">
+                <h2>Livro Incrível</h2>
+                <p>Autor: João Silva</p>
+                <button>Comprar</button>
+            </div>
+
+            <div class="card">
+                <img src="image/livraria/livro-02.jpg" alt="Livro 2">
+                <h2>Livro Fantástico</h2>
+                <p>Autor: Maria Santos</p>
+                <button>Comprar</button>
+            </div>
+
+            <div class="card">
+                <img src="image/livraria/livro-03.jpg" alt="Livro 3">
+                <h2>Aventuras Mágicas</h2>
+                <p>Autor: Pedro Almeida</p>
+                <button>Comprar</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Livraria Fantástica | Criado por Seu Nome</p>
+    </footer>
 </body>
 </html>
-```
