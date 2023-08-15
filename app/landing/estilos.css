@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+.logo img {
+    max-width: 200px;
+}
+
+header {
+    background-color: #e8e8e8;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.clearfix {
+    overflow: auto;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+[class*="col-"] {
+    float: left;
+    margin-right: 10px;
+}
+
+.col-1 { width: calc(8.33% - 10px); }
+.col-2 { width: calc(16.66% - 10px); }
+.col-3 { width: calc(25% - 10px); }
+.col-4 { width: calc(33.33% - 10px); }
+.col-5 { width: calc(41.66% - 10px); }
+.col-6 { width: calc(50% - 10px); }
+.col-7 { width: calc(58.33% - 10px); }
+.col-8 { width: calc(66.66% - 10px); }
+.col-9 { width: calc(75% - 10px); }
+.col-10 { width: calc(83.33% - 10px); }
+.col-11 { width: calc(91.66% - 10px); }
+.col-12 { width: calc(100% - 10px); }
+
+.col-image {
+    height: 350px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.col-image:hover {
+    transform: scale(1.1);
+}
+
+.card {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.banner {
+    background-image: url("img/banner.jpeg"); /* Adiciona a imagem de fundo */
+    background-size: cover; /* Redimensiona a imagem para cobrir todo o banner */
+    background-position: center; /* Centraliza a imagem */
+    text-align: center;
+    padding: 100px 0; /* Ajuste o espaçamento interno conforme necessário */
+}
+
+.card button {
+    display: block;
+    margin: 10px auto;
+    padding: 0.5rem 1rem;
+    background-color: #F40027;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+#email-box {
+    background-color: #e8e8e8;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+#email-box input[type="email"] {
+    padding: 0.5rem;
+    width: 70%;
+    border: none;
+    border-radius: 5px;
+}
+
+#email-box button {
+    padding: 0.5rem 1rem;
+    color: white;
+    background-color: #F40027;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #264653;
+    color: #fff;
+}
