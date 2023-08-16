@@ -1,49 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+/* Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0; /* Remove a margem */
+    padding: 0; /* Remove o espaçamento interno */
+    box-sizing: border-box; /* largura e altura definidas no CSS incluem o padding e a borda */
 }
 
 body {
-    font-family: 'Open Sans', Arial, sans-serif;
+    font-family: 'Open Sans', Arial, sans-serif; /* Define a fonte */
+    animation: fade-in .5s ease, slide-in 1.2s ease; /* Adiciona animações */
+   -webkit-animation: fade-in .5s ease, slide-in 1.2s ease; /* Adiciona animações */
 }
 
 img {
-    max-width: 100%;
+    max-width: 100%; /* Imagens não ultrapassam a largura do elemento pai */
 }
 
 .logo img {
-    max-width: 200px;
+    max-width: 200px; /* Imagem da logo não ultrapassa 200px de largura */
 }
 
 header {
-    background-color: #e8e8e8;
-    color: #fff;
-    text-align: center;
-    padding: 1rem 0;
+    background-color: #e8e8e8; /* Cor de fundo */
+    color: #fff; /* Cor do texto */
+    text-align: center; /* Alinha o texto ao centro */
+    padding: 1rem 0; /* Adiciona um espaçamento interno */
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
+    max-width: 1200px; /* Largura máxima do container */
+    margin: 0 auto; /* Centraliza o container */
+    padding: 2rem; /* Adiciona um espaçamento interno */
+    animation: scaleDown .5s ease ; /* Adiciona uma animação */
+    -webkit-animation: scaleDown .5s ease; /* Adiciona uma animação */
 }
 
+/* Limpa o float */
 .clearfix {
     overflow: auto;
 }
 
 .clearfix::after {
-    content: "";
-    display: table;
+    content: ""; 
+    display: table; 
     clear: both;
 }
 
+/* Alinha as colunas ao lado esquerdo */
 [class*="col-"] {
-    float: left;
+    float: left; 
     margin-right: 10px;
 }
 
+/* Calcula a largura da coluna */
 .col-1 { width: calc(8.33% - 10px); }
 .col-2 { width: calc(16.66% - 10px); }
 .col-3 { width: calc(25% - 10px); }
@@ -54,25 +64,25 @@ header {
 .col-8 { width: calc(66.66% - 10px); }
 .col-9 { width: calc(75% - 10px); }
 .col-10 { width: calc(83.33% - 10px); }
-.col-11 { width: calc(91.66% - 10px); }
+.col-11 { width: calc(91.66% - 10px); } 
 .col-12 { width: calc(100% - 10px); }
 
 .col-image {
-    height: 350px;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.3s ease;
+    height: 350px; /* Altura da imagem */
+    object-fit: cover; /* Redimensiona a imagem para cobrir todo o elemento */
+    display: block; /* Faz a imagem ocupar a largura total do elemento pai */
+    transition: transform 0.3s ease; /* Adiciona uma transição suave */
 }
 
 .col-image:hover {
-    transform: scale(1.1);
+    transform: scale(1.1); /* Aumenta a imagem em 10% ao passar o mouse */
 }
 
 .card {
-    background-color: #fff;
-    padding: 1rem;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    background-color: #fff; /* Cor de fundo */
+    padding: 1rem; /* Adiciona um espaçamento interno */
+    border-radius: 5px; /* Arredonda as bordas */
+    box-shadow: 0 0 10px rgba(0,0,0,0.2); /* Adiciona uma sombra */
 }
 
 .banner {
@@ -84,22 +94,37 @@ header {
 }
 
 .card button {
-    display: block;
-    margin: 10px auto;
-    padding: 0.5rem 1rem;
-    background-color: #F40027;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-decoration: none;
+    display: block; /* Faz o botão ocupar a largura total do elemento pai */
+    margin: 10px auto; /* Centraliza o botão */
+    padding: 0.5rem 1rem; /* Adiciona um espaçamento interno */
+    background-color: #F40027; /* Cor de fundo */
+    color: #fff; /* Cor do texto */
+    border: none; /* Remove a borda */
+    cursor: pointer; /* Adiciona o cursor de mão */
+    text-decoration: none; /* Remove o sublinhado */
+    width: 64px; /* Largura */
+    height: 64px; /* Altura */
+    border-radius: 50%; /* Arredonda as bordas */
+    font-size: 1.5rem; /* Tamanho da fonte */
+    transition: transform 0.3s ease; /* Adiciona uma transição suave */
 }
 
+.card button:hover {
+    background-color: yellow; /* Cor de fundo */
+    color: #F40027; /* Cor do texto */
+    border: 2px solid #F40027; /* Adiciona uma borda */
+    transform: scale(1.1); /* Aumenta o botão em 10% ao passar o mouse */
+}
 
+/* Formulário */
 #email-box {
-    background-color: #e8e8e8;
-    text-align: center;
-    padding: 2rem 0;
+    background-color: #e8e8e8; /* Cor de fundo */
+    text-align: center; /* Alinha o texto ao centro */
+    padding: 2rem 0; /* Adiciona um espaçamento interno */
+}
+
+#email-box h2 {
+    margin-bottom: 1rem;
 }
 
 #email-box input[type="email"] {
@@ -109,6 +134,7 @@ header {
     border-radius: 5px;
 }
 
+/* Botão */
 #email-box button {
     padding: 0.5rem 1rem;
     color: white;
@@ -118,9 +144,43 @@ header {
     cursor: pointer;
 }
 
+/* Rodapé */
 footer {
     text-align: center;
-    padding: 1rem 0;
+    padding: 10px 0;
     background-color: #264653;
     color: #fff;
+}
+
+/* Links para redes sociais */
+.social-icons {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.social-icon {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 24px;
+    color: white;
+}
+
+
+/* Animações */
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes scaleDown {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
 }

@@ -95,6 +95,7 @@ O Visual Studio Code possui um sistema de extensões que permite adicionar novas
 - [Path Intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense): autocompleta nomes de arquivos.
 - [Better Comments](https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments): melhora a visualização dos comentários.
 - [Peacock](https://marketplace.visualstudio.com/items?itemName=johnpapa.vscode-peacock): colore a barra superior do Visual Studio Code.
+- [Font Awesome Auto Completion](https://marketplace.visualstudio.com/items?itemName=Janne252.fontawesome-autocomplete): adiciona autocompletar para Font Awesome.
 
 ### Sincronizando as configurações do Visual Studio Code com o GitHub
 
