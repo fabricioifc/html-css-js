@@ -1552,6 +1552,10 @@ loja-kfc
 
 > 💡 As imagens do projeto estão disponíveis na pasta `app/loja-kfc/img`.
 
+Veja o resultado esperado abaixo:
+
+![kfc](./image/kfc_pronto.PNG)
+
 Para começar, vamos começar a criar o site passo a passo. Primeiro, vamos criar a tag `head` e adicionar o título do site e as metatags. Para isso, siga os passos abaixo:
 
 ```html
@@ -2055,3 +2059,10 @@ html {
 ```
 
 Pronto. Agora, nosso site tem um efeito de rolagem suave. Faça pequenas modificações de estilo no seu projeto. Adicione cores e espaçamentos diferentes. O importante é praticar e se divertir.
+
+Verifique se o resultado final está parecido com a imagem abaixo:
+
+![livraria](./image/kfc_pronto.PNG)
+
+# Projeto: Loja de Games
+[&uarr;](#1-introdução-a-html)
