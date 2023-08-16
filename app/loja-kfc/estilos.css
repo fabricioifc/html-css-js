@@ -7,8 +7,12 @@
     box-sizing: border-box; /* largura e altura definidas no CSS incluem o padding e a borda */
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: 'Open Sans', Arial, sans-serif; /* Define a fonte */
+    font-family: 'Open Sans', sans-serif; /* Define a fonte */
     animation: fade-in .5s ease, slide-in 1.2s ease; /* Adiciona animações */
    -webkit-animation: fade-in .5s ease, slide-in 1.2s ease; /* Adiciona animações */
 }
@@ -32,8 +36,6 @@ header {
     max-width: 1200px; /* Largura máxima do container */
     margin: 0 auto; /* Centraliza o container */
     padding: 2rem; /* Adiciona um espaçamento interno */
-    animation: scaleDown .5s ease ; /* Adiciona uma animação */
-    -webkit-animation: scaleDown .5s ease; /* Adiciona uma animação */
 }
 
 /* Limpa o float */
@@ -72,6 +74,9 @@ header {
     object-fit: cover; /* Redimensiona a imagem para cobrir todo o elemento */
     display: block; /* Faz a imagem ocupar a largura total do elemento pai */
     transition: transform 0.3s ease; /* Adiciona uma transição suave */
+
+    animation: scaleDown .5s ease ; /* Adiciona uma animação */
+    -webkit-animation: scaleDown .5s ease; /* Adiciona uma animação */
 }
 
 .col-image:hover {
@@ -85,12 +90,20 @@ header {
     box-shadow: 0 0 10px rgba(0,0,0,0.2); /* Adiciona uma sombra */
 }
 
+.card h2 {
+    font-size: 1.5rem; /* Define o tamanho da fonte */
+    margin: 1rem 0; /* Adiciona um espaçamento externo */
+}
+
 .banner {
     background-image: url("img/banner.jpeg"); /* Adiciona a imagem de fundo */
     background-size: cover; /* Redimensiona a imagem para cobrir todo o banner */
     background-position: center; /* Centraliza a imagem */
     text-align: center;
     padding: 100px 0; /* Ajuste o espaçamento interno conforme necessário */
+
+    /* Adicionei essas linhas */
+    background-attachment: fixed; /* Define o background como fixo */
 }
 
 .card button {
@@ -117,17 +130,17 @@ header {
 }
 
 /* Formulário */
-#email-box {
+#newsletter {
     background-color: #e8e8e8; /* Cor de fundo */
     text-align: center; /* Alinha o texto ao centro */
     padding: 2rem 0; /* Adiciona um espaçamento interno */
 }
 
-#email-box h2 {
+#newsletter h2 {
     margin-bottom: 1rem;
 }
 
-#email-box input[type="email"] {
+#newsletter input[type="email"] {
     padding: 0.5rem;
     width: 70%;
     border: none;
@@ -135,7 +148,7 @@ header {
 }
 
 /* Botão */
-#email-box button {
+#newsletter button {
     padding: 0.5rem 1rem;
     color: white;
     background-color: #F40027;
@@ -184,3 +197,4 @@ footer {
         transform: scale(1);
     }
 }
+
