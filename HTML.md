@@ -123,8 +123,7 @@ Um elemento HTML é composto por uma tag de abertura, um conteúdo e uma tag de 
 <p>Este é um parágrafo.</p>
 ```
 
-### Tags básicas
-[&uarr;](#1-introdução-a-html)
+### Título
 
 As tags de título são utilizadas para criar títulos e destacar partes importantes do conteúdo. A tag `h1` é utilizada para criar o título mais importante. A tag `h6` é utilizada para criar o título menos importante.
 
@@ -138,30 +137,51 @@ As tags de título são utilizadas para criar títulos e destacar partes importa
 <h6>Título 6</h6>
 ```
 
-As tags de parágrafo são utilizadas para criar parágrafos. Os parágrafos são utilizados para agrupar frases. O parágrafo, por padrão, é um elemento de bloco, ou seja, ele ocupa toda a largura da página.
+> 💡 Os mecanismos de busca utilizam os títulos para indexar o conteúdo das páginas. Por isso, é importante utilizar os títulos corretamente. O título mais importante deve ser utilizado apenas uma vez. Os títulos menos importantes podem ser utilizados várias vezes.
+
+### Parágrafos
+
+Parágrafos são elementos HTML básicos utilizados para agrupar frases.
+
+| Tag | Descrição |
+| --- | --- |
+| `<p>` | Cria um parágrafo. |
+| `<br>` | Cria uma quebra de linha. |
+| `<strong>` | Cria uma ênfase forte. |
+| `<em>` | Cria uma ênfase fraca. |
+
+A tag `<p>` é utilizada para criar parágrafos. Os parágrafos são utilizados para agrupar frases. O parágrafo, por padrão, é um elemento de bloco, ou seja, ele ocupa toda a largura da página.
 
 ```html
 <p>Este é um parágrafo.</p>
 ```
 
-As tags de quebra de linha são utilizadas para criar quebras de linha. As quebras de linha são utilizadas para separar frases. A tag `br` é uma tag vazia, ou seja, ela não possui uma tag de fechamento. 
+A tag `<br>` é utilizada para criar quebras de linha. As quebras de linha são utilizadas para separar frases. A tag `br` é uma tag vazia, ou seja, ela não possui uma tag de fechamento. 
 
 > 💡 **Importante**: Essa tag não possui conteúdo e não pode ser usada fora do texto.
 
 ```html
-<p>Este é um parágrafo.<br>Este é outro parágrafo.</p>
+<p>Este é um parágrafo.<br>Esta é a continuação do parágrafo.</p>
 ```
 
-As tags de ênfase são utilizadas para criar ênfases. As ênfases são utilizadas para destacar partes importantes do conteúdo. A tag `strong` é utilizada para criar ênfases fortes. A tag `em` é utilizada para criar ênfases fracas.
+O resultado do código acima é parecido com o código abaixo:
+
+> <p>Este é um parágrafo.<br>Esta é a continuação do parágrafo.</p>
+
+### Ênfase
+
+As ênfases são utilizadas para destacar partes importantes do conteúdo. A tag `strong` é utilizada para criar ênfases fortes. A tag `em` é utilizada para criar ênfases fracas.
 
 ```html
 <p>Este é um <strong>parágrafo</strong>.</p>
 <p>Este é um <em>parágrafo</em>.</p>
 ```
 
-As tags de lista são utilizadas para criar listas. As listas são utilizadas para agrupar itens. A tag `ul` é utilizada para criar uma lista não ordenada. A tag `li` é utilizada para criar um item de lista. 
+### Listas
 
-**Importante**: a tag `li` deve ser utilizada dentro da tag `ul`.
+As listas são utilizadas para agrupar itens. A tag `ul` é utilizada para criar uma lista não ordenada. A tag `li` é utilizada para criar um item de lista. 
+
+> 💡 **Importante**: a tag `li` deve ser utilizada dentro da tag `ul`.
 
 ```html
 <ul>
@@ -171,19 +191,44 @@ As tags de lista são utilizadas para criar listas. As listas são utilizadas pa
 </ul>
 ```
 
-As tags de imagem são utilizadas para criar imagens e ilustrar o conteúdo. A tag `img` é uma tag vazia, ou seja, ela não possui uma tag de fechamento. A tag `img` possui dois atributos obrigatórios: `src` e `alt`. O atributo `src` é utilizado para adicionar o endereço da imagem. O atributo `alt` é utilizado para adicionar um texto alternativo à imagem. O texto alternativo é utilizado para descrever a imagem para pessoas com deficiência visual.
+O resultado do código acima é parecido com o código abaixo:
 
-**Importante**: A tag `img` é um elemento de linha, ou seja, ela não ocupa toda a largura da página.
+> <ul>
+>    <li>Item 1</li>
+>   <li>Item 2</li>
+>   <li>Item 3</li>
+> </ul>
+
+### Imagens
+
+As tags de imagem são utilizadas para criar imagens e ilustrar o conteúdo. A tag `img` é uma tag vazia, ou seja, ela não possui uma tag de fechamento. A tag `img` possui dois atributos obrigatórios: `src` e `alt`. O atributo `src` é utilizado para adicionar o endereço da imagem. O atributo `alt` é utilizado para adicionar um texto alternativo à imagem. O texto alternativo é utilizado para descrever a imagem, principalmente para pessoas com deficiência visual.
+
+> 💡 **Importante**: A tag `img` é um elemento de linha, ou seja, ela não ocupa toda a largura da página.
+
+Vamos ver um exemplo de como adicionar uma imagem ao nosso site. Para isso, siga os passos abaixo:
 
 ```html
 <img src="https://www.google.com.br/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Logo do Google">
+
+<img src="logo.png" alt="Logo do Google">
 ```
 
-As tags de âncora são utilizadas para criar links, ou seja, ligações entre páginas. A tag `a` é uma tag de âncora. A tag `a` possui dois atributos obrigatórios: `href` e `alt`. O atributo `href` é utilizado para adicionar o endereço do link. O atributo `alt` é utilizado para adicionar um texto alternativo ao link. O texto alternativo é utilizado para descrever o link para pessoas com deficiência visual.
+### Links
 
-```html
-<a href="https://www.google.com.br" alt="Link para o Google">Google</a>
-```
+As tags de âncora são utilizadas para criar links, ou seja, ligações entre páginas. A tag `a` é uma tag de âncora e possui dois atributos obrigatórios: `href` e `alt`. O atributo `href` é utilizado para adicionar o endereço do link. O atributo `alt` é utilizado para adicionar um texto alternativo ao link. O texto alternativo é utilizado para descrever o link para pessoas com deficiência visual.
+
+> 💡 **Importante**: A tag `a` é um elemento de linha, ou seja, ela não ocupa toda a largura da página.
+
+Vejamos diferentes formas de adicionar links ao nosso site na tabela abaixo:
+
+| Exemplo | Descrição |
+| --- | --- |
+| `<a href="https://www.google.com.br" alt="Link para o Google">Google</a>` | Cria um link para o Google com um texto alternativo. |
+| `<a href="https://www.google.com.br" target="_blank">Google</a>` | Cria um link para o Google que abre em uma nova aba. |
+| `<a href="outra-pagina.html">Outra Página</a>` | Cria um link para outra página do site. |
+| `<a href="#titulo">Título</a>` | Cria um link para um título dentro da mesma página. |
+
+### Comentários
 
 As tags de comentário são utilizadas para criar comentários. Os comentários são utilizados para adicionar informações adicionais ao código que não serão exibidas na página. Os comentários são utilizados para explicar o código e serão ignorados pelo navegador.
 
@@ -191,7 +236,9 @@ As tags de comentário são utilizadas para criar comentários. Os comentários 
 <!-- Este é um comentário -->
 ```
 
-As tags de divisão são utilizadas para criar divisões. As divisões são utilizadas para agrupar elementos e partes de uma página HTML. A tag `div` é um elemento de bloco, ou seja, ela ocupa toda a largura da página.
+### Divisões
+
+As tags de divisão são utilizadas para agrupar elementos e partes de uma página HTML. A tag `div` é um elemento de bloco, ou seja, ela ocupa toda a largura da página.
 
 ```html
 <div>
@@ -208,24 +255,94 @@ O aninhamento de elementos é utilizado para agrupar elementos, criando estrutur
 ```html
 <ul>
     <li>
-        <h1>Título 1</h1>
+        <h3>Título 1</h3>
         <p>Este é um parágrafo.</p>
     </li>
     <li>
-        <h1>Título 2</h1>
+        <h3>Título 2</h3>
         <p>Este é outro parágrafo.</p>
     </li>
 </ul>
 ```
 
-No código acima, cada item `li` possui um título `h1` e um parágrafo `p`. O título e o parágrafo estão aninhados dentro do item da lista. 
+No código acima, cada item `li` possui um título `h3` e um parágrafo `p`. O título e o parágrafo estão aninhados dentro do item da lista. 
 
-## Atributos
+### Tabela
+
+As tabelas são utilizadas para exibir dados em linhas e colunas. 
+
+| Tag | Descrição |
+| --- | --- |
+| `<table>` | Cria uma tabela. |
+| `<thead>` | Cria o cabeçalho da tabela. |
+| `<tbody>` | Cria o corpo da tabela. |
+| `<tr>` | Cria uma linha da tabela. |
+| `<th>` | Cria uma célula de cabeçalho da tabela. |
+| `<td>` | Cria uma célula da tabela. |
+
+Vamos ver um exemplo de como adicionar uma tabela ao nosso site. Para isso, siga os passos abaixo:
+
+```html
+<table border="1">
+    <thead>
+        <tr>
+            <th>Título</th>
+            <th>Ano</th>
+            <th>Gênero</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Matrix</td>
+            <td>1999</td>
+            <td>Ficção Científica</td>
+        </tr>
+        <tr>
+            <td>Interestelar</td>
+            <td>2014</td>
+            <td>Ficção Científica</td>
+        </tr>
+        <tr>
+            <td>Star Wars: Episódio IV - Uma Nova Esperança</td>
+            <td>1977</td>
+            <td>Ficção Científica</td>
+        </tr>
+    </tbody>
+</table>
+```
+
+### Vídeo
+
+As tags de vídeo são utilizadas para exibir vídeos. 
+
+| Tag | Descrição |
+| --- | --- |
+| `<video>` | Cria um vídeo. |
+| `<source>` | Cria uma fonte de vídeo. |
+| `alt` | Cria um texto alternativo para o vídeo. |
+| `width` | Cria a largura do vídeo. |
+| `height` | Cria a altura do vídeo. |
+| `controls` | Adiciona controles para o vídeo. |
+
+```html
+<video src="video.mp4" alt="Vídeo" width="320" height="240" controls>
+    Seu navegador não suporta a tag de vídeo.
+</video>
+```
+
+### Atributos
 [&uarr;](#1-introdução-a-html)
 
-Os atributos são utilizados para adicionar informações adicionais às tags. Os atributos são adicionados na tag de abertura. Por exemplo, o atributo `href` é utilizado para adicionar um link a um elemento. O atributo `src` é utilizado para adicionar uma imagem a um elemento. O atributo `alt` é utilizado para adicionar um texto alternativo a um elemento. O atributo `class` é utilizado para adicionar uma classe a um elemento. O atributo `id` é utilizado para adicionar um identificador a um elemento.
+Os atributos são utilizados para adicionar informações adicionais às tags. Os atributos são adicionados na tag de abertura. Por exemplo:
+ - O atributo `href` é utilizado para adicionar um link a um elemento. 
+ - O atributo `src` é utilizado para adicionar uma imagem a um elemento. 
+ - O atributo `alt` é utilizado para adicionar um texto alternativo a um elemento. 
+ - O atributo `class` é utilizado para adicionar uma classe a um elemento. 
+ - O atributo `id` é utilizado para adicionar um identificador a um elemento.
 
 **Importante**: Os atributos `class` e `id` são utilizados para adicionar estilos e comportamentos aos elementos. Esses atributos serão explicados nas próximas aulas.
+
+Segue abaixo alguns exemplos de como adicionar atributos às tags:
 
 ```html
 <a href="https://www.google.com.br">Google</a>
@@ -234,15 +351,16 @@ Os atributos são utilizados para adicionar informações adicionais às tags. O
 <p id="paragrafo">Este é um parágrafo.</p>
 ```
 
-## Exemplo
+## Exemplo Prático
 [&uarr;](#1-introdução-a-html)
 
-Nesta aula aprendemos alguns conceitos básicos sobre HTML e suas tags básicas. Aprendemos também a estrutura básica de um documento HTML e como criar títulos, parágrafos, listas, imagens, links, comentários e divisões. Aprendemos também sobre aninhamento de elementos e atributos. Para demonstrar o que aprendemos, vamos criar uma página HTML com uma lista de compras de produtos de supermercado. Cada produto terá um título, uma imagem e um link para o site do supermercado.
+No conteúdo anterior aprendemos alguns conceitos básicos sobre HTML e suas tags básicas. Aprendemos também a estrutura básica de um documento HTML e como criar títulos, parágrafos, listas, imagens, links, comentários, divisões, tabelas e vídeos. Aprendemos também sobre aninhamento de elementos e atributos. Para demonstrar o que aprendemos, vamos criar uma página HTML com uma lista de compras de produtos de supermercado. Cada produto terá um título, uma imagem e um link para o site do supermercado.
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
     <head>
+        <meta charset="UTF-8">
         <title>Lista de Compras</title>
     </head>
     <body>
@@ -268,10 +386,12 @@ Nesta aula aprendemos alguns conceitos básicos sobre HTML e suas tags básicas.
 </html>
 ```
 
+Veja o resultado clicando aqui: [Lista de Compras](https://codepen.io/fabriciobizotto/pen/oNJNJQR)
+
 ## Criando nosso primeiro site com HTML
 [&uarr;](#1-introdução-a-html)
 
-Nesta aula, vamos criar nosso primeiro site. O site será uma página de perfil. A página de perfil será composta por uma foto, um nome, uma descrição, um link para o GitHub e uma lista de atividades favoritas. Para criar o site, siga os passos abaixo:
+Vamos criar nosso primeiro site. O site será uma página de perfil. A página de perfil será composta por uma foto, um nome, uma descrição, um link para o GitHub e uma lista de atividades favoritas. Para criar o site, siga os passos abaixo:
 
 1. Crie uma pasta chamada `primeiro-site` no seu computador.
 2. Abra a pasta `primeiro-site` no Visual Studio Code.
