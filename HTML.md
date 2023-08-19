@@ -423,6 +423,8 @@ Com o projeto criado, vamos começar a escrever o código HTML. Para isso, siga 
 </html>
 ```
 
+> 💡 Para ver o resultado, execute a ferramenta `live server` que fica no menu inferior direito do vscode. Por padrão, seu site vai estar disponível no endereço `http://localhost:5000`. `localhost` significa que o projeto está sendo executado no seu computador local e `5000` é o número da porta.
+
 Para melhorar o código acima, vamos separar o conteúdo em seções com a tag `div`. Para isso, siga os passos abaixo:
 
 ```html
@@ -452,10 +454,12 @@ Para melhorar o código acima, vamos separar o conteúdo em seções com a tag `
 </html>
 ```
 
-## Símbolos e Emoji no seu site
+Continue adicionando mais elementos ao nosso site nas próximas seções.
+
+### Símbolos e Emoji no seu site
 [&uarr;](#1-introdução-a-html)
 
-Para adicionar símbolos e emoji no seu site, você pode utilizar o [Emojipedia](https://emojipedia.org/). Para demonstrar, vamos adicionar um emoji de coração na lista de atividades. Para isso, siga os passos abaixo:
+Para adicionar símbolos e emojis ao seu site, você pode utilizar o [Emojipedia](https://emojipedia.org/). Para demonstrar, vamos adicionar um emoji de coração na lista de atividades. Para isso, siga os passos abaixo:
 
 1. Abra o site [Emojipedia](https://emojipedia.org/).
 2. Pesquise por "heart".
@@ -470,29 +474,55 @@ O resultado final deve ser parecido com o código abaixo:
     <li>❤️ Programar</li>
     <li>❤️ Estudar</li>
     <li>❤️ Assistir filmes</li>
-    <li>❤️</li>
 </ul>
 ...
 ```
 
-## Você tem o direito de usar qualquer imagem no seu site?
+### Você tem o direito de usar qualquer imagem no seu site?
 [&uarr;](#1-introdução-a-html)
 
-Não. Você não pode usar qualquer imagem no seu site. Você só pode usar imagens que você tem o direito de usar. Por exemplo, você pode usar imagens que você criou ou imagens que você encontrou em sites que permitem o uso comercial. Para encontrar imagens que você pode usar comercialmente, você pode utilizar o [Google Imagens](https://www.google.com.br/imghp?hl=pt-BR&tab=wi&ogbl). Para demonstrar, vamos encontrar uma imagem de um coração no Google Imagens. Para isso, siga os passos abaixo:
+**Não**. Você não pode usar qualquer imagem no seu site. Você só pode usar imagens que você tem o direito de usar. Por exemplo, você pode usar imagens que você criou ou imagens que você encontrou em sites que permitem o uso comercial. Para encontrar imagens que você pode usar comercialmente, você pode utilizar o [Google Imagens](https://www.google.com.br/imghp?hl=pt-BR&tab=wi&ogbl). Para demonstrar, vamos encontrar uma imagem de um coração no Google Imagens. Para isso, siga os passos abaixo:
 
 1. Abra o site [Google Imagens](https://www.google.com.br/imghp?hl=pt-BR&tab=wi&ogbl).
 2. Pesquise por "heart".
-3. Clique em "Ferramentas de pesquisa".
+3. Clique em "Ferramentas".
 4. Clique em "Direitos de uso".
-5. Clique em "Marcadas para reutilização com modificação".
+5. Selecione a opção "Licenças Creative Commons".
+6. Selecione também a opção "Cor" e marque "Transparente".
+7. Escolha uma imagem que você goste e copie o endereço da imagem.
 
-O resultado final deve ser parecido com a imagem abaixo:
+O resultado final deve ser parecido com a código abaixo. Uma imagem de coração com o fundo transparente e 150 pixels de largura:
 
-```html	
-<img src="https://cdn.pixabay.com/photo/2013/07/13/10/24/heart-157895_960_720.png" alt="Coração" width="150">
+```html
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Meu Perfil</title>
+    </head>
+    <body>
+        <div>
+            <h1>Meu Perfil</h1>
+            <img src="https://github.com/fabricioifc.png" alt="Foto de perfil" width="150">
+            <!-- Adicionei a imagem do coração aqui -->
+            <img src="https://freesvg.org/img/heart_jon_phillips_01.png" alt="Coração" width="150">
+        </div>
+        <div>
+            <h1>Fabricio Bizotto</h1>
+            <p>Desenvolvedor de Software</p>
+            <a href="https://github.com/fabricioifc" target="_blank">GitHub</a>
+            <h2>Lista de Atividades</h2>
+            <ul>
+                <li>❤️ Programar</li>
+                <li>❤️ Estudar</li>
+                <li>❤️ Assistir filmes</li>
+            </ul>
+        </div>
+    </body>
+</html>
 ```
 
-## Como adicionar um favicon ao seu site?
+### Como adicionar um favicon ao seu site?
 [&uarr;](#1-introdução-a-html)
 
 Favicon é a sigla para Favorite Icon, que significa Ícone Favorito. O favicon é o ícone que aparece na aba do navegador. 
@@ -516,11 +546,27 @@ O resultado final deve ser parecido com o código abaixo:
     <head>
         <meta charset="UTF-8">
         <title>Meu Perfil</title>
+
         <!-- veja abaixo como adicionar o favicon-->
         <link rel="icon" href="favicon.ico" type="image/x-icon">
     </head>
     <body>
-        ...
+        <div>
+            <h1>Meu Perfil</h1>
+            <img src="https://github.com/fabricioifc.png" alt="Foto de perfil" width="150">
+            <img src="https://freesvg.org/img/heart_jon_phillips_01.png" alt="Coração" width="150">
+        </div>
+        <div>
+            <h1>Fabricio Bizotto</h1>
+            <p>Desenvolvedor de Software</p>
+            <a href="https://github.com/fabricioifc" target="_blank">GitHub</a>
+            <h2>Lista de Atividades</h2>
+            <ul>
+                <li>❤️ Programar</li>
+                <li>❤️ Estudar</li>
+                <li>❤️ Assistir filmes</li>
+            </ul>
+        </div>
     </body>
 </html>
 ```
@@ -534,10 +580,33 @@ Tabelas em HTML são utilizadas para exibir dados em linhas e colunas. Para demo
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
-        ...
+        <meta charset="UTF-8">
+        <title>Meu Perfil</title>
+
+        <!-- veja abaixo como adicionar o favicon-->
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
     </head>
     <body>
-        ...
+        <div>
+            <h1>Meu Perfil</h1>
+            <img src="https://github.com/fabricioifc.png" alt="Foto de perfil" width="150">
+            <img src="https://freesvg.org/img/heart_jon_phillips_01.png" alt="Coração" width="150">
+        </div>
+        
+        <div>
+            <h1>Fabricio Bizotto</h1>
+            <p>Desenvolvedor de Software</p>
+            <a href="https://github.com/fabricioifc" target="_blank">GitHub</a>
+            <h2>Lista de Atividades</h2>
+            <ul>
+                <li>❤️ Programar</li>
+                <li>❤️ Estudar</li>
+                <li>❤️ Assistir filmes</li>
+            </ul>
+        </div>
+
+
+        <!-- Tabela de filmes aqui -->
         <div>
             <h2>Filmes Favoritos</h2>
             <table>
@@ -568,10 +637,10 @@ Tabelas em HTML são utilizadas para exibir dados em linhas e colunas. Para demo
             </table>
         </div>
     </body>
-</html>
+</html>       
 ```
 
-Percebe-se que a tabela é composta por uma tag `<table>`, que contém duas tags: `<thead>` e `<tbody>`. A tag `<thead>` é utilizada para criar o cabeçalho da tabela. A tag `<tbody>` é utilizada para criar o corpo da tabela. O cabeçalho da tabela é composto por uma tag `<tr>`, que contém três tags `<th>`. O corpo da tabela é composto por três tags `<tr>`, que contém três tags `<td>`. A tag `<th>` é utilizada para criar o cabeçalho da coluna. A tag `<td>` é utilizada para criar o conteúdo da célula.
+Nosso site está ficando cada vez mais completo. Vamos compreender alguns conceitos.
 
 ## Elementos de linha e elementos de bloco
 [&uarr;](#1-introdução-a-html)
@@ -580,24 +649,11 @@ Cada elemento HTML possui um comportamento diferente. Alguns elementos são elem
 
 A grande maioria dos elementos HTML são elementos de bloco. Por exemplo, as tags `<h1>`, `<p>`, `<ul>`, `<li>`, `<table>`, `div`, `hr`, `pre` e `blockquote` são elementos de bloco. Poucas tags são elementos de linha. Por exemplo, as tags `<a>`, `<span>`, `<img>`, `<strong>`, `<em>`, `<br>`, `<input>`, `<select>`, `<textarea>` e `<button>` são elementos de linha.
 
-Para demonstrar a diferença entre elementos de linha e elementos de bloco, vamos adicionar mais uma imagem de perfil ao nosso site. Para isso, siga os passos abaixo:
+Para demonstrar a diferença entre elementos de linha e elementos de bloco, vamos analisar as imagens que foram adicionadas ao nosso site. Repare que as imagens estão uma ao lado da outra. Isso acontece porque as imagens são elementos de linha.
 
 ```html
-<!DOCTYPE html>
-<html lang="pt-br">
-    <head>
-        ...
-    </head>
-    <body>
-        ...
-        <div>
-            <h1>Meu Perfil</h1>
-            <img src="https://github.com/fabricioifc.png" alt="Foto de perfil" width="150">
-            <img src="https://github.com/fabricioifc.png" alt="Foto de perfil" width="150">
-        </div>
-        ...
-    </body>
-</html>
+<img src="https://github.com/fabricioifc.png" alt="Foto de perfil" width="150">
+<img src="https://freesvg.org/img/heart_jon_phillips_01.png" alt="Coração" width="150">
 ```
 
 Observe que as imagens estão uma ao lado da outra. Para que as imagens fiquem uma abaixo da outra, é necessário alterar a propriedade `display` das imagens para `block`. Isso será feito posteriormente, quando aprendermos sobre CSS.
@@ -605,7 +661,7 @@ Observe que as imagens estão uma ao lado da outra. Para que as imagens fiquem u
 ## Como adicionar um vídeo ao seu site?
 [&uarr;](#1-introdução-a-html)
 
-Para adicionar um vídeo ao seu site, você pode utilizar o [YouTube](https://www.youtube.com/). Para demonstrar, vamos adicionar um vídeo ao nosso site. Para isso, siga os passos abaixo:
+Para adicionar um vídeo ao seu site, você pode utilizar o [YouTube](https://www.youtube.com/). Para isso, siga os passos abaixo:
 
 1. Abra o site [YouTube](https://www.youtube.com/).
 2. Pesquise por "fabricio bizotto".
@@ -623,10 +679,62 @@ O resultado final deve ser parecido com o código abaixo:
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
-        ...
+        <meta charset="UTF-8">
+        <title>Meu Perfil</title>
+
+        <!-- veja abaixo como adicionar o favicon-->
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
     </head>
     <body>
-        ...
+        <div>
+            <h1>Meu Perfil</h1>
+            <img src="https://github.com/fabricioifc.png" alt="Foto de perfil" width="150">
+            <img src="https://freesvg.org/img/heart_jon_phillips_01.png" alt="Coração" width="150">
+        </div>
+        
+        <div>
+            <h1>Fabricio Bizotto</h1>
+            <p>Desenvolvedor de Software</p>
+            <a href="https://github.com/fabricioifc" target="_blank">GitHub</a>
+            <h2>Lista de Atividades</h2>
+            <ul>
+                <li>❤️ Programar</li>
+                <li>❤️ Estudar</li>
+                <li>❤️ Assistir filmes</li>
+            </ul>
+        </div>
+
+        <div>
+            <h2>Filmes Favoritos</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Título</th>
+                        <th>Ano</th>
+                        <th>Gênero</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Matrix</td>
+                        <td>1999</td>
+                        <td>Ficção Científica</td>
+                    </tr>
+                    <tr>
+                        <td>Interestelar</td>
+                        <td>2014</td>
+                        <td>Ficção Científica</td>
+                    </tr>
+                    <tr>
+                        <td>Star Wars: Episódio IV - Uma Nova Esperança</td>
+                        <td>1977</td>
+                        <td>Ficção Científica</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Vídeo adicionado aqui -->
         <div>
             <h2>Vídeo</h2>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/5n0sdE5Y3lY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -638,7 +746,7 @@ O resultado final deve ser parecido com o código abaixo:
 ## Como adicionar um mapa ao seu site?
 [&uarr;](#1-introdução-a-html)
 
-Para adicionar um mapa ao seu site, você pode utilizar o [Google Maps](https://www.google.com.br/maps/). Para demonstrar, vamos adicionar um mapa ao nosso site. Para isso, siga os passos abaixo:
+Para adicionar um mapa ao seu site, você pode utilizar o [Google Maps](https://www.google.com.br/maps/). Para isso, siga os passos abaixo:
 
 1. Abra o site [Google Maps](https://www.google.com.br/maps/).
 2. Pesquise por "Instituto Federal Catarinense - Campus Videira".
@@ -655,17 +763,76 @@ O resultado final deve ser parecido com o código abaixo:
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
-        ...
+        <meta charset="UTF-8">
+        <title>Meu Perfil</title>
+
+        <!-- veja abaixo como adicionar o favicon-->
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
     </head>
     <body>
-        ...
+        <div>
+            <h1>Meu Perfil</h1>
+            <img src="https://github.com/fabricioifc.png" alt="Foto de perfil" width="150">
+            <img src="https://freesvg.org/img/heart_jon_phillips_01.png" alt="Coração" width="150">
+        </div>
+        
+        <div>
+            <h1>Fabricio Bizotto</h1>
+            <p>Desenvolvedor de Software</p>
+            <a href="https://github.com/fabricioifc" target="_blank">GitHub</a>
+            <h2>Lista de Atividades</h2>
+            <ul>
+                <li>❤️ Programar</li>
+                <li>❤️ Estudar</li>
+                <li>❤️ Assistir filmes</li>
+            </ul>
+        </div>
+
+        <div>
+            <h2>Filmes Favoritos</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Título</th>
+                        <th>Ano</th>
+                        <th>Gênero</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Matrix</td>
+                        <td>1999</td>
+                        <td>Ficção Científica</td>
+                    </tr>
+                    <tr>
+                        <td>Interestelar</td>
+                        <td>2014</td>
+                        <td>Ficção Científica</td>
+                    </tr>
+                    <tr>
+                        <td>Star Wars: Episódio IV - Uma Nova Esperança</td>
+                        <td>1977</td>
+                        <td>Ficção Científica</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div>
+            <h2>Vídeo</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/5n0sdE5Y3lY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+
+        <!-- Mapa adicionado aqui -->
         <div>
             <h2>Mapa</h2>
-           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d40216.95482411219!2d-51.154208489782796!3d-27.007716151029644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94e14fa5b07c8fd5%3A0xfc69f726d4659812!2sInstituto%20Federal%20de%20Educa%C3%A7%C3%A3o%20Ci%C3%AAncia%20e%20Tecnologia%20Catarinense%20-%20Campus%20Videira!5e0!3m2!1spt-BR!2sbr!4v1691860887844!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d40216.95482411219!2d-51.154208489782796!3d-27.007716151029644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94e14fa5b07c8fd5%3A0xfc69f726d4659812!2sInstituto%20Federal%20de%20Educa%C3%A7%C3%A3o%20Ci%C3%AAncia%20e%20Tecnologia%20Catarinense%20-%20Campus%20Videira!5e0!3m2!1spt-BR!2sbr!4v1691860887844!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </body>
 </html>
 ```
+
+> 💡 Para adicionar o vídeo do YouTube e o mapa, usamos a tag `<iframe>`. A tag `<iframe>` é utilizada para exibir um conteúdo de outro site dentro do seu site. Para adicionar um conteúdo de outro site dentro do seu site, você precisa copiar o código de incorporação do site e colar dentro da tag `<iframe>`.
 
 ## Como adicionar um rodapé ao seu site?
 [&uarr;](#1-introdução-a-html)
@@ -676,10 +843,72 @@ O rodapé é a parte inferior da página. O rodapé é utilizado para adicionar 
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
-        ...
+        <meta charset="UTF-8">
+        <title>Meu Perfil</title>
+
+        <!-- veja abaixo como adicionar o favicon-->
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
     </head>
     <body>
-        ...
+        <div>
+            <h1>Meu Perfil</h1>
+            <img src="https://github.com/fabricioifc.png" alt="Foto de perfil" width="150">
+            <img src="https://freesvg.org/img/heart_jon_phillips_01.png" alt="Coração" width="150">
+        </div>
+        
+        <div>
+            <h1>Fabricio Bizotto</h1>
+            <p>Desenvolvedor de Software</p>
+            <a href="https://github.com/fabricioifc" target="_blank">GitHub</a>
+            <h2>Lista de Atividades</h2>
+            <ul>
+                <li>❤️ Programar</li>
+                <li>❤️ Estudar</li>
+                <li>❤️ Assistir filmes</li>
+            </ul>
+        </div>
+
+        <div>
+            <h2>Filmes Favoritos</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Título</th>
+                        <th>Ano</th>
+                        <th>Gênero</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Matrix</td>
+                        <td>1999</td>
+                        <td>Ficção Científica</td>
+                    </tr>
+                    <tr>
+                        <td>Interestelar</td>
+                        <td>2014</td>
+                        <td>Ficção Científica</td>
+                    </tr>
+                    <tr>
+                        <td>Star Wars: Episódio IV - Uma Nova Esperança</td>
+                        <td>1977</td>
+                        <td>Ficção Científica</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div>
+            <h2>Vídeo</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/5n0sdE5Y3lY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+
+        <div>
+            <h2>Mapa</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d40216.95482411219!2d-51.154208489782796!3d-27.007716151029644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94e14fa5b07c8fd5%3A0xfc69f726d4659812!2sInstituto%20Federal%20de%20Educa%C3%A7%C3%A3o%20Ci%C3%AAncia%20e%20Tecnologia%20Catarinense%20-%20Campus%20Videira!5e0!3m2!1spt-BR!2sbr!4v1691860887844!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <!-- Rodapé da página -->
         <div>
             <p>&copy; 2023 Fabricio Bizotto</p>
             <p>Licença: MIT</p>
@@ -694,7 +923,7 @@ O rodapé é a parte inferior da página. O rodapé é utilizado para adicionar 
 
 SEO é a sigla para `Search Engine Optimization`, que significa Otimização para Mecanismos de Busca. O SEO é utilizado para melhorar o posicionamento de um site nos mecanismos de busca. Para melhorar o posicionamento de um site nos mecanismos de busca, é necessário adicionar metatags ao site. As principais metatags para SEO são: `description`, `keywords`, `author`, `viewport`, `robots` e `charset`. Adicionar estas metatags permitem que o site seja encontrado mais facilmente nos mecanismos de busca.
 
-As metatags são utilizadas para adicionar informações adicionais ao documento. Vejamos alguns exemplos de metatags:
+As metatags são utilizadas para adicionar informações extras ao documento. Vejamos alguns exemplos de metatags:
 
 ```html
 <meta name="description" content="Descrição do documento">
@@ -751,7 +980,7 @@ O resultado final deve ser parecido com o código abaixo:
 ## Resultado Final
 [&uarr;](#1-introdução-a-html)
 
-O resultado final deve ser parecido com o código abaixo:
+Pronto. Terminamos nosso primeiro site. O resultado final deve ser parecido com o código abaixo:
 
 ```html
 <!DOCTYPE html>
@@ -828,9 +1057,11 @@ O resultado final deve ser parecido com o código abaixo:
     </body>
 </html>
 ```
+Agora que você já aprendeu os conceitos básicos de HTML, é hora de praticar.
 
 ## Exercício Prático
 [&uarr;](#1-introdução-a-html)
+
 
 Crie um site para mostrar os seus filmes e séries favoritas. O site precisa ter:
  - Um título. Utilize a tag `<h1>`.
@@ -839,7 +1070,7 @@ Crie um site para mostrar os seus filmes e séries favoritas. O site precisa ter
  - Uma lista de filmes. Cada filme terá um título, um ano e um gênero. A lista deve ter pelo menos 3 filmes. Utilize as tags `<h1>`, `<ul>`, `<li>`, `<table>`, `<thead>`, `<tbody>`, `<tr>`, `<th>` e `<td>`. 
  - Uma tabela com as suas séries favoritas. Cada série terá um título, um ano e um gênero. A tabela deve ter pelo menos 3 séries. Utilize as tags `<h1>`, `<table>`, `<thead>`, `<tbody>`, `<tr>`, `<th>` e `<td>`.
  - Um vídeo de um trailer de um filme ou série. Utilize a tag `<iframe>`.
-  - Um rodapé com o seu nome e link para o seu GitHub. Utilize as tags `<p>` e `<a>`.
+ - Um rodapé com o seu nome e link para o seu GitHub. Utilize as tags `<p>` e `<a>`.
 
 # O que é CSS?
 [&uarr;](#1-introdução-a-html)
@@ -903,7 +1134,7 @@ O resultado final deve ser parecido com o código abaixo:
 </html>
 ```
 
-Perceba que o resultado final é um título vermelho com fundo preto. Isso acontece porque o atributo `style` adiciona a cor vermelha e o fundo preto ao título.
+Perceba que o resultado final é um título vermelho com fundo preto. Isso acontece porque o atributo `style` na tag `<h1>` adiciona a cor vermelha (`color: red`) e o fundo preto (`background-color: black`).
 
 ### Como adicionar CSS na tag `<style>`?
 
@@ -988,7 +1219,7 @@ p {
 </html>
 ```
 
-## Seletores
+## Elementos, Classes e IDs
 [&uarr;](#1-introdução-a-html)
 
 Podemos usar o seletor de elemento, classe e id para selecionar um ou mais elementos HTML. O seletor de elemento seleciona um ou mais elementos HTML. O seletor de classe seleciona um ou mais elementos HTML com a mesma classe. O seletor de id seleciona um elemento HTML com o respectivo id. Para demonstrar, as três formas de selecionar um elemento HTML, vamos adicionar um título, um parágrafo e uma lista ao nosso site. Para isso, siga os passos abaixo:
@@ -1052,11 +1283,10 @@ Perceba que estamos usando seletores de elemento, classe e id para adicionar est
  - O seletor `p.green` seleciona todos os elementos `<p>` com a classe `green` e adiciona a cor verde. 
  - O seletor `.link` seleciona todos os elementos com a classe `link` e adiciona a cor magenta, remove o sublinhado e aumenta o tamanho da fonte. Por padrão, os links possuem um sublinhado. Para remover o sublinhado, utilizamos a propriedade `text-decoration` com o valor `none`. Para aumentar o tamanho da fonte, utilizamos a propriedade `font-size` com o valor `20px`.
 
-
 ## Como adicionar espaçamentos?
 [&uarr;](#1-introdução-a-html)
 
-Podemos adicionar espaçamentos entre os elementos HTML. Para isso, podemos usar as propriedades `margin` e `padding`. A propriedade `margin` é utilizada para adicionar espaçamento externo. A propriedade `padding` é utilizada para adicionar espaçamento interno. Para demonstrar, vamos adicionar espaçamentos ao nosso site. Para isso, siga os passos abaixo:
+Podemos adicionar espaçamentos entre os elementos HTML. Para isso, podemos usar as propriedades `margin` e `padding`. A propriedade `margin` é utilizada para adicionar espaçamento externo. A propriedade `padding` é utilizada para adicionar espaçamento interno. Para demonstrar, vamos adicionar espaçamentos ao nosso site fazendo algumas modificações no código CSS.
 
 > 💡 **Importante**: Nunca use a tag `br` para adicionar espaçamento. A tag `br` é utilizada para quebrar linha. Para adicionar espaçamento, use as propriedades `margin` e `padding`.
 
@@ -1092,25 +1322,6 @@ p.green {
     text-decoration: none;
     font-size: 20px;
 }
-```
-
-```html
-<!-- index.html -->
-<!DOCTYPE html>
-<html lang="pt-br">
-    <head>
-        <link rel="stylesheet" href="estilo.css">
-    </head>
-    <body>
-        <div id="main">
-            <h1>Livraria</h1>
-            <p class="blue">Faça doações ou empréstimos de livros no campus.</p>
-            <p class="red">Faça doações ou empréstimos de livros no campus.</p>
-            <p class="green">Faça doações ou empréstimos de livros no campus.</p>
-            <a class="link" href="#">GitHub</a>
-        </div>
-    </body>
-</html>
 ```
 
 Podemos perceber que existe um padrão de 10px para `margin` e `padding` repetindo-se em todos os parágrafos. Para evitar repetição, podemos fazer uma pequena modificação no nosso código. Para isso, siga os passos abaixo:
@@ -1196,11 +1407,9 @@ Experimente remover o seletor de id `#paragrafo` no arquivo `index.html` no exem
 ## Reset de Estilos
 [&uarr;](#1-introdução-a-html)
 
-Todo elemento HTML tem um estilo padrão que é injetado pelo navegador web. O legal é que não existe um padrão entre eles. O Chrome tem seu estilo, o Firefox tem o dele, o Safari e Opera também. Isso pode gerar incompatibilidade com o CSS que você escreve. 
+Todo elemento HTML tem um estilo padrão que é injetado pelo navegador web. O problema é que cada navegador tem um estilo padrão diferente. Isso pode causar problemas de compatibilidade entre navegadores.
 
-O CSS Reset é uma técnica que serve para evitar esse problema. Você remove ou seta valores para as propriedades dos elementos conforme necessário. Existem várias formas de se fazer um CSS Reset. Para começar, podemos criar um simples reset de estilos. Para isso, siga os passos abaixo:
-
-Basta colocar esse código no início do arquivo de estilos:
+O CSS Reset é uma técnica que serve para evitar esse problema. Você remove ou setar valores para as propriedades dos elementos conforme necessário. Existem várias formas de se fazer um CSS Reset. Para começar, podemos criar um simples reset de estilos. Para isso, basta adicionar o código abaixo no início do arquivo de estilos:
 
 ```css
 /* estilos.css */
@@ -1252,7 +1461,7 @@ Box Model ajuda a entender como os elementos HTML são renderizados no navegador
 </html>
 ```
 
-Nesse exemplo, o parágrafo está contido em uma div com a classe `.box-example`.
+Nesse exemplo, o parágrafo está contido em uma div com a classe `.box-example`. Temos basicamente:
 
 - **Conteúdo**: O texto do parágrafo "Livraria fantástica." é o conteúdo do elemento.
 - **Preenchimento (Padding)**: O padding (preenchimento) da `div` é definido como `20px`, o que cria um espaço entre o conteúdo (parágrafo) e a borda da caixa.
@@ -1288,7 +1497,7 @@ livraria
 ├── index.html
 └── estilo.css
 ```
-> 💡 Busque por imagens de livros na internet e salve na pasta `img`.
+> 💡 Busque por 3 imagens de livros na internet e salve na pasta `img`.
 
 O resultado esperado deve ser parecido com a imagem abaixo:
 
@@ -1298,6 +1507,7 @@ Vamos começar a criar o site passo a passo. Primeiro, vamos criar o título e o
 
 ```html
 <!-- index.html -->
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -1329,6 +1539,8 @@ O código acima começa com a declaração do documento HTML. Em seguida, temos 
 Agora, vamos adicionar o estilo ao nosso site. Para começar, vamos adicionar um reset de estilos. Para isso, siga os passos abaixo:
 
 ```css
+/* estilos.css */
+
 /* Reset de Estilos */
 * {
     margin: 0; /* zerar a margem de todos os elementos */
@@ -1344,6 +1556,8 @@ O código CSS acima, começa com o reset de estilos com a propriedade `*` que se
 O próximo passo será adicionar uma cor de fundo e um tipo de fonte diferente. Faremos isso na tag `body` pois queremos que esses estilos sejam aplicados em todo o site. Para isso, siga os passos abaixo:
 
 ```css
+/* estilos.css */
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
@@ -1355,6 +1569,8 @@ body {
 Em seguida, vamos adicionar o estilo ao cabeçalho. Para isso, siga os passos abaixo:
 
 ```css
+/* estilos.css */
+
 header {
     background-color: #333; /* cor de fundo */
     color: #fff; /* cor do texto */
@@ -1369,6 +1585,8 @@ header {
 O código acima adiciona uma cor de fundo, uma cor de texto, um alinhamento centralizado e um espaçamento interno de 20px em todas as direções. Para simplificar, podemos usar a propriedade `padding` para adicionar um espaçamento interno de 20px em todas as direções. Para isso, faça a seguinte alteração no código acima:
 
 ```css
+/* estilos.css */
+
 header {
     background-color: #333;
     color: #fff;
@@ -1386,6 +1604,8 @@ header {
 Nosso cabeçalho está quase pronto. Falta apenas adicionar o estilo ao título e ao menu. Para isso, siga os passos abaixo:
 
 ```css
+/* estilos.css */
+
 nav ul {
     list-style: none; /* Remove o estilo da lista */
 }
@@ -1407,12 +1627,30 @@ O código acima remove os marcadores da lista, deixa os itens da lista em linha,
 Pronto, nosso cabeçalho está pronto. Agora, vamos alterar nosso arquivo `index.html` para adicionar a lista de livros. Para isso, siga os passos abaixo:
 
 ```html
-<!-- ... -->
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livraria</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
 <body>
     <header>
-        <!-- ... -->
+        <h1>Livraria Fantástica</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Livros</a></li>
+                <li><a href="#">Autores</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
     </header>
 
+    <!-- Conteúdo principal adicionado -->
     <main>
         <section class="cards">
             <div class="card">
@@ -1438,7 +1676,7 @@ Pronto, nosso cabeçalho está pronto. Agora, vamos alterar nosso arquivo `index
         </section>
     </main>
 </body>
-<!-- ... -->
+</html>
 ```
 
 > 💡 Repare que estamos usando mais duas tags semânticas: `main` e `section`. A tag `main` é utilizada para adicionar o conteúdo principal do site. A tag `section` é utilizada para adicionar uma seção do site. Conheça mais sobre tags semânticas [clicando aqui](https://www.freecodecamp.org/portuguese/news/elementos-semanticos-do-html5-explicados/).
@@ -1446,6 +1684,8 @@ Pronto, nosso cabeçalho está pronto. Agora, vamos alterar nosso arquivo `index
 O código acima adiciona uma seção com a classe `.cards` e três cartões com a classe `.card`. Cada cartão tem uma imagem, um título, um autor e um botão para comprar. Inicialmente, vamos adicionar uma margem de 20px em todas as direções na tag `main`. Para isso, siga os passos abaixo:
 
 ```css
+/* estilos.css */
+
 main {
     padding: 20px; /* espaçamento interno */
     overflow: hidden; /* esconde o conteúdo que ultrapassa o tamanho do elemento */
@@ -1457,6 +1697,8 @@ main {
 Já que vamos dividir nossa tela em três colunas, vamos adicionar um estilo de coluna na classe `.card`. Cada `.card` terá uma largura calculada da seguinte forma: `33.33% - 20px`. Esse calculo foi feito para descontar a margem de 10px para cima e para baixo. Para isso, siga os passos abaixo:
 
 ```css
+/* estilos.css */
+
 .card {
     width: calc(33.33% - 20px); /* 33.33% - 20px */
     margin: 10px; /* margem de 10px para cima e para baixo */
@@ -1483,15 +1725,66 @@ No código acima, usamos vários conceitos diferentes.
 Por fim, vamos adicionar o estilo ao rodapé. Para isso, siga os passos abaixo:
 
 ```html
-<!-- </main -->
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livraria</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header>
+        <h1>Livraria Fantástica</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Livros</a></li>
+                <li><a href="#">Autores</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Conteúdo principal adicionado -->
+    <main>
+        <section class="cards">
+            <div class="card">
+                <img src="image/livraria/livro-01.jpg" alt="Livro 1">
+                <h2>Livro Incrível</h2>
+                <p>Autor: João Silva</p>
+                <button>Comprar</button>
+            </div>
+
+            <div class="card">
+                <img src="image/livraria/livro-02.jpg" alt="Livro 2">
+                <h2>Livro Fantástico</h2>
+                <p>Autor: Maria Santos</p>
+                <button>Comprar</button>
+            </div>
+
+            <div class="card">
+                <img src="image/livraria/livro-03.jpg" alt="Livro 3">
+                <h2>Aventuras Mágicas</h2>
+                <p>Autor: Pedro Almeida</p>
+                <button>Comprar</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé adicionado -->
     <footer>
         <p>&copy; 2023 Livraria Fantástica | Criado por Seu Nome</p>
     </footer>
-<!-- </body> -->
-<!-- </html> -->
+</body>
+</html>
 ```
 
 ```css
+/* estilos.css */
+
 footer {
     background-color: #333;
     color: #fff;
@@ -1507,6 +1800,8 @@ O código acima adiciona uma cor de fundo, uma cor de texto, um alinhamento cent
 Terminamos nosso projeto. Agora, vamos adicionar o código completo do nosso projeto. Para isso, siga os passos abaixo:
 
 ```html
+<!-- index.html -->
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -1561,6 +1856,8 @@ Terminamos nosso projeto. Agora, vamos adicionar o código completo do nosso pro
 ```
 
 ```css
+/* estilos.css */
+
 /* Reset de Estilos */
 * {
     margin: 0; /* Remove a margem padrão */
@@ -1691,13 +1988,16 @@ Para começar, vamos começar a criar o site passo a passo. Primeiro, vamos cria
     <title>Loja</title> <!-- título do site -->
 </head>
 <body>
-<!-- ... -->
+
+</body>
 </html>
 ```
 
 > 💡 Para conhecer mais sobre as metatags, assista ao vídeo [Principais metatags no HTML](https://youtu.be/vfLMKUIEYuk).
 
-Em seguida, vamos adicionar uma novidade. O ícone da aba do navegador, mais conhecido como favicon. Para isso, siga os passos abaixo:
+Em seguida, vamos adicionar uma novidade. O ícone da aba do navegador, mais conhecido como favicon. Você precisará de uma imagem com o formato `.ico`. Caso não lembre como adicionar o favicon, volte na seção [Como Adicionar um Favicon](HTML.md#como-adicionar-um-favicon-ao-seu-site) e siga os passos novamente.
+
+O resultado será parecido com o código abaixo:
 
 ```html
 <head>
@@ -1706,13 +2006,15 @@ Em seguida, vamos adicionar uma novidade. O ícone da aba do navegador, mais con
 </head>
 ```
 
-Pronto. Agora, podemos verificar na aba do navegador se o ícone foi adicionado.
-
 > 💡 Para gerar o seu próprio favicon, acesse o site [favicon.io](https://favicon.io/). Escolha um ícone e faça o download. Em seguida, adicione o arquivo `favicon.ico` na pasta `img` do seu projeto. Por fim, adicione o código abaixo na tag `head` do seu arquivo `index.html`.
 
- O próximo passo será adicionar o estilo ao nosso site. Para começar, vamos adicionar um reset de estilos. Para isso, siga os passos abaixo:
+Pronto. Agora, podemos verificar na aba do navegador se o ícone foi adicionado.
+
+O próximo passo será adicionar o estilo ao nosso site. Para começar, vamos adicionar um reset de estilos. Para isso, siga os passos abaixo:
 
 ```css
+/* estilos.css */
+
 /* Reset de Estilos */
 * {
     margin: 0; /* Remove a margem padrão */
@@ -1721,7 +2023,9 @@ Pronto. Agora, podemos verificar na aba do navegador se o ícone foi adicionado.
 }
 ```
 
-Assim como foi feito nos outros projetos, o reset de estilos é importante para remover os estilos padrões do navegador. Agora, vamos adicionar uma família de fonte diferente que será importada do Google Fonts. Para isso, siga os passos abaixo:
+Assim como foi feito nos outros projetos, o reset de estilos é importante para remover os estilos padrões do navegador. 
+
+Agora, vamos adicionar uma família de fonte diferente que será importada do Google Fonts. Para isso, siga os passos abaixo:
 
 ```css
 /* Importar fonte do Google Fonts */
@@ -1746,6 +2050,8 @@ Vamos adicionar uma imagem de cabeçalho e a imagem de banner. Para isso, siga o
     </header>
 
     <section class="banner"></section>
+</body>
+</html>
 ```
 
 Repare que adicionamos uma tag `header` e uma tag `section`. A tag `header` é utilizada para adicionar o cabeçalho do site. A tag `section` é utilizada para adicionar uma seção do site. Na tag `header`, adicionamos uma div com a classe `.logo` e uma imagem com o logo da loja. Na tag `section`, adicionamos uma seção com a classe `.banner`. O resto será feito com CSS.
@@ -1753,6 +2059,8 @@ Repare que adicionamos uma tag `header` e uma tag `section`. A tag `header` é u
 Agora, vamos adicionar o estilo ao nosso cabeçalho. Para isso, siga os passos abaixo:
 
 ```css
+/* estilos.css */
+
 header {
     background-color: #e8e8e8; /* Cor de fundo */
     color: #fff; /* Cor do texto */
@@ -1764,6 +2072,8 @@ header {
 O código do cabeçalho não tem muito mistério. Adicionamos uma cor de fundo, uma cor de texto, um alinhamento centralizado e um espaçamento interno de 1rem em todas as direções. Agora, vamos adicionar o estilo a imagem de logotipo. Para isso, siga os passos abaixo:
 
 ```css
+/* estilos.css */
+
 img {
     max-width: 100%; /* Imagens não ultrapassam a largura do elemento pai */
 }
@@ -1773,9 +2083,11 @@ img {
 }
 ```
 
-O código acima adiciona um estilo para todas as imagens e um estilo para a imagem da logo. Todas as imagens não ultrapassam a largura do elemento pai. A imagem da logo não ultrapassa 200px de largura. Agora, vamos adicionar o estilo ao banner. Para isso, siga os passos abaixo:
+O código acima adiciona um estilo para todas as imagens e um estilo específico para a imagem da logo. Todas as imagens não ultrapassam a largura do elemento pai. A imagem da logo não ultrapassa 200px de largura. Agora, vamos adicionar o estilo ao banner. Para isso, siga os passos abaixo:
 
 ```css
+/* estilos.css */
+
 .banner {
     background-image: url("img/banner.jpeg"); /* Adiciona a imagem de fundo */
     background-size: cover; /* Redimensiona a imagem para cobrir todo o banner */
@@ -1790,35 +2102,49 @@ Na classe `.banner`, adicionamos uma imagem de fundo, redimensionamos a imagem p
 A primeira parte do projeto está pronta. Agora, vamos adicionar a lista de produtos. Para isso, siga os passos abaixo:
 
 ```html
-<!-- ... -->
-<section id="content">
-    <div class="container clearfix">
-        <div class="card">
-            <img src="img/promocoes.png" alt="Promoções" class="col-image">
-            <h2>Promoções</h2>
-            <p>Conteúdo da coluna 3 Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <button>
-                <i class="fa-solid fa-cart-shopping"></i>
-            </button>
+<!-- index.html -->
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo">
         </div>
-        <div class="card">
-            <img src="img/baldes.png" alt="Baldes" class="col-image">
-            <h2>Baldes</h2>
-            <p>Conteúdo da coluna 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <button>
-                <i class="fa-solid fa-cart-shopping"></i>
-            </button>
+    </header>
+
+    <section class="banner"></section>
+
+    <!-- Seção adicionada aqui -->
+    <section id="content">
+        <div class="container clearfix">
+            <div class="card">
+                <img src="img/promocoes.png" alt="Promoções" class="col-image">
+                <h2>Promoções</h2>
+                <p>Conteúdo da coluna 3 Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <button>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </button>
+            </div>
+            <div class="card">
+                <img src="img/baldes.png" alt="Baldes" class="col-image">
+                <h2>Baldes</h2>
+                <p>Conteúdo da coluna 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <button>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </button>
+            </div>
+            <div class="card">
+                <img src="img/combos.png" alt="Combos" class="col-image">
+                <h2>Combos</h2>
+                <p>Conteúdo da coluna 2 Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <button>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </button>
+            </div>
         </div>
-        <div class="card">
-            <img src="img/combos.png" alt="Combos" class="col-image">
-            <h2>Combos</h2>
-            <p>Conteúdo da coluna 2 Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <button>
-                <i class="fa-solid fa-cart-shopping"></i>
-            </button>
-        </div>
-    </div>
-</section>
+    </section>
+
+</body>
+</html>
 <!-- ... -->
 ```
 
@@ -1834,9 +2160,11 @@ Para começar a definir os estilos do conteúdo principal do site, vamos adicion
 }
 ```
 
-O código acima define a largura máxima do container, centraliza o container e adiciona um espaçamento interno de 2rem em todas as direções. Quando usamos contêineres, é uma boa prática definir uma largura máxima para o contêiner. Isso evita que o conteúdo fique muito largo em telas grandes. Além disso, já que vamos trabalhar com colunas usando a propriedade `float`, precisamos adicionar uma classe `clearfix` na div com a classe `container`. Para isso, siga os passos abaixo:
+O código acima define a largura máxima do container, centraliza o container e adiciona um espaçamento interno de 2rem em todas as direções. Quando usamos contêiner, é uma boa prática definir uma largura máxima. Isso evita que o conteúdo fique muito largo em telas grandes. Além disso, já que vamos trabalhar com colunas usando a propriedade `float`, precisamos adicionar uma classe `clearfix` na div com a classe `container`. Para isso, siga os passos abaixo:
 
 ```css
+/* estilos.css */
+
 /* Limpa o float */
 .clearfix {
     overflow: auto;
@@ -1852,6 +2180,8 @@ O código acima define a largura máxima do container, centraliza o container e 
 O código acima adiciona uma classe `clearfix` que limpa o float. Isso é necessário para que o conteúdo não ultrapasse o tamanho do elemento pai. Agora, vamos adicionar o estilo a classe `.card`. Para isso, siga os passos abaixo:
 
 ```css
+/* estilos.css */
+
 .card {
     background-color: #fff; /* Cor de fundo */
     padding: 1rem; /* Adiciona um espaçamento interno */
@@ -1869,6 +2199,8 @@ Com o entendimento da importância das classes `.container` e `.clearfix`, podem
 A imagem demonstra a divisão da tela em 12 colunas. Cada coluna tem uma largura de 1/12 da largura total da tela. Para implementar essa estratégia e reutilizar ela em nossas páginas web podemos criar classes com o nome `col-1`, `col-2`, `col-3`, `col-4`, `col-6` e `col-12`. Para isso, siga os passos abaixo:
 
 ```css
+/* estilos.css */
+
 /* Colunas */
 /* Alinha as colunas ao lado esquerdo */
 [class*="col-"] {
@@ -1895,7 +2227,7 @@ O código acima adiciona um estilo para todas as classes que começam com `col-`
 
 > ⚠️ É fundamental entender essa divisão da tela em 12 pedaços para prosseguir.
 
-Com as colunas definidas no nosso projeto, podemos utilizar as classes `col-4` para adicionar três colunas na nossa página. Para isso, vamos fazer uma pequena modificação no nosso código HTML anterior. Para isso, siga os passos abaixo:
+Com as colunas definidas no nosso projeto, podemos utilizar as classes `col-4` para adicionar três colunas com a mesma largura. Para isso, vamos fazer uma pequena modificação no nosso código HTML anterior. Para isso, siga os passos abaixo:
 
 ```html
 <section id="content">
@@ -1934,11 +2266,13 @@ Com as colunas definidas no nosso projeto, podemos utilizar as classes `col-4` p
 O código acima adiciona a classe `col-4` em cada div com a classe `card`. Isso significa que cada div com a classe `card` terá uma largura de 33.33% da largura do elemento pai. A soma das três colunas é igual a 100%.
 
 > 💡 É fundamental que a soma das colunas seja igual a `100%`, ou seja, `12 colunas`. <br>
-> 💡 **Importante**: Para adicionar mais ou menos colunas, use as classes `col-1`, `col-2`, `col-3`, `col-4`, `col-6` e `col-12`. Por exemplo, se você quiser adicionar 4 colunas, use as classes `col-3`. Se você quiser adicionar 6 colunas, use as classes `col-2`. Se você quiser adicionar 2 colunas, use as classes `col-6`.
+> 💡 **Importante**: Para adicionar mais ou menos colunas, use as classes `col-1`, `col-2`, `col-3`, `col-4`, `col-6` e `col-12`. Por exemplo, se você quiser adicionar 4 colunas iguais, use as classes `col-3`. Se você quiser adicionar 6 colunas, use as classes `col-2`. Se você quiser adicionar 2 colunas, use as classes `col-6`.
 
 Agora, vamos adicionar o estilo a imagem de cada coluna. Para isso, siga os passos abaixo:
 
 ```css
+/* estilos.css */
+
 .col-image {
     height: 350px; /* Altura da imagem */
     object-fit: cover; /* Redimensiona a imagem para cobrir todo o elemento */
@@ -1956,6 +2290,8 @@ Vamos analisar o código acima. Primeiro, definimos uma altura de 350px para a i
 Agora, vamos adicionar o estilo ao título de cada coluna. Para isso, siga os passos abaixo:
 
 ```css
+/* estilos.css */
+
 .card h2 {
     font-size: 1.5rem; /* Define o tamanho da fonte */
     margin: 1rem 0; /* Adiciona um espaçamento externo */
@@ -1965,6 +2301,8 @@ Agora, vamos adicionar o estilo ao título de cada coluna. Para isso, siga os pa
 Para finalizar nosso card, vamos adicionar o estilo ao botão de cada coluna. Para isso, siga os passos abaixo:
 
 ```css
+/* estilos.css */
+
 .card button {
     display: block; /* Faz o botão ocupar a largura total do elemento pai */
     margin: 10px auto; /* Centraliza o botão */
@@ -1994,17 +2332,20 @@ Apesar do código do botão ser extendo, não tem muito mistério. Adicionamos u
 Agora, vamos adicionar o estilo ao formulário de contato. Para isso, siga os passos abaixo:
 
 ```html
-<!-- ... -->
-<section id="newsletter">
-    <div class="container clearfix">
-        <h2>Inscreva-se para receber nossas novidades</h2>
-        <form action="#">
-            <input type="email" placeholder="Digite seu e-mail">
-            <button type="submit">Inscrever</button>
-        </form>
-    </div>
-</section>
-<!-- ... -->
+    
+    <!-- ... -->
+
+    <section id="newsletter">
+        <div class="container clearfix">
+            <h2>Inscreva-se para receber nossas novidades</h2>
+            <form action="#">
+                <input type="email" placeholder="Digite seu e-mail">
+                <button type="submit">Inscrever</button>
+            </form>
+        </div>
+    </section>
+</body>
+</html>
 ```
 
 O código acima adiciona uma seção com o id `newsletter`. Novamente, estamos reutilizando aqui a classe `container` e a classe `clearfix`. Dentro da div com a classe `container`, adicionamos um título, um formulário e um botão. O resto será feito com CSS.
@@ -2012,6 +2353,7 @@ O código acima adiciona uma seção com o id `newsletter`. Novamente, estamos r
 Antes de verificarmos o CSS, repare que estamos criando um formulário de contato. Para isso, usamos a tag `form` e adicionamos um `input` do tipo `email` e um botão do tipo `submit`. O tipo `email` é utilizado para adicionar um campo de e-mail. O tipo `submit` é utilizado para adicionar um botão de envio. Agora, vamos adicionar o estilo ao formulário de contato. Para isso, siga os passos abaixo:
 
 ```css
+/* estilos.css */
 
 /* Formulário */
 #newsletter {
@@ -2042,14 +2384,16 @@ Antes de verificarmos o CSS, repare que estamos criando um formulário de contat
 }
 ```
 
-Novamente, não temos muitas novidades no código acima. Adicionamos um estilo para a seção `#newsletter`, um estilo para o título `h2` e um estilo para o formulário. A novidade aqui fica para o estilo aplicado ao `input` do tipo `email`. Adicionamos um espaçamento interno, uma largura de 70%, uma borda, um arredondamento nas bordas e um cursor de mão. Existem diversos tipos de input. 
+Novamente, não temos muitas novidades no código acima. Adicionamos um estilo para a seção `#newsletter`, um estilo para o título `h2` e um estilo para o formulário. A novidade aqui fica para o estilo aplicado ao `input` do tipo `email`. Adicionamos um espaçamento interno, uma largura de 70%, uma borda, um arredondamento nas bordas e um cursor de mão.
 
 > 💡 Para conhecer mais sobre os tipos de input, assista ao vídeo [Todos os Tipos de INPUT do HTML e suas FUNÇÕES](https://youtu.be/m_9HufwmmzE).
 
 Para finalizar, vamos adicionar nosso rodapé. Para isso, siga os passos abaixo:
 
 ```html
+
     <!-- ... -->
+
     <footer>
         <div class="social-icons">
             <a href="#" class="social-icon"><i class="fa-brands fa-facebook"></i></a>
@@ -2070,6 +2414,7 @@ Para adicionar os ícones de redes sociais, vamos utilizar a biblioteca `font aw
 ```html
 <head>
     <!-- ... -->
+
     <!-- Adicione essa linha -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
@@ -2078,6 +2423,8 @@ Para adicionar os ícones de redes sociais, vamos utilizar a biblioteca `font aw
 Pronto. Agora, os ícones das redes sociais presentes em seu rodapé já estão funcionando. Agora, vamos adicionar o estilo ao nosso rodapé. Para isso, siga os passos abaixo:
 
 ```css
+/* estilos.css */
+
 /* Rodapé */
 footer {
     text-align: center;
@@ -2100,11 +2447,13 @@ footer {
 }
 ```
 
-O código do nosso rodapé não teve nenhuma novidade. O código acima adiciona um estilo para o rodapé, um estilo para os links de redes sociais e um estilo para os ícones de redes sociais. O estilo do rodapé é bem simples. Adicionamos um alinhamento centralizado, um espaçamento interno, uma cor de fundo e uma cor de texto. O resultado será um rodapé simples e elegante.
+O código acima adiciona um estilo para o rodapé, um estilo para os links de redes sociais e um estilo para os ícones de redes sociais. O estilo do rodapé é bem simples. Adicionamos um alinhamento centralizado, um espaçamento interno, uma cor de fundo e uma cor de texto. O resultado será um rodapé simples e elegante.
 
 Para incrementar nosso site, vamos adicionar algumas animações. Para isso, adicione o código abaixo no final do arquivo `estilos.css`.
 
 ```css
+/* estilos.css */
+
 /* Animações */
 @keyframes fade-in {
     0% {
@@ -2127,36 +2476,40 @@ Para incrementar nosso site, vamos adicionar algumas animações. Para isso, adi
 
 O código acima adiciona duas animações. A primeira animação é uma animação de fade-in. A segunda animação é uma animação de escala. Agora, vamos adicionar essas animações no nosso projeto.
 
-Para adicionar a animação de fade-in, modifique o código aplicado na tag `body` no arquivo `estilos.css`. Para isso, siga os passos abaixo:
+Para adicionar a animação de `fade-in`, modifique o código aplicado na tag `body` no arquivo `estilos.css`. Para isso, siga os passos abaixo:
 
 ```css
+/* estilos.css */
+
 body {
     font-family: 'Open Sans', sans-serif; /* Define a fonte */
     
-    /* Adicione essas linhas */
+    /* Adicione essa linha */
     animation: fade-in .5s ease, slide-in 1.2s ease; /* Adiciona animações */
-   -webkit-animation: fade-in .5s ease, slide-in 1.2s ease; /* Adiciona animações */
 }
 ```
 
 Para adicionar a animação de escala, modifique o código aplicado na classe `.col-image` no arquivo `estilos.css`. Para isso, siga os passos abaixo:
 
 ```css
+/* estilos.css */
+
 .col-image {
     height: 350px; /* Altura da imagem */
     object-fit: cover; /* Redimensiona a imagem para cobrir todo o elemento */
     display: block; /* Faz a imagem ocupar a largura total do elemento pai */
     transition: transform 0.3s ease; /* Adiciona uma transição suave */
     
-    /* Adicione essas linhas */
+    /* Adicione essa linha */
     animation: scaleDown 1.2s ease; /* Adiciona animações */
-    -webkit-animation: scaleDown 1.2s ease; /* Adiciona animações */
 }
 ```
 
 Pronto. Agora, nosso site tem animações. Para finalizar, vamos adicionar um efeito de paralaxe no nosso banner. Para isso, adicione o código abaixo no final do arquivo `estilos.css`.
 
 ```css
+/* estilos.css */
+
 .banner {
     background-image: url("img/banner.jpeg"); /* Adiciona a imagem de fundo */
     background-size: cover; /* Redimensiona a imagem para cobrir todo o banner */
@@ -2172,6 +2525,8 @@ Pronto. Agora, nosso site tem animações. Para finalizar, vamos adicionar um ef
 Pronto. Agora, nosso site tem um efeito de paralaxe. Para finalizar, vamos adicionar um efeito de rolagem suave. Para isso, adicione o código abaixo no final do arquivo `estilos.css`.
 
 ```css
+/* estilos.css */
+
 /* Efeito de rolagem suave */
 html {
     scroll-behavior: smooth;

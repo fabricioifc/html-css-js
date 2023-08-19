@@ -1,20 +1,26 @@
+/* Reset de Estilos */
+* {
+    margin: 0; /* Remove a margem padrão */
+    padding: 0; /* Remove o padding padrão */
+    box-sizing: border-box; /* Faz com que o padding e a borda não aumentem o tamanho do elemento */
+}
+
+/* Importar fonte do Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 
-/* Reset */
-* {
-    margin: 0; /* Remove a margem */
-    padding: 0; /* Remove o espaçamento interno */
-    box-sizing: border-box; /* largura e altura definidas no CSS incluem o padding e a borda */
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
+/* Definir fonte padrão */
 body {
     font-family: 'Open Sans', sans-serif; /* Define a fonte */
     animation: fade-in .5s ease, slide-in 1.2s ease; /* Adiciona animações */
-   -webkit-animation: fade-in .5s ease, slide-in 1.2s ease; /* Adiciona animações */
+}
+
+/* estilos.css */
+
+header {
+    background-color: #e8e8e8; /* Cor de fundo */
+    color: #fff; /* Cor do texto */
+    text-align: center; /* Alinha o texto ao centro */
+    padding: 1rem 0; /* Adiciona um espaçamento interno */
 }
 
 img {
@@ -25,11 +31,14 @@ img {
     max-width: 200px; /* Imagem da logo não ultrapassa 200px de largura */
 }
 
-header {
-    background-color: #e8e8e8; /* Cor de fundo */
-    color: #fff; /* Cor do texto */
-    text-align: center; /* Alinha o texto ao centro */
-    padding: 1rem 0; /* Adiciona um espaçamento interno */
+.banner {
+    background-image: url("img/banner.jpeg"); /* Adiciona a imagem de fundo */
+    background-size: cover; /* Redimensiona a imagem para cobrir todo o banner */
+    background-position: center; /* Centraliza a imagem */
+    text-align: center;
+    padding: 100px 0; /* Ajuste o espaçamento interno conforme necessário */
+
+    background-attachment: fixed; /* Define o background como fixo */
 }
 
 .container {
@@ -49,6 +58,14 @@ header {
     clear: both;
 }
 
+.card {
+    background-color: #fff; /* Cor de fundo */
+    padding: 1rem; /* Adiciona um espaçamento interno */
+    border-radius: 5px; /* Arredonda as bordas */
+    box-shadow: 0 0 10px rgba(0,0,0,0.2); /* Adiciona uma sombra */
+}
+
+/* Colunas */
 /* Alinha as colunas ao lado esquerdo */
 [class*="col-"] {
     float: left; 
@@ -75,35 +92,16 @@ header {
     display: block; /* Faz a imagem ocupar a largura total do elemento pai */
     transition: transform 0.3s ease; /* Adiciona uma transição suave */
 
-    animation: scaleDown .5s ease ; /* Adiciona uma animação */
-    -webkit-animation: scaleDown .5s ease; /* Adiciona uma animação */
+    animation: scaleDown 1.2s ease; /* Adiciona animações */
 }
 
 .col-image:hover {
     transform: scale(1.1); /* Aumenta a imagem em 10% ao passar o mouse */
 }
 
-.card {
-    background-color: #fff; /* Cor de fundo */
-    padding: 1rem; /* Adiciona um espaçamento interno */
-    border-radius: 5px; /* Arredonda as bordas */
-    box-shadow: 0 0 10px rgba(0,0,0,0.2); /* Adiciona uma sombra */
-}
-
 .card h2 {
     font-size: 1.5rem; /* Define o tamanho da fonte */
     margin: 1rem 0; /* Adiciona um espaçamento externo */
-}
-
-.banner {
-    background-image: url("img/banner.jpeg"); /* Adiciona a imagem de fundo */
-    background-size: cover; /* Redimensiona a imagem para cobrir todo o banner */
-    background-position: center; /* Centraliza a imagem */
-    text-align: center;
-    padding: 100px 0; /* Ajuste o espaçamento interno conforme necessário */
-
-    /* Adicionei essas linhas */
-    background-attachment: fixed; /* Define o background como fixo */
 }
 
 .card button {
@@ -178,7 +176,6 @@ footer {
     color: white;
 }
 
-
 /* Animações */
 @keyframes fade-in {
     0% {
@@ -198,3 +195,6 @@ footer {
     }
 }
 
+html {
+    scroll-behavior: smooth;
+}
