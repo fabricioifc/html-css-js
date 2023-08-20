@@ -2539,5 +2539,40 @@ Verifique se o resultado final está parecido com a imagem abaixo:
 
 ![livraria](./image/kfc_pronto.PNG)
 
-# Projeto: Loja de Games
+# Projeto: Game Quiz
 [&uarr;](#1-introdução-a-html)
+
+Vamos usar vários conhecimentos relacionados a HTML e CSS em um projeto prático. O projeto consiste em criar um site para um jogo de perguntas e respostas. O site deve ter:
+
+ - Um cabeçalho `header` com um título e um botão para iniciar o jogo.
+ - Uma seção `section` com um título e um texto de introdução.
+ - Um formulário `form` com um título e um campo de texto para o nome do jogador.
+ - Um rodapé `footer`.
+
+Para isso, siga os passos abaixo:
+
+1. Crie um novo projeto chamado `game-quiz` no Visual Studio Code.
+2. Crie um arquivo chamado `index.html`.
+3. Crie um arquivo chamado `estilo.css`.
+4. Adicione o código HTML abaixo no arquivo `index.html`.
+5. Adicione o código CSS abaixo no arquivo `estilo.css`.
+6. Abra o projeto no navegador usando a ferramenta `live server`.
+
+
+A estrutura de pastas e arquivos do projeto terá a seguinte estrutura:
+
+```
+game-quiz
+├── img
+|   ├── favicon.ico
+|   └── logo.png
+├── index.html
+└── estilo.css
+```
+
+> 💡 As imagens do projeto estão disponíveis na pasta `app/game-quiz/img`.
+
+Veja o resultado esperado abaixo:
+
+![game-quiz](./image/game_quiz_pronto.PNG)
+

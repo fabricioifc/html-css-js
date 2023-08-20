@@ -1,0 +1,96 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul {
+  list-style: none;
+  background-color: #333;
+  padding: 10px 0;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+#loginForm {
+  text-align: center;
+}
+
+#username {
+  padding: 8px;
+}
+
+#startButton {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+#startButton:hover {
+  background-color: #0056b3;
+}
+
+#quizContainer {
+  margin-top: 20px;
+  text-align: center;
+}
+
+p {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+input[type="radio"] {
+  margin-right: 5px;
+}
+
+#nextButton {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+#nextButton:hover {
+  background-color: #0056b3;
+}
+
+#resultContainer {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#resultContainer h2 {
+  color: #007bff;
+}
+
+#correctCount, #wrongCount {
+  font-size: 24px;
+  color: #28a745;
+}
+
+#wrongCount {
+  color: #dc3545;
+}

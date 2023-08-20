@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="estilos.css" />
+    <title>Quiz Game</title>
+  </head>
+  <body>
+    <main>
+      <h1>Quiz Game</h1>
+
+      <form id="loginForm">
+        <label for="username">Informe seu Nome:</label>
+        <input type="text" id="username" placeholder="Informe seu Nome" required autofocus />
+        <button type="submit" id="startButton">Iniciar Quiz</button>
+      </form>
+
+      <div id="quizContainer" style="display: none;">
+        <h2>Pergunta 1 de 5</h2>
+        <p>What is the capital of France?</p>
+        <input type="radio" name="q1" value="paris" /> Paris<br />
+        <input type="radio" name="q1" value="london" /> London<br />
+        <input type="radio" name="q1" value="berlin" /> Berlin<br />
+        <input type="radio" name="q1" value="madrid" /> Madrid<br />
+        <button type="button" id="nextButton">Próxima Pergunta</button>
+      </div>
+
+      <div id="resultContainer" style="display: none">
+        <h2>Resultado</h2>
+        <p>Respostas Corretas: <span id="correctCount">0</span></p>
+        <p>Respostas Erradas: <span id="wrongCount">0</span></p>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
