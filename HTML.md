@@ -2537,9 +2537,16 @@ Pronto. Agora, nosso site tem um efeito de rolagem suave. Faça pequenas modific
 
 Verifique se o resultado final está parecido com a imagem abaixo:
 
-![livraria](./image/kfc_pronto.PNG)
+![KFC](./image/kfc_pronto.PNG)
 
-# Projeto: Game Quiz
+
+## Projeto: Refeitório
+[&uarr;](#1-introdução-a-html)
+
+
+
+
+<!-- # Projeto: Game Quiz
 [&uarr;](#1-introdução-a-html)
 
 Vamos usar vários conhecimentos relacionados a HTML e CSS em um projeto prático. O projeto consiste em criar um site para um jogo de perguntas e respostas. O site deve ter:
@@ -2575,4 +2582,4 @@ game-quiz
 Veja o resultado esperado abaixo:
 
 ![game-quiz](./image/game_quiz_pronto.PNG)
-
+ -->

@@ -1,0 +1,290 @@
+/* Importar fonte do Google Fonts */
+/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+/* Reset de Estilos */
+* {
+    margin: 0; /* Remove a margem padrão */
+    padding: 0; /* Remove o padding padrão */
+    box-sizing: border-box; /* Faz com que o padding e a borda não aumentem o tamanho do elemento */
+}
+
+:root {
+    --bg-color: #f8f8f8;
+    --header-bg-color: #FF5733;
+    --header-text-color: #fff;
+    --text-color: #333;
+    --cor-1: #FF5733;
+    --cor-2: #F40027;
+    --cor-3: #264653;
+    --fonte-principal: 'Lato', 'Open Sans', sans-serif;
+}
+
+/* Definir fonte padrão */
+body {
+    font-family: var(--fonte-principal);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    animation: fade-in .5s ease, slide-in 1.2s ease; /* Adiciona animações */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+nav {
+    background-color: var(--cor-1);
+    padding: 5px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    float: left;
+}
+
+nav ul.right {
+    float: right;
+}
+  
+nav li {
+    list-style-type: none;
+    padding: 0px;
+    height: 24px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    display: inline;
+}
+  
+nav li a {
+    position: relative;
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    line-height: 55px;
+    padding: 5px 15px;
+    opacity: 0.7;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+nav li a:hover {
+    opacity: 1;
+}
+
+nav li a::before {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: white;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+nav li a:hover::before {
+    transform: scaleX(1);
+}
+
+nav ul.right li {
+    background-color: var(--cor-3);
+    padding: 10px;
+}
+
+header, main {
+    padding: 1rem;
+}
+
+header {
+    background-color: var(--header-bg-color); /* Cor de fundo */
+    color: var(--header-text-color); /* Cor do texto */
+    margin-top: 65px;
+}
+
+
+img {
+    max-width: 100%; /* Imagens não ultrapassam a largura do elemento pai */
+}
+
+.logo img {
+    float: left;
+    max-width: 100px; /* Imagem da logo não ultrapassa 200px de largura */
+}
+
+.banner {
+    background-image: url("img/banner.jpeg"); /* Adiciona a imagem de fundo */
+    background-size: cover; /* Redimensiona a imagem para cobrir todo o banner */
+    background-position: center; /* Centraliza a imagem */
+    text-align: center;
+    padding: 100px 0; /* Ajuste o espaçamento interno conforme necessário */
+
+    background-attachment: fixed; /* Define o background como fixo */
+}
+
+.container {
+    max-width: 1200px; /* Largura máxima do container */
+    margin: 0 auto; /* Centraliza o container */
+    padding: 0.5rem 0; /* Adiciona um espaçamento interno */
+}
+
+/* Limpa o float */
+.clearfix {
+    overflow: auto;
+}
+
+.clearfix::after {
+    content: ""; 
+    display: table; 
+    clear: both;
+}
+
+/* Cards com a mesma altura */
+.cardapio {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #fff; /* Cor de fundo */
+    padding: 1rem; /* Adiciona um espaçamento interno */
+    border-radius: 5px; /* Arredonda as bordas */
+    box-shadow: 0 0 10px rgba(0,0,0,0.2); /* Adiciona uma sombra */
+}
+
+.card.start {
+    align-items: baseline;
+}
+
+.card button {
+    padding: 0.5rem 1rem; /* Adiciona um espaçamento interno */
+    border: none;
+    border-radius: 5px; /* Arredonda as bordas */
+    background-color: var(--cor-3); /* Cor de fundo */
+    color: #fff; /* Cor do texto */
+    font-size: 1rem; /* Define o tamanho da fonte */
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.card button:hover {
+    background-color: var(--cor-2); /* Cor de fundo */
+}
+
+/* Colunas */
+/* Alinha as colunas ao lado esquerdo */
+[class*="col-"] {
+    float: left; 
+    margin-right: 10px;
+}
+
+/* Calcula a largura da coluna */
+.col-1 { width: calc(8.33% - 10px); }
+.col-2 { width: calc(16.66% - 10px); }
+.col-3 { width: calc(25% - 10px); }
+.col-4 { width: calc(33.33% - 10px); }
+.col-5 { width: calc(41.66% - 10px); }
+.col-6 { width: calc(50% - 10px); }
+.col-7 { width: calc(58.33% - 10px); }
+.col-8 { width: calc(66.66% - 10px); }
+.col-9 { width: calc(75% - 10px); }
+.col-10 { width: calc(83.33% - 10px); }
+.col-11 { width: calc(91.66% - 10px); } 
+.col-12 { width: calc(100% - 10px); }
+
+.col-image {
+    height: 200px; /* Altura da imagem */
+    object-fit: cover; /* Redimensiona a imagem para cobrir todo o elemento */
+    display: block; /* Faz a imagem ocupar a largura total do elemento pai */
+
+    animation: scaleDown 0.3s ease; /* Adiciona animações */
+}
+
+.card h2 {
+    font-size: 1.4rem; /* Define o tamanho da fonte */
+    text-align: center; /* Alinha o texto ao centro */
+}
+
+.card h2,
+.card h3 {
+    margin: 0.5rem 0; /* Adiciona um espaçamento externo */
+}
+
+.card .price {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px; /* Arredonda as bordas */
+    padding: 0.5rem 1rem; /* Adiciona um espaçamento interno */
+    background-color: #F40027; /* Cor de fundo */
+    color: #fff; /* Cor do texto */
+    margin-top: 10px;
+}
+
+.card a {
+    color: #fff; /* Cor do texto */
+}
+
+.card ul.ingredientes {
+    list-style-type: none;
+}
+
+.card ul.ingredientes li {
+    margin: 0.5rem 0; /* Adiciona um espaçamento externo */
+    color: var(--cor-3); /* Cor do texto */
+}
+
+.card ul.ingredientes li::before {
+    content: '•'; /* Adiciona um bullet */
+    margin-right: 0.5rem; /* Adiciona um espaçamento externo */
+
+    color: var(--cor-1); /* Cor do bullet */
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: var(--cor-1);
+    color: #fff;
+}
+
+/* Links para redes sociais */
+.social-icons {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.social-icon {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 24px;
+    color: white;
+}
+
+/* Animações */
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes scaleDown {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
