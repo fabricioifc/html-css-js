@@ -158,8 +158,8 @@ img {
     padding: 0.5rem 1rem; /* Adiciona um espaçamento interno */
     border: none;
     border-radius: 5px; /* Arredonda as bordas */
-    background-color: var(--cor-3); /* Cor de fundo */
-    color: #fff; /* Cor do texto */
+    background-color: white; /* Cor de fundo */
+    color: #333;
     font-size: 1rem; /* Define o tamanho da fonte */
     cursor: pointer;
     transition: all 0.3s ease;
@@ -223,6 +223,10 @@ img {
     float: right;
 }
 
+.card .price strong {
+    cursor: pointer;
+}
+
 .card a {
     color: #fff; /* Cor do texto */
 }
@@ -271,6 +275,23 @@ footer {
     margin: 0 10px;
     font-size: 24px;
     color: white;
+}
+
+dialog {
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 1rem rgba(0,0,0,0.2);
+    min-width: 75%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-height: 300px;
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 /* Animações */
