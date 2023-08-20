@@ -12,39 +12,36 @@
     <title>Página Inicial - Rango</title>
 </head>
 <body>
-    <nav class="clearfix">
-        <h1 class="logo">
-            <a href="index.html">
-                <img src="img/logo.png" alt="Rango Logo">
-            </a>
-        </h1>
-        <ul>
-            <li><a href="cardapio.html">Cardápio</a></li>
-            <li><a href="#">Sobre Nós</a></li>
-        </ul>
-        <ul class="right">
-            <li><a href="#">Faça seu Pedido</a></li>
-        </ul>
+    <nav>
+        <div class="container clearfix">
+            <h1 class="logo">
+                <a href="index.html">
+                    <img src="img/logo.png" alt="Rango Logo">
+                </a>
+            </h1>
+            <ul>
+                <li><a href="semana.html">Receitas da Semana</a></li>
+                <li><a href="receitas.html">Todas as Receitas</a></li>
+            </ul>
+            <ul class="right">
+                <li>
+                    <a href="#">
+                        <i class="fas fa-user"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
     </nav>
-
-    <header>
-        <h2>Prato do Dia</h2>
-        <p>Confira o prato do dia e faça seu pedido.</p>
-    </header>
 
     <main>
         <section>
-            <div class="cardapio container clearfix">
-                <div class="card col-4">
+
+            <div class="card container clearfix">
+                <h3>Receita do Dia</h3>
+                <div class="col-4">
                     <img src="img/feijoada.jpg" alt="Feijoada">
                     <h3>Feijoada</h3>
                     <p>Feijoada completa com arroz, farofa e couve.</p>
-                    <p class="price">
-                        <strong>R$ 15,00</strong>
-                        <a href="#"><i class="fa-regular fa-heart"></i></a>
-                    </p>
-                </div>
-                <div class="card start col-8">
                     <h3>Ingredientes</h3>
                     <ul class="ingredientes">
                         <li>Feijão</li>
@@ -54,9 +51,20 @@
                         <li>Couve</li>
                         <li>Banana Frita</li>
                     </ul>
-                    <button class="btn">Faça seu Pedido</button>
+                    <p class="price">
+                        <strong>R$ 15,00</strong>
+                        <a href="#"><i class="fa-regular fa-heart"></i></a>
+                    </p>
                 </div>
-
+                <div class="col-8">
+                    <p>Todo mundo ama feijoada, e fazer uma feijoada para a família não precisa ser uma dor de cabeça. Essa receita deixa a feijoada prática, aprenda como se organizar para preparar esse prato tão tradicional da culinária brasileira e aproveitar o almoço com as pessoas mais queridas, junto com uma porção de arroz fresquinha, couve refogada e farofa. Experimente!</p>
+                    <iframe 
+                        src="https://www.youtube.com/embed/dlIfc5adZKc" 
+                        title="Como Fazer a Feijoada Perfeita (10 DICAS) I Churrasqueadas" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+                    </iframe>
+                </div>
             </div>
         </section>
     </main>
