@@ -1,22 +1,17 @@
 /* Importar fonte do Google Fonts */
-/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
-/* Reset de Estilos */
 * {
-    margin: 0; /* Remove a margem padrão */
-    padding: 0; /* Remove o padding padrão */
-    box-sizing: border-box; /* Faz com que o padding e a borda não aumentem o tamanho do elemento */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 :root {
     --bg-color: #f8f8f8;
-    --header-bg-color: #FF5733;
-    --header-text-color: #fff;
     --text-color: #333;
     --cor-1: #FF5733;
     --cor-2: #F40027;
-    --cor-3: #264653;
     --fonte-principal: 'Lato', 'Open Sans', sans-serif;
 }
 
@@ -45,9 +40,6 @@ nav {
 }
 
 nav ul {
-    padding: 0;
-    margin: 0;
-    text-align: center;
     float: left;
 }
 
@@ -237,7 +229,6 @@ img {
 
 .card ul li {
     margin: 0.5rem 0; /* Adiciona um espaçamento externo */
-    color: var(--cor-3); /* Cor do texto */
 }
 
 .card ul li::before {
@@ -277,6 +268,7 @@ footer {
     color: white;
 }
 
+/* Modal */
 dialog {
     padding: 1rem;
     border: none;

@@ -2540,46 +2540,685 @@ Verifique se o resultado final está parecido com a imagem abaixo:
 ![KFC](./image/kfc_pronto.PNG)
 
 
-## Projeto: Refeitório
+## Projeto: Receitas de Casa
 [&uarr;](#1-introdução-a-html)
 
+O próximo projeto consiste em criar um site com receitas caseiras. O site deve ter uma página inicial, uma página com receitas da semana e outra página com todas as receitas. O site deve ter:
 
-
-
-<!-- # Projeto: Game Quiz
-[&uarr;](#1-introdução-a-html)
-
-Vamos usar vários conhecimentos relacionados a HTML e CSS em um projeto prático. O projeto consiste em criar um site para um jogo de perguntas e respostas. O site deve ter:
-
- - Um cabeçalho `header` com um título e um botão para iniciar o jogo.
- - Uma seção `section` com um título e um texto de introdução.
- - Um formulário `form` com um título e um campo de texto para o nome do jogador.
+ - Uma barra de navegação `nav` com um logo e um menu.
+ - Na tela inicial, um card com detalhes sobre a receita do dia.
+ - Na tela de receitas da semana, uma lista de cards com as receitas da semana.
+ - Na tela de todas as receitas, uma lista de cards com todas as receitas. Cada receita deve ter um título, uma imagem e um botão para ver mais detalhes.
  - Um rodapé `footer`.
 
-Para isso, siga os passos abaixo:
+Para começar, crie um novo projeto no Visual Studio Code:
 
-1. Crie um novo projeto chamado `game-quiz` no Visual Studio Code.
-2. Crie um arquivo chamado `index.html`.
-3. Crie um arquivo chamado `estilo.css`.
-4. Adicione o código HTML abaixo no arquivo `index.html`.
-5. Adicione o código CSS abaixo no arquivo `estilo.css`.
-6. Abra o projeto no navegador usando a ferramenta `live server`.
-
+1. Crie um novo projeto chamado `receitas` no Visual Studio Code.
+2. Crie uma pasta chamada `img`.
+3. Crie um arquivo chamado `index.html`.
+4. Crie um arquivo chamado `receitas.html`.
+5. 4. Crie um arquivo chamado `semana.html`.
+6. Crie um arquivo chamado `estilo.css`.
+7. Crie um arquivo chamado `script.js`.
 
 A estrutura de pastas e arquivos do projeto terá a seguinte estrutura:
 
 ```
-game-quiz
+receitas
 ├── img
 |   ├── favicon.ico
-|   └── logo.png
+|   ├── logo.png
+|   ├── receita-1.png
+|   ├── receita-2.png
+|   ├── receita-3.png
 ├── index.html
+├── script.js
 └── estilo.css
 ```
 
-> 💡 As imagens do projeto estão disponíveis na pasta `app/game-quiz/img`.
+> 💡 Baixe imagens de receitas na internet e adicione na pasta `img` do seu projeto.
 
-Veja o resultado esperado abaixo:
+As páginas HTML do seu projeto terão a seguinte estrutura:
 
-![game-quiz](./image/game_quiz_pronto.PNG)
- -->
+```html
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Receitas Rango">
+    <meta name="keywords" content="receitas, rango, cardápio">
+    <meta name="author" content="Professor">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Título da Página</title>
+</head>
+<body>
+
+    <nav></nav>
+    <main></main>
+    <footer></footer>
+
+</body>
+</html>
+```
+
+Perceba que a única informação que muda é o título da página. Para isso, adicione o título da página no arquivo `index.html`, `receitas.html` e `semana.html`. Por exemplo, no arquivo `index.html`, adicione o título `Receitas Rango - Receita do Dia`. No arquivo `receitas.html`, adicione o título `Receitas Rango - Receitas`. No arquivo `semana.html`, adicione o título `Receitas Rango - Receitas da Semana`.
+
+Agora, vamos adicionar o estilo ao nosso site. Para começar, vamos importar uma fonte externa e adicionar um reset de estilos. Também vamos implementar o elemento `:root`. Para isso, adicione o código abaixo no arquivo `estilos.css`.
+
+```css
+/* estilos.css */
+
+/* Importar fonte do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: #f8f8f8;
+    --text-color: #333;
+    --cor-1: #FF5733;
+    --cor-2: #F40027;
+    --fonte-principal: 'Lato', 'Open Sans', sans-serif;
+}
+```
+> 💡 O elemento `:root` é utilizado para definir variáveis CSS. No nosso caso, estamos definindo algumas variáveis de cores e fontes. 
+
+A seguir, vamos definir o estilo para o corpo do nosso site. Para isso, adicione o código abaixo no arquivo `estilos.css`.
+
+```css
+body {
+    font-family: var(--fonte-principal);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    animation: fade-in .5s ease, slide-in 1.2s ease; /* Adiciona animações */
+}
+
+p {
+    margin-bottom: 0.5rem; /* Adiciona um espaçamento externo */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+img {
+    width: 100%; /* Imagens não ultrapassam a largura do elemento pai */
+}
+```
+
+Perceba que usamos `var()` para pegar as variáveis definidas no elemento `:root`. Isso é muito útil para reutilizar cores e fontes em nosso projeto. Além disso, adicionamos uma animação de `fade-in` e uma animação de `slide-in`. Também adicionamos um estilo para o elemento `p` e para o elemento `img`. O estilo do elemento `img` é muito importante para que as imagens não ultrapassem a largura do elemento pai.
+
+Agora, vamos adicionar a barra de navegação `nav` com um logo e um menu. Para isso, adicione o código abaixo no arquivo `index.html`.
+
+```html
+<nav>
+    <div class="container clearfix">
+        <h1 class="logo">
+            <a href="index.html">
+                <img src="img/logo.png" alt="Rango Logo">
+            </a>
+        </h1>
+        <ul>
+            <li><a href="semana.html">Receitas da Semana</a></li>
+            <li><a href="receitas.html">Todas as Receitas</a></li>
+        </ul>
+        <ul class="right">
+            <li>
+                <a href="#">
+                    <i class="fas fa-user"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+```
+
+O código acima adiciona uma barra de navegação `nav` com um logo e um menu. O menu tem dois links: `Receitas da Semana` e `Todas as Receitas`. Além disso, temos um ícone de usuário no canto superior direito. O resto será feito com CSS.
+
+```css
+/* estilos.css */
+
+/* Barra de navegação */
+.logo img {
+    float: left;
+    max-width: 100px; /* Imagem da logo não ultrapassa 100px de largura */
+}
+```
+
+O código acima adiciona um estilo para a imagem da logo. A imagem da logo não ultrapassa 100px de largura. Agora, vamos adicionar estilo a barra de navegação. Para isso, adicione o código abaixo no arquivo `estilos.css`.
+
+```css 
+nav {
+    background-color: var(--cor-1); /* Cor de fundo definida no elemento :root */
+    padding: 5px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+```
+
+A barra de navegação tem uma cor de fundo, um espaçamento interno, uma posição fixa e uma largura de 100%. O fato de usar posição fixa é muito importante para que a barra de navegação fique fixa no topo da página. Agora, vamos adicionar estilo ao menu. Para isso, adicione o código abaixo no arquivo `estilos.css`.
+
+```css
+nav ul {
+    float: left;
+}
+
+nav ul.right {
+    float: right;
+}
+```
+
+O menu tem dois `ul`. O primeiro `ul` tem um `float: left` e o segundo `ul` tem um `float: right`. Isso é necessário para que o menu fique alinhado a esquerda e o ícone de usuário fique alinhado a direita. Agora, vamos adicionar estilo aos links do menu. Para isso, adicione o código abaixo no arquivo `estilos.css`.
+
+```css
+nav li {
+    list-style-type: none;
+    padding: 0px;
+    height: 24px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    display: inline;
+}
+  
+nav li a {
+    position: relative;
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    line-height: 55px;
+    padding: 5px 15px;
+    opacity: 0.7;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+```
+
+O código acima adiciona um estilo aos links do menu. Os links do menu:
+- não tem marcadores, 
+- tem um espaçamento interno, 
+- uma altura de 24px, 
+- um espaçamento externo de 4px, 
+- um tamanho de fonte de 16px, 
+- uma cor de texto branca, 
+- uma opacidade de 0.7, 
+- um efeito de transição e 
+- um texto em caixa alta. 
+
+Agora, vamos adicionar um estilo aos links do menu ao passar o mouse (efeito `hover`). Para isso, adicione o código abaixo no arquivo `estilos.css`.
+
+```css
+nav li a:hover {
+    opacity: 1;
+}
+
+nav li a::before {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: white;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+nav li a:hover::before {
+    transform: scaleX(1);
+}
+```
+
+> 💡 A propriedade `before` é muito útil para adicionar elementos antes do elemento selecionado. No nosso caso, adicionamos uma linha branca antes do elemento selecionado. Essa linha branca aparece ao passar o mouse.
+
+O código acima adiciona um estilo aos links do menu ao passar o mouse. O link do menu ao passar o mouse:
+- muda a opaciade para 1;
+- tem um efeito de transição de escala de 0 a 1 no eixo X. Esse efeito cria uma linha branca que aparece ao passar o mouse.
+
+Nosso menu de navegacão está pronto. O próximo passo será criar o conteúdo principal da página inicial. Para isso, abra o arquivo `index.html` e modifique a tag `main` para adicionar o código abaixo:
+
+```html
+<main>
+    <section>
+
+        <div class="card container clearfix">
+            <h3>Receita do Dia</h3>
+            <div class="col-4">
+                <img src="img/feijoada.jpg" alt="Feijoada">
+                <h3>Feijoada</h3>
+                <p>Feijoada completa com arroz, farofa e couve.</p>
+                <h3>Ingredientes</h3>
+                <ul class="ingredientes">
+                    <li>Feijão</li>
+                    <li>Carne de Porco</li>
+                    <li>Arroz</li>
+                    <li>Farofa</li>
+                    <li>Couve</li>
+                    <li>Banana Frita</li>
+                </ul>
+                <p class="price">
+                    <strong>R$ 15,00</strong>
+                    <a href="#"><i class="fa-regular fa-heart"></i></a>
+                </p>
+            </div>
+            <div class="col-8">
+                <p>Todo mundo ama feijoada, e fazer uma feijoada para a família não precisa ser uma dor de cabeça. Essa receita deixa a feijoada prática, aprenda como se organizar para preparar esse prato tão tradicional da culinária brasileira e aproveitar o almoço com as pessoas mais queridas, junto com uma porção de arroz fresquinha, couve refogada e farofa. Experimente!</p>
+                <iframe 
+                    src="https://www.youtube.com/embed/dlIfc5adZKc" 
+                    title="Como Fazer a Feijoada Perfeita (10 DICAS) I Churrasqueadas" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </section>
+</main>
+```
+
+O código acima adiciona um card com detalhes sobre a receita do dia. O card tem uma imagem, um título, uma descrição, uma lista de ingredientes, um preço e um botão de favoritos. Estamos usando a classe `container` e a classe `clearfix` para centralizar o card na tela e para limpar o espaçamento externo, evitando que elementos de fora do card interfiram no espaçamento interno do card. Além disso, estamos usando a classe `col-4` e a classe `col-8` para dividir o card em duas colunas. A primeira coluna tem uma largura de 33.33% e a segunda coluna tem uma largura de 66.66%. O resto será feito com CSS.
+
+Agora, vamos adicionar o estilo ao nosso card. Vamos começar com as classes `container` e `clearfix`. Para isso, adicione o código abaixo no arquivo `estilos.css`.
+
+```css
+
+.container {
+    max-width: 1200px; /* Largura máxima do container */
+    margin: 0 auto; /* Centraliza o container */
+    padding: 0.5rem 0; /* Adiciona um espaçamento interno */
+}
+
+/* Limpa o float */
+.clearfix {
+    overflow: auto;
+}
+
+.clearfix::after {
+    content: ""; 
+    display: table; 
+    clear: both;
+}
+```
+
+Na classe `container`, adicionamos uma largura máxima de `1200px`, um espaçamento interno e um alinhamento centralizado. O estilo da classe `clearfix` é um pouco mais complexo. Adicionamos um overflow de auto e um `::after` com um `content: ""`, um `display: table` e um `clear: both`. Essas propriedades são necessárias para limpar o float. Essa estratégia é muito comum quando usamos `float` para alinhar elementos na tela. 
+
+Agora, precisamos implementar as colunas que usaremos no nosso site. Para isso, adicione o código abaixo no arquivo `estilos.css`.
+
+```css
+
+/* Colunas */
+/* Alinha as colunas ao lado esquerdo */
+[class*="col-"] {
+    float: left; 
+    margin-right: 10px;
+}
+
+/* Calcula a largura da coluna */
+.col-1 { width: calc(8.33% - 10px); }
+.col-2 { width: calc(16.66% - 10px); }
+.col-3 { width: calc(25% - 10px); }
+.col-4 { width: calc(33.33% - 10px); }
+.col-5 { width: calc(41.66% - 10px); }
+.col-6 { width: calc(50% - 10px); }
+.col-7 { width: calc(58.33% - 10px); }
+.col-8 { width: calc(66.66% - 10px); }
+.col-9 { width: calc(75% - 10px); }
+.col-10 { width: calc(83.33% - 10px); }
+.col-11 { width: calc(91.66% - 10px); } 
+.col-12 { width: calc(100% - 10px); }
+```
+
+O código acima adiciona um estilo para as colunas. O estilo das colunas é um pouco mais complexo. Primeiro, adicionamos um `float: left` e um `margin-right: 10px`. Essas propriedades são necessárias para alinhar as colunas ao lado esquerdo. Usando `[class*=]`, selecionamos todas as classes que começam com `col-`. Isso significa que todas as classes que começam com `col-` terão um `float: left` e um `margin-right: 10px`. Em seguida, adicionamos um estilo específico para cada coluna. Por exemplo, a classe `col-4` tem uma largura de `33.33%`. A classe `col-4` é calculada da seguinte forma: `width: calc(33.33% - 10px)`. O `10px` é a margem direita que adicionamos anteriormente. Precisamos subtrair a margem direita para que a soma das colunas seja igual a `100%`.
+
+> 💡 Essa divisão de colunas já foi discutida anteriormente. Se você não entendeu, volte e releia o conteúdo sobre divisão de colunas.
+
+O próximo passo será adicionar o estilo ao nosso card. Para isso, adicione o código abaixo no arquivo `estilos.css`.
+
+```css
+.card {
+    background-color: #fff; /* Cor de fundo */
+    padding: 1rem; /* Adiciona um espaçamento interno */
+    border-radius: 5px; /* Arredonda as bordas */
+    box-shadow: 0 0 10px rgba(0,0,0,0.2); /* Adiciona uma sombra */
+    margin-bottom: 1rem; /* Adiciona um espaçamento externo */
+}
+
+.card button {
+    padding: 0.5rem 1rem; /* Adiciona um espaçamento interno */
+    border: none;
+    border-radius: 5px; /* Arredonda as bordas */
+    background-color: white; /* Cor de fundo */
+    color: #333;
+    font-size: 1rem; /* Define o tamanho da fonte */
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.card button:hover {
+    background-color: var(--cor-2); /* Cor de fundo */
+}
+
+
+.card h2 {
+    font-size: 1.4rem; /* Define o tamanho da fonte */
+    text-align: center; /* Alinha o texto ao centro */
+}
+
+.card h2,
+.card h3 {
+    margin: 0.5rem 0; /* Adiciona um espaçamento externo */
+}
+
+.card .price {
+    border-radius: 5px; /* Arredonda as bordas */
+    padding: 0.5rem 1rem; /* Adiciona um espaçamento interno */
+    background-color: #F40027; /* Cor de fundo */
+    color: #fff; /* Cor do texto */
+    margin-top: 10px;
+    overflow: auto;
+}
+
+.card .price a {
+    float: right;
+}
+
+.card .price strong {
+    cursor: pointer;
+}
+
+.card a {
+    color: #fff; /* Cor do texto */
+}
+
+.card ul {
+    list-style-type: none;
+}
+
+.card ul li {
+    margin: 0.5rem 0; /* Adiciona um espaçamento externo */
+}
+
+.card ul li::before {
+    content: '•'; /* Adiciona um bullet */
+    margin-right: 0.5rem; /* Adiciona um espaçamento externo */
+    color: var(--cor-1); /* Cor do bullet */
+}
+```
+
+O código acima adiciona um estilo ao nosso card. O card tem uma cor de fundo, um espaçamento interno, um arredondamento nas bordas, uma sombra, um espaçamento externo e um estilo para os botões. Além disso, o card tem um estilo para os títulos, um estilo para o preço, um estilo para os links, um estilo para as listas e um estilo para os bullets. 
+
+> 💡 O importante é entender que estamos usando `var()` para pegar as variáveis definidas no elemento `:root`. Isso é muito útil para reutilizar cores e fontes em nosso projeto. Além disso, estamos usando `::before` para adicionar bullets nas listas.
+
+Nossa página inicial está quase pronta. O próximo passo será adicionar o rodapé `footer`. Para isso, adicione o código abaixo no arquivo `index.html`. O mesmo código será adicionado no arquivo `receitas.html` e `semana.html`.
+
+```html
+<footer>
+    <div class="social-icons">
+        <a href="#" class="social-icon"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#" class="social-icon"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+        <!-- Adicione mais ícones de redes sociais conforme necessário -->
+    </div>
+    <p>&copy; 2023 Todos os direitos reservados.</p>
+</footer>
+```
+
+O código acima adiciona um rodapé `footer` com uma div com a classe `social-icons` e uma div com a classe `social-icon`. Dentro da div com a classe `social-icons`, adicionamos três links com a classe `social-icon` e um ícone de rede social. O resto será feito com CSS.
+
+Para adicionar os ícones de redes sociais, vamos utilizar a biblioteca `font awesome`. Repare que já adicionamos essa biblioteca anteriormente na tag `head`. Agora, vamos adicionar o estilo ao nosso rodapé. Para isso, adicione o código abaixo no arquivo `estilos.css`.
+
+```css
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: var(--cor-1);
+    color: #fff;
+}
+
+/* Links para redes sociais */
+.social-icons {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.social-icon {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 24px;
+    color: white;
+}
+```
+
+O código acima adiciona um estilo para o rodapé, um estilo para os links de redes sociais e um estilo para os ícones de redes sociais. O estilo do rodapé é bem simples. Adicionamos um alinhamento centralizado, um espaçamento interno, uma cor de fundo e uma cor de texto. O resultado será um rodapé simples e elegante.
+
+Nosso site está quase pronto. O próximo passo será modificar a página de receitas da semana. Para isso, abra o arquivo `semana.html` e modifique a tag `main` para adicionar o código abaixo:
+
+```html
+<main>
+    <section>
+        <div class="container clearfix">
+            <h3>Receitas da Semana</h3>
+            <p>Confira as receitas da semana e prepare em casa.</p>
+            <div class="card col-4">
+                <h2>Segunda-Feira</h2>
+                <img src="img/feijoada.jpg" alt="Feijoada" class="col-image">
+                <h3>Feijoada</h3>
+                <p>Feijoada completa com arroz, farofa e couve.</p>
+                <p class="price">
+                    <strong>R$ 15,00</strong>
+                    <a href="#"><i class="fa-regular fa-heart"></i></a>
+                </p>
+            </div>
+            <div class="card col-4">
+                <h2>Terça-Feira</h2>
+                <img src="img/estrogonofe.jpg" alt="Estrogonofe" class="col-image">
+                <h3>Estrogonofe</h3>
+                <p>Estrogonofe de frango com arroz e batata palha.</p>
+                <p class="price">
+                    <strong>R$ 15,00</strong>
+                    <a href="#"><i class="fa-regular fa-heart"></i></a>
+                </p>
+            </div>
+            <div class="card col-4">
+                <h2>Quarta-Feira</h2>
+                <img src="img/parmegiana.jpg" alt="Frango à Parmegiana" class="col-image">
+                <h3>Frango à Parmegiana</h3>
+                <p>Frango à parmegiana com arroz e batata frita.</p>
+                <p class="price">
+                    <strong>R$ 15,00</strong>
+                    <a href="#"><i class="fa-regular fa-heart"></i></a>
+                </p>
+            </div>
+        </div>
+
+        <div class="cardapio container clearfix">
+            <div class="card col-4">
+                <h2>Quinta-Feira</h2>
+                <img src="img/salada.jpg" alt="Salada" class="col-image">
+                <h3>Salada Mista</h3>
+                <p>Feijoada completa com arroz, farofa e couve.</p>
+                <p class="price">
+                    <strong>R$ 11,00</strong>
+                    <a href="#"><i class="fa-regular fa-heart"></i></a>
+                </p>
+            </div>
+            <div class="card col-4">
+                <h2>Sexta-Feira</h2>
+                <img src="img/peixe.jpg" alt="Peixe" class="col-image">
+                <h3>Peixe Frito</h3>
+                <p>Peixe frito com arroz e batata frita.</p>
+                <p class="price">
+                    <strong>R$ 12,00</strong>
+                    <a href="#"><i class="fa-regular fa-heart"></i></a>
+                </p>
+            </div>
+            <div class="card col-4">
+                <h2>Sábado</h2>
+                <img src="img/vegetariano.jpg" alt="Vegetariano" class="col-image">
+                <h3>Vegetariano</h3>
+                <p>Prato vegetariano com arroz, feijão e salada.</p>
+                <p class="price">
+                    <strong>R$ 18,00</strong>
+                    <a href="#"><i class="fa-regular fa-heart"></i></a>
+                </p>
+        </div>
+    </section>
+</main>
+```
+
+O código acima adiciona uma lista de cards com as receitas da semana. O card tem uma imagem, um título, uma descrição e um preço. Estamos usando a classe `container` e a classe `clearfix` para centralizar o card na tela e para limpar o espaçamento externo, evitando que elementos de fora do card interfiram no espaçamento interno do card. Além disso, estamos usando a classe `col-4` para dividir o card em três colunas. Os estilos para o card já foram definidos anteriormente.
+
+> 💡 Lembrando que a barra de navegação `nav` e o rodapé `footer` são os mesmos para todas as páginas. 
+
+O próximo passo será modificar a página de todas as receitas. Para isso, abra o arquivo `receitas.html` e modifique a tag `main` para adicionar o código abaixo:
+
+```html
+ <main>
+    <section>
+        <div class="card container clearfix">
+            <h3>Doces e Sobremesas</h3>
+            <div class="card col-4">
+                <h2>Danoninho Caseiro</h2>
+                <img src="img/sample.png" alt="Feijoada" class="col-image">
+                <p data-text="Em um liquidificador, bata todos os ingrediente até obter uma consistência cremosa. Dispense a mistura em um recipiente e leve à geladeira até que esteja firme.">
+                    Descrição da Receita
+                </p>
+                <p class="price">
+                    <strong>Mais Detalhes</strong>
+                    <a href="#"><i class="fa-regular fa-heart"></i></a>
+                </p>
+            </div>
+            <div class="card col-4">
+                <h2>Danoninho Caseiro</h2>
+                <img src="img/sample.png" alt="Feijoada" class="col-image">
+                <p>Descrição da receita.</p>
+                <p class="price">
+                    <strong>Mais Detalhes</strong>
+                    <a href="#"><i class="fa-regular fa-heart"></i></a>
+                </p>
+            </div>
+            <div class="card col-4">
+                <h2>Danoninho Caseiro</h2>
+                <img src="img/sample.png" alt="Feijoada" class="col-image">
+                <p>Descrição da receita.</p>
+                <p class="price">
+                    <strong>Mais Detalhes</strong>
+                    <a href="#"><i class="fa-regular fa-heart"></i></a>
+                </p>
+            </div>
+        </div>
+
+        <div class="card container clearfix">
+            <h3>Carnes</h3>
+            <div class="card col-4">
+                <h2>Danoninho Caseiro</h2>
+                <img src="img/sample.png" alt="Feijoada" class="col-image">
+                <p>Descrição da receita.</p>
+                <p class="price">
+                    <strong>Mais Detalhes</strong>
+                    <a href="#"><i class="fa-regular fa-heart"></i></a>
+                </p>
+            </div>
+            <div class="card col-4">
+                <h2>Danoninho Caseiro</h2>
+                <img src="img/sample.png" alt="Feijoada" class="col-image">
+                <p>Descrição da receita.</p>
+                <p class="price">
+                    <strong>Mais Detalhes</strong>
+                    <a href="#"><i class="fa-regular fa-heart"></i></a>
+                </p>
+            </div>
+            <div class="card col-4">
+                <h2>Danoninho Caseiro</h2>
+                <img src="img/sample.png" alt="Feijoada" class="col-image">
+                <p>Descrição da receita.</p>
+                <p class="price">
+                    <strong>Mais Detalhes</strong>
+                    <a href="#"><i class="fa-regular fa-heart"></i></a>
+                </p>
+            </div>
+        </div>
+
+        <div class="card container clearfix">
+            <h3>Massas</h3>
+            <div class="card col-4">
+                <h2>Danoninho Caseiro</h2>
+                <img src="img/sample.png" alt="Feijoada" class="col-image">
+                <p>Descrição da receita.</p>
+                <p class="price">
+                    <strong>Mais Detalhes</strong>
+                    <a href="#"><i class="fa-regular fa-heart"></i></a>
+                </p>
+            </div>
+            <div class="card col-4">
+                <h2>Danoninho Caseiro</h2>
+                <img src="img/sample.png" alt="Feijoada" class="col-image">
+                <p>Descrição da receita.</p>
+                <p class="price">
+                    <strong>Mais Detalhes</strong>
+                    <a href="#"><i class="fa-regular fa-heart"></i></a>
+                </p>
+            </div>
+            <div class="card col-4">
+                <h2>Danoninho Caseiro</h2>
+                <img src="img/sample.png" alt="Feijoada" class="col-image">
+                <p>Descrição da receita.</p>
+                <p class="price">
+                    <strong>Mais Detalhes</strong>
+                    <a href="#"><i class="fa-regular fa-heart"></i></a>
+                </p>
+            </div>
+        </div>
+    </section>
+</main>
+```
+
+O código acima adiciona uma lista de cards com todas as receitas. O card tem uma imagem, um título, uma descrição e um preço. Estamos usando a classe `container` e a classe `clearfix` para centralizar o card na tela e para limpar o espaçamento externo, evitando que elementos de fora do card interfiram no espaçamento interno do card. Além disso, estamos usando a classe `col-4` para dividir o card em três colunas. Os estilos para o card já foram definidos anteriormente.
+
+As imagens das receitas foram substituídas por uma imagem de exemplo. O próximo passo será adicionar o estilo a essas imagens. Para isso, adicione o código abaixo no arquivo `estilos.css`.
+
+```css
+.col-image {
+    height: 200px; /* Altura da imagem */
+    object-fit: cover; /* Redimensiona a imagem para cobrir todo o elemento */
+    display: block; /* Faz a imagem ocupar a largura total do elemento pai */
+
+    animation: scaleDown 0.3s ease; /* Adiciona animações */
+}
+```
+
+Com isso, as imagens das receitas ficarão com uma altura de 200px e ocuparão a largura total do elemento pai. Além disso, adicionamos uma animação de `scaleDown` para que as imagens fiquem com um efeito de zoom ao passar o mouse. Essa e as demais animações irão funcionar a partir do momento que adicionarmos o código abaixo no arquivo `estilos.css`.
+
+```css
+/* Animações */
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes scaleDown {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+```
+
+O código acima adiciona duas animações: `fade-in` e `scaleDown`. A animação `fade-in` faz com que os elementos apareçam gradualmente. A animação `scaleDown` faz com que os elementos fiquem com um efeito de zoom ao passar o mouse.
+
+Com isso, nosso site está pronto. Para ver o resultado, abra o arquivo `index.html` no navegador usando a extensão `Live Server`. O resultado será semelhante ao apresentado abaixo:
+
+![Resultado Final](img/resultado-final.png)
