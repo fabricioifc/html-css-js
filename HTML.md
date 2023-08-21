@@ -2651,6 +2651,11 @@ html {
 img {
     width: 100%; /* Imagens não ultrapassam a largura do elemento pai */
 }
+
+main {
+    padding: 1rem;
+    margin-top: 70px;
+}
 ```
 
 Perceba que usamos `var()` para pegar as variáveis definidas no elemento `:root`. Isso é muito útil para reutilizar cores e fontes em nosso projeto. Além disso, adicionamos uma animação de `fade-in` e uma animação de `slide-in`. Também adicionamos um estilo para o elemento `p` e para o elemento `img`. O estilo do elemento `img` é muito importante para que as imagens não ultrapassem a largura do elemento pai.
@@ -2680,7 +2685,11 @@ Agora, vamos adicionar a barra de navegação `nav` com um logo e um menu. Para 
 </nav>
 ```
 
-O código acima adiciona uma barra de navegação `nav` com um logo e um menu. O menu tem dois links: `Receitas da Semana` e `Todas as Receitas`. Além disso, temos um ícone de usuário no canto superior direito. O resto será feito com CSS.
+O código acima adiciona uma barra de navegação `nav` com um logo e um menu. O menu tem dois links: `Receitas da Semana` e `Todas as Receitas`. Além disso, temos um ícone de usuário no canto superior direito. 
+
+> 💡 Use a extensão `Live Server` para visualizar o resultado parcial no navegador.
+
+Perceba que a imagem do logotipo está muito grande. Para resolver esse problema, adicione o código abaixo no arquivo `estilos.css`.
 
 ```css
 /* estilos.css */
@@ -2782,7 +2791,9 @@ O código acima adiciona um estilo aos links do menu ao passar o mouse. O link d
 - muda a opaciade para 1;
 - tem um efeito de transição de escala de 0 a 1 no eixo X. Esse efeito cria uma linha branca que aparece ao passar o mouse.
 
-Nosso menu de navegacão está pronto. O próximo passo será criar o conteúdo principal da página inicial. Para isso, abra o arquivo `index.html` e modifique a tag `main` para adicionar o código abaixo:
+> 💡 Nosso menu de navegacão está pronto. Verifique o resultado parcial no navegador.
+
+O próximo passo será criar o conteúdo principal da página inicial. Para isso, abra o arquivo `index.html` e modifique a tag `main` para adicionar o código abaixo:
 
 ```html
 <main>
@@ -2822,12 +2833,11 @@ Nosso menu de navegacão está pronto. O próximo passo será criar o conteúdo 
 </main>
 ```
 
-O código acima adiciona um card com detalhes sobre a receita do dia. O card tem uma imagem, um título, uma descrição, uma lista de ingredientes, um preço e um botão de favoritos. Estamos usando a classe `container` e a classe `clearfix` para centralizar o card na tela e para limpar o espaçamento externo, evitando que elementos de fora do card interfiram no espaçamento interno do card. Além disso, estamos usando a classe `col-4` e a classe `col-8` para dividir o card em duas colunas. A primeira coluna tem uma largura de 33.33% e a segunda coluna tem uma largura de 66.66%. O resto será feito com CSS.
+O código acima adiciona um card com detalhes sobre a receita do dia. O card tem uma imagem, um título, uma descrição, uma lista de ingredientes, um preço e um botão de favoritos. Estamos usando a classe `container` e a classe `clearfix` para centralizar o card na tela e para limpar o espaçamento externo, evitando que elementos de fora do card interfiram no espaçamento interno do card. Além disso, estamos usando a classe `col-4` e a classe `col-8` para dividir o card em duas colunas. A primeira coluna tem uma largura de 33.33% e a segunda coluna tem uma largura de 66.66%.
 
 Agora, vamos adicionar o estilo ao nosso card. Vamos começar com as classes `container` e `clearfix`. Para isso, adicione o código abaixo no arquivo `estilos.css`.
 
 ```css
-
 .container {
     max-width: 1200px; /* Largura máxima do container */
     margin: 0 auto; /* Centraliza o container */
@@ -2998,7 +3008,9 @@ footer {
 
 O código acima adiciona um estilo para o rodapé, um estilo para os links de redes sociais e um estilo para os ícones de redes sociais. O estilo do rodapé é bem simples. Adicionamos um alinhamento centralizado, um espaçamento interno, uma cor de fundo e uma cor de texto. O resultado será um rodapé simples e elegante.
 
-Nosso site está quase pronto. O próximo passo será modificar a página de receitas da semana. Para isso, abra o arquivo `semana.html` e modifique a tag `main` para adicionar o código abaixo:
+> 💡 Nosso site está quase pronto. Verifique o resultado parcial no navegador.
+
+O próximo passo será modificar a página de receitas da semana. Para isso, abra o arquivo `semana.html` e modifique a tag `main` para adicionar o código abaixo:
 
 ```html
 <main>
