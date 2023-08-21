@@ -6,8 +6,6 @@ Vamos usar vários conhecimentos relacionados a HTML e CSS em um projeto prátic
 1. Crie um novo projeto chamado `livraria` no Visual Studio Code.
 2. Crie um arquivo chamado `index.html`.
 3. Crie um arquivo chamado `estilo.css`.
-4. Adicione o código HTML abaixo no arquivo `index.html`.
-5. Adicione o código CSS abaixo no arquivo `estilo.css`.
 6. Abra o projeto no navegador usando a ferramenta `live server`.
 
 A estrutura de pastas e arquivos do projeto terá a seguinte estrutura:
