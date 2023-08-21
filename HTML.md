@@ -3231,6 +3231,75 @@ Com isso, as imagens das receitas ficarão com uma altura de 200px e ocuparão a
 
 O código acima adiciona duas animações: `fade-in` e `scaleDown`. A animação `fade-in` faz com que os elementos apareçam gradualmente. A animação `scaleDown` faz com que os elementos fiquem com um efeito de zoom ao passar o mouse.
 
+Cada receita tem um botão `Mais Detalhes`. O próximo passo será adicionar uma ação para esse botão. Ao clicar, uma janela modal será aberta com os detalhes da receita. Para isso, adicione o código abaixo no arquivo `receitas.html`, após o fechamento da tag `footer`.
+
+```html
+    <dialog>
+        <h2>Detalhes da Receita</h2>
+        <div class="modal">
+            <p>
+                A receita é uma lista de ingredientes e instruções para preparar um prato.
+            </p>
+        </div>
+
+        <button>Fechar</button>
+    </dialog>
+
+    <script src="script.js"></script>
+</body>
+</html>
+```
+
+O código acima adiciona uma janela modal `dialog` com um título, uma descrição e um botão `Fechar`. O botão `Fechar` é necessário para fechar a janela modal. Além disso, adicionamos um script `script.js` no final do arquivo. Esse script será responsável por abrir e fechar a janela modal.
+
+Agora, vamos adicionar o estilo a nossa janela modal. Para isso, adicione o código abaixo no arquivo `estilos.css`.
+
+```css
+/* Modal */
+dialog {
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 1rem rgba(0,0,0,0.2);
+    min-width: 75%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-height: 300px;
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+```
+
+O código acima adiciona um estilo a nossa janela modal. A janela modal tem um espaçamento interno, um arredondamento nas bordas, uma sombra, uma largura mínima de 75%, uma posição absoluta, um alinhamento centralizado e uma altura mínima de 300px. Além disso, adicionamos um estilo ao `backdrop`. O `backdrop` é a tela escura que aparece ao abrir a janela modal.
+
+Para implementar o comportamento de abrir e fechar a janela modal, vamos usar JavaScript. Para isso, adicione o código abaixo no arquivo `script.js`.
+
+```js
+const botao = document.querySelectorAll('.price strong');
+const modal = document.querySelector('dialog');
+const fechar = document.querySelector('dialog button');
+
+botao.forEach((item) => {
+    item.addEventListener('click', () => {
+        modal.querySelector('div.modal').innerHTML = `
+            <p>${item.parentElement.parentElement.querySelector('p').getAttribute('data-text')}</p>
+        `;
+
+        // Abrindo modal
+        modal.showModal();
+    });
+});
+
+fechar.addEventListener('click', () => {
+    modal.close();
+});
+```
+Estamos usando `querySelector` para selecionar o elemento `dialog`, o elemento `dialog button`. Além disso, estamos usando `querySelectorAll` para selecionar todos os elementos com a classe `.price strong`. Em seguida, adicionamos um evento de clique para cada elemento `.price strong`. Ao clicar, a janela modal é aberta com os detalhes da receita. Além disso, adicionamos um evento de clique para o botão `Fechar`. Ao clicar, a janela modal é fechada.
+
 Com isso, nosso site está pronto. Para ver o resultado, abra o arquivo `index.html` no navegador usando a extensão `Live Server`. O resultado será semelhante ao apresentado abaixo:
 
 ![Resultado Final](img/resultado-final.png)
