@@ -466,5 +466,7 @@ Verifique se o resultado final está parecido com a imagem abaixo:
  - [ ] Adicione mais uma seção com livros dividida em colunas.
  - [ ] Adicione animação nos links do menu.
  - [ ] Adicione uma fonte externa ao seu site.
+ - [ ] Publicar seu site no GitHub Pages.
+ - [ ] Enviar o link do GitHub Pages no Google Classroom.
 
-O importante é praticar e se divertir.
+O importante é praticar e se divertir!
