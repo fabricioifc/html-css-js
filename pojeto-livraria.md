@@ -1,12 +1,26 @@
 # Projeto: Livraria
 [&uarr;](#1-introdução-a-html)
 
-Vamos usar vários conhecimentos relacionados a HTML e CSS em um projeto prático. O projeto consiste em criar um site para uma livraria. O site deve ter um título, um menu, uma lista de livros e um rodapé. O menu deve ter os links "Início", "Livros", "Autores" e "Contato". A lista de livros deve ter pelo menos 3 livros. Cada livro deve ter um título, um autor, uma imagem e um botão para comprar. O rodapé deve ter o nome do autor e o ano de criação do site. Para isso, siga os passos abaixo:
+Antes de começar o projeto, vamos criar um novo repositório no GitHub. Para isso, siga os passos abaixo:
+
+1. Faça login na plataforma GitHub. Caso não tenha uma conta, crie uma conta gratuitamente.
+2. Crie um novo repositório chamado `livraria`. Deixe o repositório público e marque a opção "Inicializar este repositório com um README". Clique no botão "Criar repositório".
+3. Abra o Visual Studio Code.
+4. Instale a extensão `GitHub CodeSpaces` no Visual Studio Code.
+5. Tecle `Ctrl + Shift + P` para abrir a paleta de comandos.
+6. Digite `Codespaces: Create New Codespace` e tecle `Enter`.
+7. Selecione o repositório `livraria` e tecle `Enter`.
+8. Aguarde o Visual Studio Code criar o ambiente de desenvolvimento.
+9. Pronto. Agora você está pronto para começar o projeto.
+
+## Desenvolvendo o projeto
+
+Vamos usar vários conhecimentos relacionados a HTML e CSS em um projeto prático. O projeto consiste em criar um site para uma livraria. O site deve ter um título, um menu, uma lista de livros e um rodapé. O menu deve ter os links "Início", "Livros", "Autores" e "Contato". A lista de livros deve ter pelo menos 3 livros. Cada livro deve ter um título, um autor, uma imagem e um botão para comprar. O rodapé deve ter o nome do autor e o ano de criação do site.
 
 1. Crie um novo projeto chamado `livraria` no Visual Studio Code.
 2. Crie um arquivo chamado `index.html`.
 3. Crie um arquivo chamado `estilo.css`.
-6. Abra o projeto no navegador usando a ferramenta `live server`.
+4. Abra o projeto no navegador usando a ferramenta `live server`.
 
 A estrutura de pastas e arquivos do projeto terá a seguinte estrutura:
 
@@ -460,7 +474,7 @@ Verifique se o resultado final está parecido com a imagem abaixo:
 
 ![livraria](./image/livraria_resultado.png)
 
-# Tarefa
+## Tarefa
 
  - [ ] Adicione cores e espaçamentos diferentes.
  - [ ] Adicione mais uma seção com livros dividida em colunas.
