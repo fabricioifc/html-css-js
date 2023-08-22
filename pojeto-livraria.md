@@ -15,12 +15,14 @@ Antes de começar o projeto, vamos criar um novo repositório no GitHub. Para is
 
 ## Desenvolvendo o projeto
 
-Vamos usar vários conhecimentos relacionados a HTML e CSS em um projeto prático. O projeto consiste em criar um site para uma livraria. O site deve ter um título, um menu, uma lista de livros e um rodapé. O menu deve ter os links "Início", "Livros", "Autores" e "Contato". A lista de livros deve ter pelo menos 3 livros. Cada livro deve ter um título, um autor, uma imagem e um botão para comprar. O rodapé deve ter o nome do autor e o ano de criação do site.
+Vamos usar vários conhecimentos relacionados a HTML e CSS em um projeto prático. O projeto consiste em criar um site para uma livraria. O site deve ter um título, um menu, uma lista de livros e um rodapé. O menu deve ter os links "Início", "Livros", "Autores" e "Contato". A lista de livros deve ter pelo menos 3 livros. Cada livro deve ter um título, um autor, uma imagem e um botão para comprar. O rodapé deve ter o nome do autor e o ano de criação do site. 
 
-1. Crie um novo projeto chamado `livraria` no Visual Studio Code.
-2. Crie um arquivo chamado `index.html`.
-3. Crie um arquivo chamado `estilo.css`.
-4. Abra o projeto no navegador usando a ferramenta `live server`.
+Com o projeto `livraria` aberto no Visual Studio Code, faça:
+
+   1. Crie um novo arquivo chamado `index.html`.
+   2. Crie um novo arquivo chamado `estilos.css`.
+   3. Crie uma nova pasta chamada `img`.
+   4. Abra o projeto no navegador usando a ferramenta `live server`.
 
 A estrutura de pastas e arquivos do projeto terá a seguinte estrutura:
 
