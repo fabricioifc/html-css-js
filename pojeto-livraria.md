@@ -6,7 +6,7 @@ Antes de começar o projeto, vamos criar um novo repositório no GitHub. Para is
 1. Faça login na plataforma GitHub. Caso não tenha uma conta, crie uma conta gratuitamente.
 2. Crie um novo repositório chamado `livraria`. 
    1. Deixe o repositório público
-   2. Marque a opção "Inicializar este repositório com um README". 
+   2. Marque a opção "Inicializar este repositório com um *README*". 
    3. Clique no botão "Criar repositório".
 3. Abra o Visual Studio Code.
    1. Instale a extensão `GitHub CodeSpaces` no Visual Studio Code.
