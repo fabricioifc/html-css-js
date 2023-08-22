@@ -460,4 +460,11 @@ Verifique se o resultado final está parecido com a imagem abaixo:
 
 ![livraria](./image/livraria_resultado.png)
 
-Faça pequenas modificações de estilo no seu projeto. Adicione cores e espaçamentos diferentes. O importante é praticar e se divertir.
+# Tarefa
+
+ - [ ] Adicione cores e espaçamentos diferentes.
+ - [ ] Adicione mais uma seção com livros dividida em colunas.
+ - [ ] Adicione animação nos links do menu.
+ - [ ] Adicione uma fonte externa ao seu site.
+
+O importante é praticar e se divertir.
