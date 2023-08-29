@@ -242,6 +242,7 @@ Já que vamos dividir nossa tela em três colunas, vamos adicionar um estilo de 
 
 .card {
     width: calc(33.33% - 20px); /* 33.33% - 20px */
+    height: 500px; /* altura de 500px */
     margin: 10px; /* margem de 10px para cima e para baixo */
     padding: 20px;
     background-color: #fff;
@@ -254,6 +255,7 @@ Já que vamos dividir nossa tela em três colunas, vamos adicionar um estilo de 
 No código acima, usamos vários conceitos diferentes.
 
 - A largura (`width`) de cada card é calculada da seguinte forma. Primeiro, calculamos 33.33% da largura do elemento pai. Em seguida, subtraímos 20px para adicionar uma margem de 20px entre os cartões. O resultado é uma largura de 33.33% - 20px.
+- Adicionamos uma altura de 500px.
 - Adicionamos uma margem de 10px em cada card.
 - Adicionamos um espaçamento interno de 20px em todas as direções.
 - Adicionamos uma cor de fundo branca.
