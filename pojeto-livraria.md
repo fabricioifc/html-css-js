@@ -1,7 +1,7 @@
 # Projeto: Livraria
 [&uarr;](#1-introdução-a-html)
 
-Antes de começar o projeto, vamos criar um novo repositório no GitHub. Para isso, siga os passos abaixo:
+Para começar, vamos criar um novo repositório no GitHub para armazenar nosso projeto e usar o Visual Studio Code para o desenvolvimento. Para isso, siga os passos abaixo:
 
 ### Plataforma GitHub (navegador web)
 1. Faça login na plataforma GitHub. Caso não tenha uma conta, crie uma conta gratuitamente.
