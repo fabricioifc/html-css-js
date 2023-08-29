@@ -121,9 +121,15 @@ header {
     padding-left: 20px; /* espaçamento interno esquerdo */
     padding-right: 20px; /* espaçamento interno direito */
 }
+
+header h1 {
+    margin-bottom: 10px; /* Define um espaçamento inferior */
+}
 ```
 
-O código acima adiciona uma cor de fundo, uma cor de texto, um alinhamento centralizado e um espaçamento interno de 20px em todas as direções. Para simplificar, podemos usar a propriedade `padding` para adicionar um espaçamento interno de 20px em todas as direções. Para isso, faça a seguinte alteração no código acima:
+No cabeçalho `header` adicionamos uma cor de fundo, uma cor de texto, um alinhamento centralizado e um espaçamento interno de 20px em todas as direções. Em seguida, adicionamos um espaçamento inferior de 10px no título `h1`.
+
+Para simplificar, podemos usar a propriedade `padding` para adicionar um espaçamento interno de 20px em todas as direções. Para isso, faça a seguinte alteração no código acima:
 
 ```css
 /* estilos.css */
@@ -134,7 +140,8 @@ header {
     text-align: center;
     
     /* assim (cima, baixo, esquerda, direita) */
-    padding: 20px 20px 20px 20px;
+    /* padding: 20px 20px 20px 20px; */
+    
     /* ou 20px em todas as direções */
     padding: 20px;
 }
@@ -153,7 +160,7 @@ nav ul {
 
 nav li {
     display: inline; /* Deixa os itens da lista em linha */
-    margin-right: 20px; /* Adiciona um espaçamento de 20px entre os itens da lista */
+    margin: 0 10px; /* Adiciona um espaçamento de 10px entre os itens da lista */
 }
 
 nav a {
@@ -418,13 +425,17 @@ header {
     padding: 1rem; /* Define um espaçamento interno */
 }
 
+header h1 {
+    margin-bottom: 10px; /* Define um espaçamento inferior */
+}
+
 nav ul {
     list-style: none; /* Remove a bolinha da lista */
 }
 
 nav li {
     display: inline; /* Faz com que os itens da lista fiquem na mesma linha */
-    margin-right: 20px; /* Define um espaçamento entre os itens */
+    margin: 0 10px; /* Adiciona um espaçamento de 10px entre os itens da lista */
 }
 
 nav a {
