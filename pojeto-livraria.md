@@ -232,13 +232,12 @@ Pronto, nosso cabeçalho está pronto. Agora, vamos alterar nosso arquivo `index
 
 > 💡 Repare que estamos usando mais duas tags semânticas: `main` e `section`. A tag `main` é utilizada para adicionar o conteúdo principal do site. A tag `section` é utilizada para adicionar uma seção do site. Conheça mais sobre tags semânticas [clicando aqui](https://www.freecodecamp.org/portuguese/news/elementos-semanticos-do-html5-explicados/).
 
-O código acima adiciona uma seção com a classe `.cards` e três cartões com a classe `.card`. Cada cartão tem uma imagem, um título, um autor e um botão para comprar. Inicialmente, vamos adicionar uma margem de 20px em todas as direções na tag `main`. Para isso, siga os passos abaixo:
+O código acima adiciona uma seção com a classe `.cards` e três cartões com a classe `.card`. Cada cartão tem uma imagem, um título, um autor e um botão para comprar. Para isso, siga os passos abaixo:
 
 ```css
 /* estilos.css */
 
 main {
-    padding: 20px; /* espaçamento interno */
     overflow: hidden; /* esconde o conteúdo que ultrapassa o tamanho do elemento */
 }
 ```
@@ -254,7 +253,7 @@ Já que vamos dividir nossa tela em três colunas, vamos adicionar um estilo de 
     width: calc(33.33% - 20px); /* 33.33% - 20px */
     height: 500px; /* altura de 500px */
     margin: 10px; /* margem de 10px para cima e para baixo */
-    padding: 20px;
+    padding: 10px; /* Define um espaçamento interno */
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -267,7 +266,7 @@ No código acima, usamos vários conceitos diferentes.
 - A largura (`width`) de cada card é calculada da seguinte forma. Primeiro, calculamos 33.33% da largura do elemento pai. Em seguida, subtraímos 20px para adicionar uma margem de 20px entre os cartões. O resultado é uma largura de 33.33% - 20px.
 - Adicionamos uma altura de 500px.
 - Adicionamos uma margem de 10px em cada card.
-- Adicionamos um espaçamento interno de 20px em todas as direções.
+- Adicionamos um espaçamento interno de 10px em todas as direções.
 - Adicionamos uma cor de fundo branca.
 - Adicionamos uma sombra.
 - Centralizamos o texto no card.
@@ -349,6 +348,34 @@ footer {
 O código acima adiciona uma cor de fundo, uma cor de texto, um alinhamento centralizado e um espaçamento interno de 1rem em todas as direções.
 
 > 💡 A propriedade `rem` é utilizada para definir o tamanho da fonte. O `rem` é relativo ao tamanho da fonte do elemento `html`. Por padrão, o tamanho da fonte do elemento `html` é `16px`. Isso significa que `1rem` é igual a `16px`. Se o tamanho da fonte do elemento `html` for `20px`, `1rem` será igual a `20px`.
+
+Para finalizar, vamos adicionar a propriedade `@media` para tornar nosso site responsivo. O design responsivo é uma técnica de desenvolvimento que permite que o site se adapte a diferentes tamanhos de tela. Para isso, siga os passos abaixo:
+
+```css
+/* estilos.css */
+
+/* Design Responsivo */
+@media screen and (max-width: 768px) {
+    .card {
+        width: calc(50% - 20px); /* 50% - 40px */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .card {
+        width: 100%;
+    }
+}
+```
+
+O código acima adiciona duas propriedades `@media`. A primeira propriedade `@media` é utilizada para definir o estilo do site quando a largura da tela for menor ou igual a `768px`. A segunda propriedade `@media` é utilizada para definir o estilo do site quando a largura da tela for menor ou igual a `480px`. Para verificar, siga os passos abaixo:
+
+1. Abra o site no navegador.
+2. Abra o modo de desenvolvedor do navegador.
+3. Clique no ícone de celular para ativar o modo de visualização de celular.
+4. Clique no ícone de recarregar para atualizar a página.
+5. Redimensione a tela para verificar o design responsivo.
+6. Pronto, nosso site está pronto.
 
 Terminamos nosso projeto. Agora, vamos adicionar o código completo do nosso projeto. Para isso, siga os passos abaixo:
 
@@ -450,14 +477,13 @@ nav a {
 }
 
 main {
-    padding: 20px; /* Define um espaçamento interno */
     overflow: hidden; /* Faz com que o elemento não ultrapasse o tamanho do pai */
 }
 
 .card {
     width: calc(33.33% - 20px); /* 33.33% - 40px */
     margin: 10px; /* Define um espaçamento externo */
-    padding: 20px; /* Define um espaçamento interno */
+    padding: 10px; /* Define um espaçamento interno */
     background-color: #fff; /* Define a cor de fundo */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra */
     text-align: center; /* Centraliza o texto */
@@ -489,6 +515,19 @@ footer {
     text-align: center;
     padding: 1rem;
 }
+
+/* Design Responsivo */
+@media (max-width: 768px) {
+    .card {
+        width: calc(50% - 20px); /* 50% - 40px */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .card {
+        width: 100%;
+    }
+}
 ```
 
 Verifique se o resultado final está parecido com a imagem abaixo:
@@ -504,4 +543,20 @@ Verifique se o resultado final está parecido com a imagem abaixo:
  - [ ] Publicar seu site no GitHub Pages.
  - [ ] Enviar o link do GitHub Pages no Google Classroom.
 
-O importante é praticar e se divertir!
+## Publicando o site no GitHub Pages
+
+Para publicar o site no GitHub Pages, siga os passos abaixo:
+
+1. Abra o navegador web e acesse o site do GitHub.
+2. Faça login na plataforma GitHub.
+3. Abra o repositório `livraria`.
+4. Clique na aba `Settings`.
+5. Clique no menu lateral `Pages`.
+6. Na opção `Source`, selecione a branch `main` e clique no botão `Save`.
+7. Aguarde alguns minutos até que o site seja publicado.
+8. Pronto, seu site está publicado no GitHub Pages.
+9. Copie o link do seu site e envie no Google Classroom.
+10. Aguarde a correção do professor.
+11. Parabéns, você concluiu o projeto!
+
+> 👍 O mais importante é praticar e se divertir!

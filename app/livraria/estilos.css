@@ -17,13 +17,17 @@ header {
     padding: 1rem; /* Define um espaçamento interno */
 }
 
+header h1 {
+    margin-bottom: 10px; /* Define um espaçamento inferior */
+}
+
 nav ul {
     list-style: none; /* Remove a bolinha da lista */
 }
 
 nav li {
     display: inline; /* Faz com que os itens da lista fiquem na mesma linha */
-    margin-right: 20px; /* Define um espaçamento entre os itens */
+    margin: 0 10px; /* Define um espaçamento entre os itens */
 }
 
 nav a {
@@ -33,14 +37,13 @@ nav a {
 }
 
 main {
-    padding: 20px; /* Define um espaçamento interno */
     overflow: hidden; /* Faz com que o elemento não ultrapasse o tamanho do pai */
 }
 
 .card {
     width: calc(33.33% - 20px); /* 33.33% - 40px */
     margin: 10px; /* Define um espaçamento externo */
-    padding: 20px; /* Define um espaçamento interno */
+    padding: 10px; /* Define um espaçamento interno */
     background-color: #fff; /* Define a cor de fundo */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra */
     text-align: center; /* Centraliza o texto */
@@ -71,4 +74,17 @@ footer {
     color: #fff;
     text-align: center;
     padding: 1rem;
+}
+
+/* Design Responsivo */
+@media screen and (max-width: 768px) {
+    .card {
+        width: calc(50% - 20px); /* 50% - 40px */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .card {
+        width: 100%;
+    }
 }
