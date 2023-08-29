@@ -538,10 +538,8 @@ Verifique se o resultado final está parecido com a imagem abaixo:
 
  - [ ] Adicione cores e espaçamentos diferentes.
  - [ ] Adicione mais uma seção com livros dividida em colunas.
- - [ ] Adicione animação nos links do menu.
- - [ ] Adicione uma fonte externa ao seu site.
- - [ ] Publicar seu site no GitHub Pages.
- - [ ] Enviar o link do GitHub Pages no Google Classroom.
+ - [ ] Adicione animação nos links do menu. Pode usar o pseudo-elemento `:hover`.
+ - [ ] Adicione uma fonte externa ao seu site. Recomendo usar o Google Fonts para adicionar fontes externas ao seu site. Conheça mais sobre o Google Fonts [clicando aqui](https://fonts.google.com/).
 
 ## Publicando o site no GitHub Pages
 
