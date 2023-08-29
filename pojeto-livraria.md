@@ -349,7 +349,13 @@ O código acima adiciona uma cor de fundo, uma cor de texto, um alinhamento cent
 
 > 💡 A propriedade `rem` é utilizada para definir o tamanho da fonte. O `rem` é relativo ao tamanho da fonte do elemento `html`. Por padrão, o tamanho da fonte do elemento `html` é `16px`. Isso significa que `1rem` é igual a `16px`. Se o tamanho da fonte do elemento `html` for `20px`, `1rem` será igual a `20px`.
 
-Para finalizar, vamos adicionar a propriedade `@media` para tornar nosso site responsivo. O design responsivo é uma técnica de desenvolvimento que permite que o site se adapte a diferentes tamanhos de tela. Para isso, siga os passos abaixo:
+### Design Responsivo
+
+O design responsivo é uma abordagem ao web design que faz com que seu conteúdo web se adapte aos diferentes tamanhos de tela e janelas de uma variedade de dispositivos. Para aplicar o design responsivo, vamos usar a propriedade `@media`.
+
+A propriedade `@media` em CSS é usada para aplicar estilos diferentes com base nas características do dispositivo ou da tela em que a página está sendo exibida. Isso é fundamental para criar designs responsivos que se adaptem a diferentes tamanhos de tela, como telas de dispositivos móveis, tablets e desktops. As media queries permitem que você ajuste o layout, as fontes, as imagens e outros elementos para proporcionar uma experiência de usuário otimizada em vários dispositivos.
+
+Para aplicar o design responsivo na classe `.card`, siga os passos abaixo:
 
 ```css
 /* estilos.css */
@@ -368,14 +374,13 @@ Para finalizar, vamos adicionar a propriedade `@media` para tornar nosso site re
 }
 ```
 
-O código acima adiciona duas propriedades `@media`. A primeira propriedade `@media` é utilizada para definir o estilo do site quando a largura da tela for menor ou igual a `768px`. A segunda propriedade `@media` é utilizada para definir o estilo do site quando a largura da tela for menor ou igual a `480px`. Para verificar, siga os passos abaixo:
+O código acima adiciona duas propriedades `@media`. A primeira propriedade `@media` é utilizada para definir o estilo do site quando a largura da tela for menor ou igual a `768px`. A segunda propriedade `@media` é utilizada para definir o estilo do site quando a largura da tela for menor ou igual a `480px`. Para verificar o resultado, siga os passos abaixo:
 
-1. Abra o site no navegador.
-2. Abra o modo de desenvolvedor do navegador.
-3. Clique no ícone de celular para ativar o modo de visualização de celular.
-4. Clique no ícone de recarregar para atualizar a página.
-5. Redimensione a tela para verificar o design responsivo.
-6. Pronto, nosso site está pronto.
+1. Abra o site no navegador usando a ferramenta `live server`.
+2. Abra o modo de desenvolvedor do navegador. Tecle `Ctrl + Shift + I` ou `F12`.
+3. Redimensione a tela para verificar o design responsivo.
+4. Para simular um dispositivo móvel, clique no ícone de celular no modo de desenvolvedor ou clique em `Ctrl + Shift + M`.
+5. Pronto, nosso site está pronto.
 
 Verifique se o resultado final está parecido com a imagem abaixo:
 
