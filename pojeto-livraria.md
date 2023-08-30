@@ -1,20 +1,23 @@
 # Projeto: Livraria
 [&uarr;](#1-introdução-a-html)
 
-Antes de começar o projeto, vamos criar um novo repositório no GitHub. Para isso, siga os passos abaixo:
+Para começar, vamos criar um novo repositório no GitHub para armazenar nosso projeto e usar o Visual Studio Code para o desenvolvimento. Para isso, siga os passos abaixo:
 
+### Plataforma GitHub (navegador web)
 1. Faça login na plataforma GitHub. Caso não tenha uma conta, crie uma conta gratuitamente.
 2. Crie um novo repositório chamado `livraria`. 
    1. Deixe o repositório público
    2. Marque a opção "Inicializar este repositório com um *README*". 
    3. Clique no botão "Criar repositório".
-3. Abra o Visual Studio Code.
+
+### Visual Studio Code
+1. Abra o Visual Studio Code.
    1. Instale a extensão `GitHub CodeSpaces` no Visual Studio Code.
    2. Tecle `Ctrl + Shift + P` para abrir a paleta de comandos.
    3. Digite `Codespaces: Create New Codespace` e tecle `Enter`.
    4. Selecione o repositório `livraria` e tecle `Enter`.
-4. Aguarde o Visual Studio Code criar o ambiente de desenvolvimento.
-5. Pronto. Agora você está pronto para começar o projeto.
+2. Aguarde o Visual Studio Code criar o ambiente de desenvolvimento.
+3. Pronto. Agora você está pronto para começar o projeto.
 
 ## Desenvolvendo o projeto
 
@@ -121,9 +124,15 @@ header {
     padding-left: 20px; /* espaçamento interno esquerdo */
     padding-right: 20px; /* espaçamento interno direito */
 }
+
+header h1 {
+    margin-bottom: 10px; /* Define um espaçamento inferior */
+}
 ```
 
-O código acima adiciona uma cor de fundo, uma cor de texto, um alinhamento centralizado e um espaçamento interno de 20px em todas as direções. Para simplificar, podemos usar a propriedade `padding` para adicionar um espaçamento interno de 20px em todas as direções. Para isso, faça a seguinte alteração no código acima:
+No cabeçalho `header` adicionamos uma cor de fundo, uma cor de texto, um alinhamento centralizado e um espaçamento interno de 20px em todas as direções. Em seguida, adicionamos um espaçamento inferior de 10px no título `h1`.
+
+Para simplificar, podemos usar a propriedade `padding` para adicionar um espaçamento interno de 20px em todas as direções. Para isso, faça a seguinte alteração no código acima:
 
 ```css
 /* estilos.css */
@@ -134,7 +143,8 @@ header {
     text-align: center;
     
     /* assim (cima, baixo, esquerda, direita) */
-    padding: 20px 20px 20px 20px;
+    /* padding: 20px 20px 20px 20px; */
+
     /* ou 20px em todas as direções */
     padding: 20px;
 }
@@ -153,7 +163,7 @@ nav ul {
 
 nav li {
     display: inline; /* Deixa os itens da lista em linha */
-    margin-right: 20px; /* Adiciona um espaçamento de 20px entre os itens da lista */
+    margin: 0 10px; /* Adiciona um espaçamento de 10px entre os itens da lista */
 }
 
 nav a {
@@ -222,13 +232,12 @@ Pronto, nosso cabeçalho está pronto. Agora, vamos alterar nosso arquivo `index
 
 > 💡 Repare que estamos usando mais duas tags semânticas: `main` e `section`. A tag `main` é utilizada para adicionar o conteúdo principal do site. A tag `section` é utilizada para adicionar uma seção do site. Conheça mais sobre tags semânticas [clicando aqui](https://www.freecodecamp.org/portuguese/news/elementos-semanticos-do-html5-explicados/).
 
-O código acima adiciona uma seção com a classe `.cards` e três cartões com a classe `.card`. Cada cartão tem uma imagem, um título, um autor e um botão para comprar. Inicialmente, vamos adicionar uma margem de 20px em todas as direções na tag `main`. Para isso, siga os passos abaixo:
+O código acima adiciona uma seção com a classe `.cards` e três cartões com a classe `.card`. Cada cartão tem uma imagem, um título, um autor e um botão para comprar. Para isso, siga os passos abaixo:
 
 ```css
 /* estilos.css */
 
 main {
-    padding: 20px; /* espaçamento interno */
     overflow: hidden; /* esconde o conteúdo que ultrapassa o tamanho do elemento */
 }
 ```
@@ -244,7 +253,7 @@ Já que vamos dividir nossa tela em três colunas, vamos adicionar um estilo de 
     width: calc(33.33% - 20px); /* 33.33% - 20px */
     height: 500px; /* altura de 500px */
     margin: 10px; /* margem de 10px para cima e para baixo */
-    padding: 20px;
+    padding: 10px; /* Define um espaçamento interno */
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -257,7 +266,7 @@ No código acima, usamos vários conceitos diferentes.
 - A largura (`width`) de cada card é calculada da seguinte forma. Primeiro, calculamos 33.33% da largura do elemento pai. Em seguida, subtraímos 20px para adicionar uma margem de 20px entre os cartões. O resultado é uma largura de 33.33% - 20px.
 - Adicionamos uma altura de 500px.
 - Adicionamos uma margem de 10px em cada card.
-- Adicionamos um espaçamento interno de 20px em todas as direções.
+- Adicionamos um espaçamento interno de 10px em todas as direções.
 - Adicionamos uma cor de fundo branca.
 - Adicionamos uma sombra.
 - Centralizamos o texto no card.
@@ -340,142 +349,38 @@ O código acima adiciona uma cor de fundo, uma cor de texto, um alinhamento cent
 
 > 💡 A propriedade `rem` é utilizada para definir o tamanho da fonte. O `rem` é relativo ao tamanho da fonte do elemento `html`. Por padrão, o tamanho da fonte do elemento `html` é `16px`. Isso significa que `1rem` é igual a `16px`. Se o tamanho da fonte do elemento `html` for `20px`, `1rem` será igual a `20px`.
 
-Terminamos nosso projeto. Agora, vamos adicionar o código completo do nosso projeto. Para isso, siga os passos abaixo:
+### Design Responsivo
 
-```html
-<!-- index.html -->
+O design responsivo é uma abordagem ao web design que faz com que seu conteúdo web se adapte aos diferentes tamanhos de tela e janelas de uma variedade de dispositivos. Para aplicar o design responsivo, vamos usar a propriedade `@media`.
 
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilos.css">
-    <title>Livraria</title>
-</head>
-<body>
-    <header>
-        <h1>Livraria Fantástica</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Início</a></li>
-                <li><a href="#">Livros</a></li>
-                <li><a href="#">Autores</a></li>
-                <li><a href="#">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
+A propriedade `@media` em CSS é usada para aplicar estilos diferentes com base nas características do dispositivo ou da tela em que a página está sendo exibida. Isso é fundamental para criar designs responsivos que se adaptem a diferentes tamanhos de tela, como telas de dispositivos móveis, tablets e desktops. As media queries permitem que você ajuste o layout, as fontes, as imagens e outros elementos para proporcionar uma experiência de usuário otimizada em vários dispositivos.
 
-    <main>
-        <section class="cards">
-            <div class="card">
-                <img src="img/livro-01.jpg" alt="Livro 1">
-                <h2>Livro Incrível</h2>
-                <p>Autor: João Silva</p>
-                <button>Comprar</button>
-            </div>
-
-            <div class="card">
-                <img src="img/livro-02.jpg" alt="Livro 2">
-                <h2>Livro Fantástico</h2>
-                <p>Autor: Maria Santos</p>
-                <button>Comprar</button>
-            </div>
-
-            <div class="card">
-                <img src="img/livro-03.jpg" alt="Livro 3">
-                <h2>Aventuras Mágicas</h2>
-                <p>Autor: Pedro Almeida</p>
-                <button>Comprar</button>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2023 Livraria Fantástica | Criado por Seu Nome</p>
-    </footer>
-</body>
-</html>
-```
+Para aplicar o design responsivo na classe `.card`, siga os passos abaixo:
 
 ```css
 /* estilos.css */
 
-/* Reset de Estilos */
-* {
-    margin: 0; /* Remove a margem padrão */
-    padding: 0; /* Remove o padding padrão */
-    box-sizing: border-box; /* Faz com que o padding e a borda não aumentem o tamanho do elemento */
+/* Design Responsivo */
+@media screen and (max-width: 768px) {
+    .card {
+        width: calc(50% - 20px); /* 50% - 40px */
+    }
 }
 
-body {
-    font-family: Arial, sans-serif; /* Define a fonte padrão */
-    background-color: #f0f0f0; /* Define a cor de fundo */
-}
-
-header {
-    background-color: #333; /* Define a cor de fundo */
-    color: #fff; /* Define a cor do texto */
-    text-align: center; /* Centraliza o texto */
-    padding: 1rem; /* Define um espaçamento interno */
-}
-
-nav ul {
-    list-style: none; /* Remove a bolinha da lista */
-}
-
-nav li {
-    display: inline; /* Faz com que os itens da lista fiquem na mesma linha */
-    margin-right: 20px; /* Define um espaçamento entre os itens */
-}
-
-nav a {
-    text-decoration: none; /* Remove o sublinhado dos links */
-    color: #fff; /* Define a cor do texto */
-    font-weight: bold; /* Define o peso da fonte */
-}
-
-main {
-    padding: 20px; /* Define um espaçamento interno */
-    overflow: hidden; /* Faz com que o elemento não ultrapasse o tamanho do pai */
-}
-
-.card {
-    width: calc(33.33% - 20px); /* 33.33% - 40px */
-    margin: 10px; /* Define um espaçamento externo */
-    padding: 20px; /* Define um espaçamento interno */
-    background-color: #fff; /* Define a cor de fundo */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra */
-    text-align: center; /* Centraliza o texto */
-    float: left; /* Faz com que os elementos fiquem na mesma linha */
-}
-
-.card img {
-    max-width: 100%; /* Define a largura máxima da imagem */
-    height: 300px; /* Define a altura da imagem */
-}
-
-.card button {
-    background-color: #333;
-    color: #fff;
-    border: none;
-    padding: 8px 16px;
-    margin-top: 10px;
-    cursor: pointer; /* Muda o cursor do mouse */
-    transition: background-color 0.3s ease; /* Adiciona uma transição suave */
-}
-
-.card button:hover {
-    background-color: #555; /* Muda a cor de fundo ao passar o mouse */
-}
-
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1rem;
+@media screen and (max-width: 480px) {
+    .card {
+        width: 100%;
+    }
 }
 ```
+
+O código acima adiciona duas propriedades `@media`. A primeira propriedade `@media` é utilizada para definir o estilo do site quando a largura da tela for menor ou igual a `768px`. A segunda propriedade `@media` é utilizada para definir o estilo do site quando a largura da tela for menor ou igual a `480px`. Para verificar o resultado, siga os passos abaixo:
+
+1. Abra o site no navegador usando a ferramenta `live server`.
+2. Abra o modo de desenvolvedor do navegador. Tecle `Ctrl + Shift + I` ou `F12`.
+3. Redimensione a tela para verificar o design responsivo.
+4. Para simular um dispositivo móvel, clique no ícone de celular no modo de desenvolvedor ou clique em `Ctrl + Shift + M`.
+5. Pronto, nosso site está pronto.
 
 Verifique se o resultado final está parecido com a imagem abaixo:
 
@@ -485,9 +390,23 @@ Verifique se o resultado final está parecido com a imagem abaixo:
 
  - [ ] Adicione cores e espaçamentos diferentes.
  - [ ] Adicione mais uma seção com livros dividida em colunas.
- - [ ] Adicione animação nos links do menu.
- - [ ] Adicione uma fonte externa ao seu site.
- - [ ] Publicar seu site no GitHub Pages.
- - [ ] Enviar o link do GitHub Pages no Google Classroom.
+ - [ ] Adicione animação nos links do menu. Pode usar o pseudo-elemento `:hover`.
+ - [ ] Adicione uma fonte externa ao seu site. Recomendo usar o Google Fonts para adicionar fontes externas ao seu site. Conheça mais sobre o Google Fonts [clicando aqui](https://fonts.google.com/).
 
-O importante é praticar e se divertir!
+## Publicando o site no GitHub Pages
+
+Para publicar o site no GitHub Pages, siga os passos abaixo:
+
+1. Abra o navegador web e acesse o site do GitHub.
+2. Faça login na plataforma GitHub.
+3. Abra o repositório `livraria`.
+4. Clique na aba `Settings`.
+5. Clique no menu lateral `Pages`.
+6. Na opção `Source`, selecione a branch `main` e clique no botão `Save`.
+7. Aguarde alguns minutos até que o site seja publicado.
+8. Pronto, seu site está publicado no GitHub Pages.
+9. Copie o link do seu site e envie no Google Classroom.
+10. Aguarde a correção do professor.
+11. Parabéns, você concluiu o projeto!
+
+> 👍 O mais importante é praticar e se divertir!
