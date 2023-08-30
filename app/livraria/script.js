@@ -1,66 +1,69 @@
-function adicionarLivroAoCarrinho(livro) {
-  const carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
-  carrinho.push(livro);
-  localStorage.setItem('carrinho', JSON.stringify(carrinho));
+const filename = 'books.json';
+const form = document.querySelector('form');
 
-  atualizarCarrinho();
-}
+form.addEventListener('submit', event => {
+    event.preventDefault();
+    const data = new FormData(form);
+    const book = {
+        titulo: data.get('titulo'),
+        autor: data.get('autor'),
+        ano: data.get('ano'),
+        editora: data.get('editora'),
+        isbn: data.get('isbn'),
+        paginas: data.get('paginas'),
+        categoria: data.get('categoria'),
+        usado: data.get('situacao'),
+        idioma: data.getAll('idioma'),
+        resumo: data.get('resumo'),
+        capa: data.get('capa')
+    }
 
-function pegarLivros() {
-  return JSON.parse(localStorage.getItem('carrinho')) || [];
-}
-
-function comprar() {
-  localStorage.removeItem('carrinho');
-  alert('Compra realizada com sucesso!');
-}
-
-function atualizarCarrinho() {
-    const livros = pegarLivros();
-    const span = document.querySelector('nav ul.right > li span');
-    span.innerText = `${livros.length} itens`;
-}
-
-const botao = document.querySelectorAll('.card button');
-
-botao.forEach((botao) => {
-    botao.addEventListener('click', (event) => {
-        const card = event.target.parentNode;
-        const livro = {
-            nome: card.querySelector('h2').innerText,
-        };
-        adicionarLivroAoCarrinho(livro);
-    });
+    // export json to file
+    exportToJsonFile(book);
+    form.reset();
+    alert('Livro cadastrado com sucesso!');
+    
 });
 
-const modal = document.querySelector('dialog');
-const botaoCarrinho = document.querySelector('nav ul.right > li');
+const exportToJsonFile = (jsonData) => {
+    let dataStr = JSON.stringify(jsonData, null, 2);
+    let dataUri = 'data:application/json;charset=utf-8,'+ encodeURIComponent(dataStr);
 
-botaoCarrinho.addEventListener('click', function() {
-    const livros = pegarLivros();
-    const lista = modal.querySelector('div.livros');
-    lista.innerHTML = '';
-    livros.forEach((livro) => {
-        const item = document.createElement('div');
-        item.innerText = livro.nome;
+    let linkElement = document.createElement('a');
+    linkElement.setAttribute('href', dataUri);
+    linkElement.setAttribute('download', filename);
+    linkElement.click();
+}
 
-        item.addEventListener('click', () => {
-            const index = livros.indexOf(livro);
-            livros.splice(index, 1);
-            localStorage.setItem('carrinho', JSON.stringify(livros));
-            atualizarCarrinho();
-            item.remove();
-        });
+// // populate form data with json
+// const populateForm = (json) => {
+//     const book = JSON.parse(json);
+//     document.querySelector('#titulo').value = book.titulo;
+//     document.querySelector('#autor').value = book.autor;
+//     document.querySelector('#ano').value = book.ano;
+    
+//     book.idioma.forEach(f => {
+//         document.querySelector(`input[value="${f}"]`).checked = true;
+//     });
+    
+//     document.querySelector('#editora').value = book.editora;
+//     document.querySelector('#isbn').value = book.isbn;
+//     document.querySelector('#paginas').value = book.paginas;
+//     document.querySelector('#categoria').value = book.categoria;
+//     document.querySelector('#usado').checked = book.situacao === 'Usado';
+//     document.querySelector('#resumo').value = book.resumo;
+//     // document.querySelector('#capa').value = book.capa;
+// }
 
-        lista.appendChild(item);
-    });
-    modal.showModal();
-});
+// document.addEventListener('DOMContentLoaded', () => {
+    
+//     try {
+//         const initialValue = '{"titulo":"Livro 1","autor":"Autor 1","ano":"2019","editora":"Editora 1","isbn":"123-4567891234","paginas":"100","categoria":"Aventura","situacao":"Usado","idioma":["Português", "Espanhol"],"resumo":"Resumo do livro 1"}';
+//         populateForm(initialValue);
+//     } catch (error) {
+//         console.error(error);
+//         alert('Erro ao carregar o arquivo');
+//     }
+    
 
-atualizarCarrinho();
-
-const botaoComprar = modal.querySelector('dialog button.fechar');
-
-botaoComprar.addEventListener('click', () => {
-    modal.close();
-});
+// });

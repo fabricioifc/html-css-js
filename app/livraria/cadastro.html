@@ -34,32 +34,25 @@
                         <label for="autor">Autor</label>
                         <input type="text" name="autor" id="autor" placeholder="Nome do autor" required>
                     </div>
+
+                    <div class="input-container">
+                        <label for="editora">Editora</label>
+                        <input type="text" name="editora" id="editora" placeholder="Editora" required>
+                    </div>
     
                     <div class="input-container">
-                        <label>Editora</label>
+                        <label>Idioma</label>
                         <div class="input-check">
-                            <input type="checkbox" name="editora" value="IFC" id="ifc">
-                            <label for="ifc">IFC</label>
+                            <input type="checkbox" name="idioma" value="Português" id="portugues">
+                            <label for="portugues">Português</label>
                         </div>
                         <div class="input-check">
-                            <input type="checkbox" name="editora" value="Pearson" id="pearson">
-                            <label for="pearson">Pearson</label>
+                            <input type="checkbox" name="idioma" value="Inglês" id="ingles">
+                            <label for="ingles">Inglês</label>
                         </div>
                         <div class="input-check">
-                            <input type="checkbox" name="editora" value="Cengage">
-                            <label for="cengage">Cengage</label>
-                        </div>
-                        <div class="input-check">
-                            <input type="checkbox" name="editora" value="RELX Group">
-                            <label for="relx">RELX Group</label>
-                        </div>
-                        <div class="input-check">
-                            <input type="checkbox" name="editora" value="Springer">
-                            <label for="springer">Springer</label>
-                        </div>
-                        <div class="input-check">
-                            <input type="checkbox" name="editora" value="Oxford">
-                            <label for="oxford">Oxford</label>
+                            <input type="checkbox" name="idioma" value="Espanhol" id="espanhol">
+                            <label for="espanhol">Espanhol</label>
                         </div>
                     </div>
     
@@ -96,16 +89,11 @@
                     <div class="input-container">
                         <label>Estado do Livro</label>
                         <div class="radio-group">
-                            <input type="radio" name="usado" id="novo" value="0" required checked>
+                            <input type="radio" name="situacao" id="novo" value="Novo" required checked>
                             <label for="novo">Novo</label>
-                            <input type="radio" name="usado" id="usado" value="1" required>
+                            <input type="radio" name="situacao" id="usado" value="Usado" required>
                             <label for="usado">Usado</label>
                         </div>
-                    </div>
-    
-                    <div class="input-container">
-                        <label for="idioma">Idioma</label>
-                        <input type="text" name="idioma" id="idioma" placeholder="Idioma do livro" required>
                     </div>
     
                     <div class="input-container">
@@ -126,5 +114,7 @@
             </form>
         </section>
     </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
