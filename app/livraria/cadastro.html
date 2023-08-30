@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Livros</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header>
+        <h1>Livraria Fantástica</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Livros</a></li>
+                <li><a href="#">Autores</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="container">
+            <form>
+                <fieldset>
+                    <legend>Cadastro de Livros</legend>
+                    <div class="input-container">
+                        <label for="titulo">Título</label>
+                        <input type="text" name="titulo" id="titulo" placeholder="Título do livro" required autofocus>
+                    </div>
+    
+                    <div class="input-container">
+                        <label for="autor">Autor</label>
+                        <input type="text" name="autor" id="autor" placeholder="Nome do autor" required>
+                    </div>
+    
+                    <div class="input-container">
+                        <label>Editora</label>
+                        <div class="input-check">
+                            <input type="checkbox" name="editora" value="IFC" id="ifc">
+                            <label for="ifc">IFC</label>
+                        </div>
+                        <div class="input-check">
+                            <input type="checkbox" name="editora" value="Pearson" id="pearson">
+                            <label for="pearson">Pearson</label>
+                        </div>
+                        <div class="input-check">
+                            <input type="checkbox" name="editora" value="Cengage">
+                            <label for="cengage">Cengage</label>
+                        </div>
+                        <div class="input-check">
+                            <input type="checkbox" name="editora" value="RELX Group">
+                            <label for="relx">RELX Group</label>
+                        </div>
+                        <div class="input-check">
+                            <input type="checkbox" name="editora" value="Springer">
+                            <label for="springer">Springer</label>
+                        </div>
+                        <div class="input-check">
+                            <input type="checkbox" name="editora" value="Oxford">
+                            <label for="oxford">Oxford</label>
+                        </div>
+                    </div>
+    
+                    <div class="input-container">
+                        <label for="isbn">ISBN</label>
+                        <input type="text" name="isbn" id="isbn" placeholder="ISBN do livro" pattern="\d{3}-\d{10}" required>
+                    </div>
+    
+                    <div class="input-container">
+                        <label for="ano">Ano</label>
+                        <input type="number" name="ano" id="ano" placeholder="Ano de publicação" required>
+                    </div>
+    
+                    <div class="input-container">
+                        <label for="paginas">Páginas</label>
+                        <input type="number" name="paginas" id="paginas" placeholder="Número de páginas" required>
+                    </div>
+                    
+                    <div class="input-container">
+                        <label for="categoria">Categoria</label>
+                        <select name="categoria" id="categoria" required>
+                            <option value="">Selecione</option>
+                            <option value="Ação">Ação</option>
+                            <option value="Aventura">Aventura</option>
+                            <option value="Comédia">Comédia</option>
+                            <option value="Drama">Drama</option>
+                            <option value="Ficção Científica">Ficção Científica</option>
+                            <option value="Romance">Romance</option>
+                            <option value="Suspense">Suspense</option>
+                            <option value="Terror">Terror</option>
+                        </select>
+                    </div>
+
+                    <div class="input-container">
+                        <label>Estado do Livro</label>
+                        <div class="radio-group">
+                            <input type="radio" name="usado" id="novo" value="0" required checked>
+                            <label for="novo">Novo</label>
+                            <input type="radio" name="usado" id="usado" value="1" required>
+                            <label for="usado">Usado</label>
+                        </div>
+                    </div>
+    
+                    <div class="input-container">
+                        <label for="idioma">Idioma</label>
+                        <input type="text" name="idioma" id="idioma" placeholder="Idioma do livro" required>
+                    </div>
+    
+                    <div class="input-container">
+                        <label for="resumo">Resumo</label>
+                        <textarea name="resumo" id="resumo" placeholder="Resumo do livro" rows="5" required></textarea>
+                    </div>
+    
+                    <div class="input-container">
+                        <label for="capa">Capa</label>
+                        <input type="file" name="capa" id="capa" accept="image/*">
+                    </div>
+    
+                    <div class="actions">
+                        <button type="submit">Cadastrar</button>
+                        <button type="reset">Limpar</button>
+                    </div>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
