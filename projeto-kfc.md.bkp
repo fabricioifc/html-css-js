@@ -29,12 +29,11 @@ loja-kfc
 
 Veja o resultado esperado abaixo:
 
-![kfc](./image/kfc_pronto.png)
+![kfc](./image/kfc_pronto.PNG)
 
 Para começar, vamos começar a criar o site passo a passo. Primeiro, vamos criar a tag `head` e adicionar o título do site e as metatags. Para isso, siga os passos abaixo:
 
 ```html
-{: .optional-language-as-class .no-copy}
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -253,7 +252,7 @@ Diferentemente das classe `.container` e `.clearfix`, a classe `.card` tem um es
 
 Com o entendimento da importância das classes `.container` e `.clearfix`, podemos agora trabalhar com a ideia de colunas. Em geral, uma ideia muito utilizada para criar colunas é dividir a nossa tela em 12 pedaços iguais. Assim, podemos dividir a tela em 2 colunas, 3 colunas, 4 colunas, 6 colunas, 12 colunas e assim por diante. Para melhor entendimento, vejamos a imagem abaixo:
 
-![colunas](./image/grid.jpeg)
+![colunas](./image/grid.webp)
 
 A imagem demonstra a divisão da tela em 12 colunas. Cada coluna tem uma largura de 1/12 da largura total da tela. Para implementar essa estratégia e reutilizar ela em nossas páginas web podemos criar classes com o nome `col-1`, `col-2`, `col-3`, `col-4`, `col-6` e `col-12`. Para isso, siga os passos abaixo:
 
@@ -596,4 +595,4 @@ Pronto. Agora, nosso site tem um efeito de rolagem suave. Faça pequenas modific
 
 Verifique se o resultado final está parecido com a imagem abaixo:
 
-![KFC](./image/kfc_pronto.png)
+![KFC](./image/kfc_pronto.PNG)
