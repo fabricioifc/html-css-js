@@ -33,8 +33,7 @@ Veja o resultado esperado abaixo:
 
 Para começar, vamos começar a criar o site passo a passo. Primeiro, vamos criar a tag `head` e adicionar o título do site e as metatags. Para isso, siga os passos abaixo:
 
-```html
-{: .optional-language-as-class .no-copy}
+```{: .optional-language-as-class .no-copy}
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
