@@ -101,14 +101,14 @@ form {
   overflow: hidden;
 }
 
-fieldset {
+form fieldset {
   border: 1px solid #ccc;
   border-radius: 4px;
   padding: 10px;
   margin-bottom: 10px;
 }
 
-legend {
+form legend {
   font-weight: bold;
   color: #777;
 }
@@ -117,7 +117,7 @@ legend {
   margin-bottom: 15px;
 }
 
-label {
+.input-container label {
   display: block;
   margin-bottom: 5px;
   font-weight: bold;
@@ -125,6 +125,7 @@ label {
 }
 
 input[type="text"],
+input[type="date"],
 input[type="number"] {
   width: 100%;
   padding: 8px;
@@ -149,16 +150,28 @@ select {
   border-radius: 4px;
 }
 
+textarea:focus,
+select:focus {
+  border-color: #333;
+  outline: none;
+}
+
 .radio-group label {
   display: inline;
-  margin-right: 15px;
+  margin-right: 10px;
   font-weight: normal;
+}
+
+.input-check {
+    display: inline-block;
+    margin-right: 10px;
 }
 
 .input-check input[type="checkbox"] + label {
     display: inline-block;
     font-weight: normal;
 }
+
 
 button {
   background-color: #007bff;
