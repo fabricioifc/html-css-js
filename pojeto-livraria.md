@@ -553,6 +553,7 @@ Agora, vamos adicionar um campo `checkbox` para escolher quais serão os idiomas
         <label for="espanhol">Espanhol</label>
     </div>
 </div>
+```
 
 O componente `checkbox` é utilizado para adicionar uma caixa de seleção. Nesse caso, temos três caixas de seleção com os valores `Português`, `Inglês` e `Espanhol`. Para agrupar os componentes `checkbox`, usamos a classe `.input-check`. Para adicionar um rótulo ao componente `checkbox`, usamos a tag `<label>` com o atributo `for` que deve ter o mesmo valor do atributo `id` do componente `checkbox`. 
     
