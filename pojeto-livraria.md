@@ -605,6 +605,7 @@ Para escolher uma categoria, vamos adicionar um componente `select`. Para isso, 
         <option value="Terror">Terror</option>
     </select>
 </div>
+```
 
 O componente `select` é utilizado para adicionar uma lista de opções. Nesse caso, temos uma lista de opções com as categorias de livros. Para adicionar uma opção, usamos a tag `<option>` com o atributo `value` que define o valor da opção. A primeira opção é utilizada para definir um valor padrão. Para isso, usamos o atributo `value` com o valor vazio.
 
